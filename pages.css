@@ -1,0 +1,65 @@
+@font-face{
+  font-family:'Inter Fallback';
+  src:local('Arial');
+  ascent-override:90.49%;
+  descent-override:22.56%;
+  line-gap-override:0%;
+  size-adjust:107.06%;
+}
+:root{
+  --paper:#FEF4DE;
+  --paper-alt:#FFFBEF;
+  --ink:#1E3A32;
+  --ink-soft:rgba(30,58,50,.78);
+  --line:#EDE0C4;
+  --accent:#F5B923;
+  --dark:#152A24;
+  --font-sans:"Inter","Inter Fallback",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{min-height:100vh;background:var(--paper);color:var(--ink);font-family:var(--font-sans);font-size:clamp(1rem,.96rem + .18vw,1.0625rem);-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+header{position:sticky;top:0;z-index:10;background:rgba(254,244,222,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-inner{max-width:1120px;margin:auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+.brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none;}
+.logo{width:32px;height:32px;flex:none;}
+.brand-name{font-size:1.125rem;font-weight:500;}
+.brand-name strong{font-weight:700;}
+nav ul{display:flex;align-items:center;gap:28px;list-style:none;}
+nav a{font-size:.875rem;font-weight:600;text-decoration:none;color:var(--ink-soft);}
+nav a:hover,nav a:focus-visible,nav a[aria-current="page"]{color:var(--ink);}
+.nav-cta{padding:10px 18px;border-radius:3px;background:var(--ink);color:var(--paper);font-size:.8125rem;font-weight:700;text-decoration:none;}
+.page{max-width:1120px;margin:auto;padding:clamp(72px,10vw,128px) 32px 100px;}
+.page-label{display:block;margin-bottom:18px;font-family:var(--font-mono);font-size:.8125rem;font-style:italic;font-weight:600;letter-spacing:-.035em;}
+.page-label span{color:var(--ink-soft);}
+h1{max-width:790px;font-size:clamp(2.6rem,7vw,5.6rem);line-height:1.02;letter-spacing:-.05em;}
+.lede{max-width:680px;margin-top:26px;color:var(--ink-soft);font-size:clamp(1.05rem,1rem + .35vw,1.25rem);line-height:1.65;}
+.placeholder-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:64px;}
+.placeholder-card{min-height:210px;padding:28px;border:1px solid var(--line);border-radius:10px;background:rgba(255,251,239,.58);display:flex;flex-direction:column;justify-content:space-between;}
+.placeholder-card small{font-family:var(--font-mono);font-size:.75rem;color:var(--ink-soft);}
+.placeholder-card h2{font-size:clamp(1.35rem,1.2rem + .7vw,1.75rem);letter-spacing:-.035em;}
+.placeholder-card p{margin-top:10px;color:var(--ink-soft);font-size:.9375rem;line-height:1.65;}
+.content-shell{max-width:760px;margin-top:64px;padding-top:40px;border-top:1px solid var(--line);}
+.content-shell h2{font-size:clamp(1.5rem,1.3rem + .9vw,2rem);letter-spacing:-.035em;margin-bottom:16px;}
+.content-shell p{color:var(--ink-soft);line-height:1.75;margin-bottom:18px;}
+.contact-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:64px;}
+.contact-option{padding:28px;border:1px solid var(--line);border-radius:10px;background:var(--paper-alt);}
+.contact-option small{font-family:var(--font-mono);font-size:.75rem;color:var(--ink-soft);}
+.contact-option h2{margin:12px 0 8px;font-size:1.35rem;letter-spacing:-.035em;}
+.contact-option p{color:var(--ink-soft);line-height:1.65;}
+.contact-option a{display:inline-block;margin-top:18px;font-weight:700;text-decoration-color:var(--accent);text-underline-offset:4px;}
+.placeholder-note{margin-top:46px;padding:16px 18px;border-left:3px solid var(--accent);background:rgba(245,185,35,.08);color:var(--ink-soft);font-size:.875rem;line-height:1.6;}
+footer{border-top:1px solid var(--line);}
+.footer-inner{max-width:1120px;margin:auto;padding:28px 32px;display:flex;justify-content:space-between;gap:20px;color:var(--ink-soft);font-size:.8125rem;}
+@media(max-width:720px){
+  .nav-inner{padding:15px 20px;}
+  .brand-name span{display:none;}
+  nav ul{gap:14px;}
+  nav a{font-size:.75rem;}
+  .nav-cta{display:none;}
+  .page{padding:64px 20px 72px;}
+  .placeholder-grid,.contact-options{grid-template-columns:1fr;}
+  .footer-inner{padding:24px 20px;flex-direction:column;}
+}
