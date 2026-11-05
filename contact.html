@@ -129,6 +129,21 @@
   var button = form.querySelector('.form-submit');
   var buttonText = button.textContent;
 
+  // Bot checks (invisible to people): a human needs a few seconds and touches the form; bots usually don't.
+  var loadedAt = Date.now(), interacted = false, MIN_MS = 1500;
+  ['pointerdown','keydown','focusin','touchstart'].forEach(function(ev){
+    form.addEventListener(ev, function(){ interacted = true; }, { once: true, passive: true });
+  });
+  function looksLikeBot(){
+    var honeypot = form.elements._gotcha && form.elements._gotcha.value;
+    return !!honeypot || !interacted || (Date.now() - loadedAt) < MIN_MS;
+  }
+  function showSuccess(){
+    var first = (form.elements.name.value.trim().split(/\s+/)[0] || '');
+    document.getElementById('successName').textContent = first ? ', ' + first : '';
+    form.hidden = true; success.hidden = false; success.focus();
+  }
+
   function setError(input, msg){
     var err = document.getElementById(input.id + '-error');
     input.setAttribute('aria-invalid', msg ? 'true' : 'false');
@@ -160,16 +175,14 @@
     fields.forEach(function(input){ var m = check(input); setError(input, m); if(m && !firstBad) firstBad = input; });
     if(firstBad){ firstBad.focus(); return; }
 
+    // Likely bot: pretend it worked so it learns nothing, but send nothing.
+    if(looksLikeBot()){ showSuccess(); return; }
+
     button.disabled = true; button.textContent = 'Sending…';
     fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
       .then(function(res){ return res.json().catch(function(){ return {}; }).then(function(data){ return { ok: res.ok, data: data }; }); })
       .then(function(r){
-        if(r.ok){
-          var first = (form.elements.name.value.trim().split(/\s+/)[0] || '');
-          document.getElementById('successName').textContent = first ? ', ' + first : '';
-          form.hidden = true; success.hidden = false; success.focus();
-          return;
-        }
+        if(r.ok){ showSuccess(); return; }
         var msg = (r.data && r.data.errors && r.data.errors.length) ? r.data.errors.map(function(x){ return x.message; }).join(' ') : 'Something went wrong on my end.';
         throw new Error(msg);
       })
