@@ -35,23 +35,23 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,247,240,.92);backdro
 @media (prefers-reduced-motion:reduce){.blink{animation:none;}}
 .bt{font-family:var(--font-sans);font-weight:500;font-size:clamp(1.125rem,1.06rem + .25vw,1.25rem);letter-spacing:-.01em;color:var(--ink);}
 .bt b{font-weight:700;}
-nav ul{list-style:none;display:flex;gap:30px;}
-nav a{font-family:var(--font-sans);font-weight:500;font-size:clamp(.875rem,.84rem + .14vw,.9375rem);color:var(--ink);text-decoration:none;opacity:.65;transition:opacity .2s;}
-nav a:hover,nav a:focus-visible,nav a[aria-current]{opacity:1;}
+header nav ul{list-style:none;display:flex;gap:30px;}
+header nav a{font-family:var(--font-sans);font-weight:500;font-size:clamp(.875rem,.84rem + .14vw,.9375rem);color:var(--ink);text-decoration:none;opacity:.65;transition:opacity .2s;}
+header nav a:hover,header nav a:focus-visible,header nav a[aria-current]{opacity:1;}
 .nav-cta{font-family:var(--font-sans);font-weight:600;font-size:clamp(.875rem,.84rem + .14vw,.9375rem);background:var(--ink);color:var(--paper);padding:10px 20px;text-decoration:none;border-radius:2px;transition:background .2s;}
 .nav-cta:hover{background:var(--accent);color:var(--dark);}
 @media (max-width:860px){
-  nav ul{gap:16px;}
+  header nav ul{gap:16px;}
   .nav-cta{display:none;}
 }
 @media (max-width:640px){
   .nav-inner{padding:16px 20px;gap:12px;}
-  nav ul{gap:4px;}
-  nav a{display:inline-block;padding:10px 6px;font-size:clamp(.75rem,.72rem + .12vw,.8125rem);white-space:nowrap;}
+  header nav ul{gap:4px;}
+  header nav a{display:inline-block;padding:10px 6px;font-size:clamp(.75rem,.72rem + .12vw,.8125rem);white-space:nowrap;}
   .bt-last{display:none;}
 }
 @media (max-width:360px){
-  nav a{padding:10px 4px;}
+  header nav a{padding:10px 4px;}
 }
 .page{max-width:1120px;margin:auto;padding:clamp(72px,10vw,128px) 32px 100px;}
 .page-label{display:block;margin-bottom:18px;font-family:var(--font-mono);font-size:.8125rem;font-style:italic;font-weight:600;letter-spacing:-.035em;}

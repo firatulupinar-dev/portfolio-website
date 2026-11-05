@@ -53,7 +53,14 @@
       "homeLocation": { "@type": "Place", "name": "Toronto, ON, Canada" },
       "alumniOf": [
         { "@type": "CollegeOrUniversity", "name": "Lambton College" },
-        { "@type": "CollegeOrUniversity", "name": "Istanbul University" }
+        { "@type": "CollegeOrUniversity", "name": "Istanbul University" },
+        { "@type": "Organization", "name": "Accuenergy", "logo": "https://www.firatulupinar.com/images/logos/accuenergy.png" },
+        { "@type": "Organization", "name": "C2 Virtual Technologies", "brand": [
+          { "@type": "Brand", "name": "Newell Outdoors", "logo": "https://www.firatulupinar.com/images/logos/newell-outdoors.png" },
+          { "@type": "Brand", "name": "SISU Wellness", "logo": "https://www.firatulupinar.com/images/logos/sisu-wellness.png" }
+        ] },
+        { "@type": "Organization", "name": "Proco Machinery", "logo": "https://www.firatulupinar.com/images/logos/proco-machinery.png" },
+        { "@type": "Organization", "name": "Yankee Lady Yacht Charters", "logo": "https://www.firatulupinar.com/images/logos/yankee-lady.png" }
       ],
       "hasCredential": [
         { "@type": "EducationalOccupationalCredential", "name": "Google Ads & Analytics" },
@@ -647,40 +654,7 @@ footer{
 /* sticky photo stops short of the Portfolio section */
 @media (min-width:861px){ .intro-right{padding-bottom:110px;} }
 
-/* ---- brands strip: slow auto-scrolling marquee ---- */
-.brands{padding:72px 0 64px;overflow:hidden;}
-.brands-caption{text-align:center;font-family:var(--font-sans);font-size:14px;color:var(--ink-soft);margin-bottom:28px;}
-.brands-viewport{overflow:hidden;
-  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%);
-  mask-image:linear-gradient(90deg,transparent 0,#000 12%,#000 88%,transparent 100%);}
-.brands-track{display:flex;width:max-content;animation:brands-scroll 70s linear infinite;}
-.brands-viewport:hover .brands-track,.brands-viewport:focus-within .brands-track{animation-play-state:paused;}
-.brands-group{display:flex;align-items:center;list-style:none;margin:0;padding:0;}
-.brand-item{flex-shrink:0;padding:0 44px;height:48px;display:flex;align-items:center;
-  font-family:var(--font-sans);font-weight:700;font-size:20px;letter-spacing:-.01em;white-space:nowrap;
-  color:var(--ink);opacity:.62;filter:grayscale(1);transition:opacity .25s ease;}
-.brand-item:hover{opacity:1;}
-.brand-item img{height:40px;width:auto;display:block;}
-@keyframes brands-scroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-@media (max-width:520px){ .brands{padding:52px 0 44px;} .brand-item{padding:0 28px;font-size:17px;} }
-@media (prefers-reduced-motion: reduce){
-  .brands-track{animation:none;width:auto;justify-content:center;}
-  .brands-group{flex-wrap:wrap;justify-content:center;}
-  .brands-group[aria-hidden="true"]{display:none;}
-  .brands-viewport{-webkit-mask-image:none;mask-image:none;}
-}
-
-/* brands strip now sits right after WHO AM I: tighten the spacing between them */
 @media (min-width:861px){ .intro-left .whoami{padding-bottom:72px;} .intro-right{padding-bottom:72px;} }
-.brands{padding:32px 0 80px;}
-
-.brands-head{max-width:1120px;margin:0 auto 22px;padding:0 32px;}
-.brands-head .code-label{margin-bottom:0;}
-@media (max-width:520px){ .brands-head{padding:0 20px;} }
-
-/* more room above the brand logos */
-.brands{padding-top:64px;}
-.brands-head{margin-bottom:34px;}
 
 /* ===== SERVICES: dark numbered list with live animated visuals ===== */
 .services{background:var(--dark);color:var(--paper);padding:96px 32px 56px;}
@@ -835,11 +809,6 @@ footer{
 .svc-cursor{display:block;width:12px;height:3px;border-radius:2px;background:var(--accent);margin-top:38px;}
 @media (max-width:860px){ .svc-cursor{margin-top:26px;width:10px;height:2.5px;} }
 
-/* brands: industry label under each name/logo */
-.brand-item{flex-direction:column;justify-content:center;align-items:center;gap:6px;height:auto;padding:4px 44px;opacity:1;filter:none;}
-.brand-name{opacity:.62;filter:grayscale(1);transition:opacity .25s ease;display:flex;align-items:center;min-height:40px;}
-.brand-item:hover .brand-name{opacity:1;}
-.brand-industry{font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
 
 /* hero title: greeting + role lines */
 .hero h1.hero-title{max-width:620px;}
@@ -908,7 +877,7 @@ nav a,.nav-cta{font-size:var(--text-sm);}
 }
 
 /* section labels are real <h2>s for SEO; keep the small mono label look */
-.brands-head h2.code-label,
+.clients-head h2.code-label,
 .services h2.code-label{font-size:var(--text-xs);line-height:1.4;font-weight:600;letter-spacing:-.035em;}
 .services h2.code-label{margin-bottom:40px;color:var(--paper);}
 
@@ -934,6 +903,36 @@ html,body{overflow-x:clip;}
 .case-tags li{font-family:var(--font-mono);font-size:11px;font-weight:600;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper-alt);color:var(--ink);}
 .portfolio-card .portfolio-cta{margin-top:auto;padding-top:14px;}
 @media (max-width:520px){ .case-metrics div + div{padding-left:14px;} }
+
+/* ---- BRANDS: calm static logo grid (logos pre-processed to one ink colour, 2x files, see images/logos) ---- */
+.clients{padding:clamp(64px,8vw,96px) 32px;border-bottom:1px solid var(--line);}
+.clients-inner{max-width:1056px;margin:0 auto;}
+.clients-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 32px;margin-bottom:28px;}
+.clients-head .code-label{margin-bottom:0;}
+.clients-head p{font-size:var(--text-sm);color:var(--ink-soft);max-width:460px;}
+.clients-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper-alt);}
+.client{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:30px 12px 22px;border-left:1px solid var(--line);transition:background .25s ease;}
+.client:first-child{border-left:none;}
+.client-mark{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;max-width:100%;opacity:.72;transition:opacity .25s ease;}
+.client-mark img{display:block;max-width:100%;height:auto;}
+.client-word{font-family:var(--font-sans);font-weight:700;font-size:1.125rem;letter-spacing:-.03em;color:var(--ink);white-space:nowrap;}
+.client-industry{font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
+.client:hover{background:var(--paper);}
+.client:hover .client-mark{opacity:1;}
+@media (max-width:1100px){
+  .clients-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .client:nth-child(3n+1){border-left:none;}
+  .client:nth-child(n+4){border-top:1px solid var(--line);}
+}
+@media (max-width:520px){
+  .clients{padding-left:20px;padding-right:20px;}
+  .clients-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .client{padding:24px 8px 18px;}
+  .client:nth-child(3n+1){border-left:1px solid var(--line);}
+  .client:nth-child(2n+1){border-left:none;}
+  .client:nth-child(n+3){border-top:1px solid var(--line);}
+}
+@media (prefers-reduced-motion:reduce){ .client,.client-mark{transition:none;} }
 
 /* tablets: keep the service demo cards and the portrait at a sensible size */
 @media (min-width:521px) and (max-width:860px){
@@ -998,7 +997,7 @@ html,body{overflow-x:clip;}
           <h2 id="whoami-heading">Helping businesses stay visible as search moves to AI.</h2>
           <p>I'm a Toronto-based digital marketing strategist with six years of
             hands-on work across SEO, paid search, email and content. I've run marketing
-            in-house at <strong>Proco Machinery</strong>, <strong>C2 Virtual Technologies</strong>,
+            in-house at <strong>Proco Machinery</strong>, <strong>Newell Outdoors</strong>, <strong>SISU Wellness</strong>,
             <strong>Accuenergy</strong> and <strong>Yankee Lady</strong>, tripling organic
             traffic, growing online sales 30% and helping drive $1M+ in new sales along the way.</p>
           <p>Today I focus on what's changing fastest: helping businesses show up in
@@ -1022,16 +1021,6 @@ html,body{overflow-x:clip;}
     </div>
   </div>
 </div>
-
-<section class="brands" aria-labelledby="brands-heading">
-  <div class="brands-head"><h2 class="code-label" id="brands-heading"><span class="code-slashes" aria-hidden="true">//</span> BRANDS I'VE WORKED WITH</h2></div>
-  <div class="brands-viewport">
-    <div class="brands-track">
-      <ul class="brands-group" aria-label="Brands I've worked with"><li class="brand-item"><span class="brand-name">Accuenergy</span><span class="brand-industry">Energy</span></li><li class="brand-item"><span class="brand-name">Yankee Lady</span><span class="brand-industry">Hospitality</span></li><li class="brand-item"><span class="brand-name">C2 Virtual Technologies</span><span class="brand-industry">Ecommerce</span></li><li class="brand-item"><span class="brand-name">Proco Machinery</span><span class="brand-industry">Robotics</span></li><li class="brand-item"><span class="brand-name">Accuenergy</span><span class="brand-industry">Energy</span></li><li class="brand-item"><span class="brand-name">Yankee Lady</span><span class="brand-industry">Hospitality</span></li><li class="brand-item"><span class="brand-name">C2 Virtual Technologies</span><span class="brand-industry">Ecommerce</span></li><li class="brand-item"><span class="brand-name">Proco Machinery</span><span class="brand-industry">Robotics</span></li></ul>
-      <ul class="brands-group" aria-hidden="true"><li class="brand-item"><span class="brand-name">Accuenergy</span><span class="brand-industry">Energy</span></li><li class="brand-item"><span class="brand-name">Yankee Lady</span><span class="brand-industry">Hospitality</span></li><li class="brand-item"><span class="brand-name">C2 Virtual Technologies</span><span class="brand-industry">Ecommerce</span></li><li class="brand-item"><span class="brand-name">Proco Machinery</span><span class="brand-industry">Robotics</span></li><li class="brand-item"><span class="brand-name">Accuenergy</span><span class="brand-industry">Energy</span></li><li class="brand-item"><span class="brand-name">Yankee Lady</span><span class="brand-industry">Hospitality</span></li><li class="brand-item"><span class="brand-name">C2 Virtual Technologies</span><span class="brand-industry">Ecommerce</span></li><li class="brand-item"><span class="brand-name">Proco Machinery</span><span class="brand-industry">Robotics</span></li></ul>
-    </div>
-  </div>
-</section>
 
 <section class="services" id="services" aria-labelledby="services-heading">
   <div class="services-inner">
@@ -1128,6 +1117,23 @@ html,body{overflow-x:clip;}
   </div>
 </section>
 
+<section class="clients" aria-labelledby="brands-heading">
+  <div class="clients-inner">
+    <div class="clients-head">
+      <h2 class="code-label" id="brands-heading"><span class="code-slashes" aria-hidden="true">//</span> BRANDS I'VE WORKED WITH</h2>
+      <p>In-house and hands-on across energy, D2C ecommerce, robotics, hospitality and fitness.</p>
+    </div>
+    <ul class="clients-grid">
+      <li class="client"><span class="client-mark"><img src="images/logos/accuenergy.png" alt="Accuenergy logo" width="150" height="24" loading="lazy" decoding="async"></span><span class="client-industry">Energy</span></li>
+      <li class="client"><span class="client-mark"><img src="images/logos/newell-outdoors.png" alt="Newell Outdoors logo" width="121" height="43" loading="lazy" decoding="async"></span><span class="client-industry">Outdoor D2C</span></li>
+      <li class="client"><span class="client-mark"><img src="images/logos/sisu-wellness.png" alt="SISU Wellness logo" width="42" height="52" loading="lazy" decoding="async"></span><span class="client-industry">Wellness D2C</span></li>
+      <li class="client"><span class="client-mark"><img src="images/logos/proco-machinery.png" alt="Proco Machinery logo" width="125" height="42" loading="lazy" decoding="async"></span><span class="client-industry">Robotics</span></li>
+      <li class="client"><span class="client-mark"><img src="images/logos/yankee-lady.png" alt="Yankee Lady Yacht Charters logo" width="103" height="51" loading="lazy" decoding="async"></span><span class="client-industry">Hospitality</span></li>
+      <li class="client"><span class="client-mark client-lockup"><img src="images/logos/fitfinder.png" alt="FitFinder logo" width="45" height="34" loading="lazy" decoding="async"><span class="client-word" aria-hidden="true">FitFinder</span></span><span class="client-industry">Fitness</span></li>
+    </ul>
+  </div>
+</section>
+
 <section class="approach-strip" id="portfolio" aria-labelledby="portfolio-heading">
   <div class="approach-inner">
     <div class="work-head">
@@ -1149,12 +1155,12 @@ html,body{overflow-x:clip;}
         <ul class="case-tags" aria-label="Services"><li>SEO</li><li>PPC</li><li>Email</li></ul>
         <span class="portfolio-cta">Read case study <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a>
-      <a class="portfolio-card reveal" href="case-studies/c2-virtual-technologies.html">
+      <a class="portfolio-card reveal" href="case-studies/newell-outdoors-sisu-wellness.html">
         <div class="portfolio-image-wrap">
-          <img class="portfolio-image" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20300%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23152A24%22/%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%238a5f12%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22200%22%20y%3D%22155%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2215%22%20fill%3D%22%23FEF4DE%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3EAdd%20C2%20Virtual%20Technologies%20image%3C/text%3E%3C/svg%3E" alt="C2 Virtual Technologies — replace with your own image" width="400" height="300" loading="lazy" decoding="async">
+          <img class="portfolio-image" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20300%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23152A24%22/%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%238a5f12%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22200%22%20y%3D%22155%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2215%22%20fill%3D%22%23FEF4DE%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3EAdd%20Newell%20Outdoors%20and%20SISU%20Wellness%20image%3C/text%3E%3C/svg%3E" alt="Newell Outdoors and SISU Wellness — replace with your own image" width="400" height="300" loading="lazy" decoding="async">
         </div>
-        <p class="case-meta"><span>C2 Virtual Technologies</span><span>Ecommerce</span><span>2024&ndash;25</span></p>
-        <h3>Grew online sales 30% year over year for two ecommerce brands</h3>
+        <p class="case-meta"><span>Newell Outdoors &amp; SISU Wellness</span><span>D2C Ecommerce</span><span>2024&ndash;25</span></p>
+        <h3>Grew online sales 30% year over year for two D2C ecommerce brands</h3>
         <dl class="case-metrics">
           <div><dt>return on ad spend</dt><dd>3&times;</dd></div>
           <div><dt>organic traffic</dt><dd>+40%</dd></div>
