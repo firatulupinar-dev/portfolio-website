@@ -41,6 +41,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,247,240,.92);backdro
 @media (prefers-reduced-motion:reduce){.blink{animation:none;}}
 .bt{font-family:var(--font-sans);font-weight:500;font-size:clamp(1.125rem,1.06rem + .25vw,1.25rem);letter-spacing:-.01em;color:var(--ink);}
 .bt b{font-weight:700;}
+.bt-last{font-weight:400;}
 header nav ul{list-style:none;display:flex;gap:30px;}
 header nav a{font-family:var(--font-sans);font-weight:500;font-size:clamp(.875rem,.84rem + .14vw,.9375rem);color:var(--ink);text-decoration:none;opacity:.78;transition:opacity .2s;}
 header nav a:hover,header nav a:focus-visible,header nav a[aria-current]{opacity:1;}
@@ -81,6 +82,9 @@ h1{max-width:790px;font-size:clamp(2.6rem,7vw,5.6rem);line-height:1.02;letter-sp
 .placeholder-note{margin-top:46px;padding:16px 18px;border-left:3px solid var(--accent);background:rgba(245,185,35,.08);color:var(--ink-soft);font-size:.875rem;line-height:1.6;}
 footer{border-top:1px solid var(--line);}
 .footer-inner{max-width:1120px;margin:auto;padding:28px 32px;display:flex;justify-content:space-between;gap:20px;color:var(--ink-soft);font-size:.8125rem;}
+.footer-signature{display:inline-flex;align-items:center;gap:9px;}
+.footer-logo{width:28px;height:28px;flex:none;}
+.footer-logo-cursor{fill:var(--accent);}
 @media(max-width:720px){
   .page{padding:64px 20px 72px;}
   .placeholder-grid,.contact-options{grid-template-columns:1fr;}
