@@ -124,6 +124,12 @@
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;scrollbar-gutter:stable;}
+/* ---- accessibility helpers ---- */
+.skip-link{position:fixed;left:16px;top:-100px;z-index:200;padding:12px 18px;border-radius:6px;background:var(--ink);color:var(--paper);font-family:var(--font-sans);font-weight:600;font-size:.9375rem;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25);transition:top .15s ease;}
+.skip-link:focus{top:12px;outline:2px solid var(--accent);outline-offset:2px;}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+main:focus{outline:none;}
+@media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} .skip-link{transition:none;} }
 body{
   background:var(--paper);
   color:var(--ink);
@@ -154,12 +160,12 @@ header{
 .bt b{font-weight:700;}
 @keyframes logo-blink{0%,50%{opacity:1;}51%,100%{opacity:0;}}
 @media (prefers-reduced-motion: reduce){.blink{animation:none;}}
-nav ul{list-style:none;display:flex;gap:30px;}
-nav a{
+header nav ul{list-style:none;display:flex;gap:30px;}
+header nav a{
   font-family:var(--font-sans);font-weight:500;font-size:13px;
-  color:var(--ink);text-decoration:none;opacity:.65;transition:opacity .2s;
+  color:var(--ink);text-decoration:none;opacity:.78;transition:opacity .2s;
 }
-nav a:hover,nav a.active{opacity:1;}
+header nav a:hover,header nav a.active{opacity:1;}
 .nav-cta{
   font-family:var(--font-sans);font-weight:600;font-size:13px;
   background:var(--ink);color:var(--paper);padding:10px 20px;text-decoration:none;
@@ -568,7 +574,7 @@ footer{
 }
 
 @media (max-width:860px){
-  nav ul{gap:16px;}
+  header nav ul{gap:16px;}
   .nav-cta{display:none;}
   .hero{grid-template-columns:1fr;gap:36px;}
   .hero-visual{order:-1;}
@@ -601,8 +607,8 @@ footer{
 .portfolio-card p.portfolio-metric{font-family:var(--font-sans);font-size:1.2rem;font-weight:700;letter-spacing:-.01em;color:var(--ink);margin-bottom:8px;}
 @media (max-width:640px){
   .nav-inner{padding:16px 20px;}
-  nav ul{gap:16px;}
-  nav a{font-size:12px;white-space:nowrap;}
+  header nav ul{gap:16px;}
+  header nav a{font-size:12px;white-space:nowrap;}
   .bt-last{display:none;}
   .hero-tilt{aspect-ratio:1/1;}
   .hero-grid,.hero-corner{display:none;}
@@ -809,6 +815,30 @@ footer{
 .svc-cursor{display:block;width:12px;height:3px;border-radius:2px;background:var(--accent);margin-top:38px;}
 @media (max-width:860px){ .svc-cursor{margin-top:26px;width:10px;height:2.5px;} }
 
+/* ---- WHAT I DO: compact & quiet at rest, grows on hover (desktop with a mouse only) ---- */
+@media (hover:hover) and (min-width:861px){
+  .services .svc{padding:16px 20px;transition:padding .5s cubic-bezier(.22,.9,.32,1),background .45s ease;outline:none;}
+  .services .svc-num{align-self:center;}
+  .services .svc-cursor{margin-top:0;opacity:.7;transition:opacity .4s ease;}
+  .services .svc h3{font-size:clamp(1.25rem,1.1rem + .6vw,1.6rem);color:rgba(254,244,222,.86);transition:font-size .5s cubic-bezier(.22,.9,.32,1),color .4s ease,background-size .45s cubic-bezier(.22,.9,.32,1);}
+  .services .svc-line{margin:4px 0 0;font-size:var(--text-sm);color:rgba(254,244,222,.6);transition:color .4s ease,margin .5s cubic-bezier(.22,.9,.32,1);}
+  .services .svc-tags{max-height:0;opacity:0;overflow:hidden;margin-top:0;transition:max-height .5s cubic-bezier(.22,.9,.32,1),opacity .35s ease,margin-top .5s cubic-bezier(.22,.9,.32,1);}
+  .services .viz-wrap{width:128px;height:75px;opacity:.5;transition:width .5s cubic-bezier(.22,.9,.32,1),height .5s cubic-bezier(.22,.9,.32,1),opacity .4s ease;}
+  .services .viz-wrap .viz{transform:scale(.376);}
+
+  .services .svc:hover,.services .svc:focus-visible{padding:30px 20px;background:rgba(254,244,222,.05);}
+  .services .svc:hover .svc-cursor,.services .svc:focus-visible .svc-cursor{opacity:1;}
+  .services .svc:hover h3,.services .svc:focus-visible h3{font-size:clamp(1.9rem,1.5rem + 1.3vw,2.5rem);color:var(--paper);background-size:100% 3px;}
+  .services .svc:hover .svc-line,.services .svc:focus-visible .svc-line{margin:10px 0 0;color:rgba(254,244,222,.85);}
+  .services .svc:hover .svc-tags,.services .svc:focus-visible .svc-tags{max-height:120px;opacity:1;margin-top:16px;}
+  .services .svc:hover .viz-wrap,.services .svc:focus-visible .viz-wrap{width:340px;height:200px;opacity:1;}
+  .services .svc:hover .viz,.services .svc:focus-visible .viz{transform:scale(1);}
+  .services .svc:focus-visible{box-shadow:inset 0 0 0 2px rgba(245,185,35,.6);}
+}
+@media (hover:hover) and (min-width:861px) and (prefers-reduced-motion:reduce){
+  .services .svc,.services .svc h3,.services .svc-line,.services .svc-tags,.services .viz-wrap,.services .viz-wrap .viz,.services .svc-cursor{transition:none;}
+}
+
 
 /* hero title: greeting + role lines */
 .hero h1.hero-title{max-width:620px;}
@@ -832,6 +862,20 @@ footer{
 }
 @media (prefers-reduced-motion:reduce){.hero-title .wave-hand{animation:none;}}
 
+/* high-five: the waving hand is a button; click plays a clap sound + pop */
+.hero-title .wave-btn{display:inline-block;position:relative;background:none;border:0;padding:0 .04em;margin:0;font:inherit;line-height:1;color:inherit;cursor:pointer;vertical-align:baseline;border-radius:14px;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
+.hero-title .wave-btn:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}
+@media (max-width:640px){ .hero-title .wave-btn{padding:6px;margin:-6px -6px -6px -2px;} } /* bigger tap area, same visual position */
+.hero-title .wave-btn:hover .wave-hand{animation-play-state:paused;transform:rotate(14deg) scale(1.08);transition:transform .2s ease;}
+.hero-title .hi5-burst{display:block;position:absolute;left:50%;top:50%;width:1.7em;height:1.7em;margin:-.85em 0 0 -.85em;pointer-events:none;opacity:0;
+  background:repeating-conic-gradient(var(--accent) 0 7deg,transparent 7deg 45deg);
+  -webkit-mask:radial-gradient(circle,transparent 46%,#000 47%,#000 64%,transparent 65%);mask:radial-gradient(circle,transparent 46%,#000 47%,#000 64%,transparent 65%);}
+.hero-title .wave-btn.hi5 .wave-hand{animation:hi5-slap .5s cubic-bezier(.2,1.5,.4,1);}
+.hero-title .wave-btn.hi5 .hi5-burst{animation:hi5-burst .55s ease-out;}
+@keyframes hi5-slap{0%{transform:scale(1) rotate(0);}30%{transform:scale(1.35) rotate(-16deg);}55%{transform:scale(.94) rotate(4deg);}100%{transform:scale(1) rotate(0);}}
+@keyframes hi5-burst{0%{opacity:0;transform:scale(.55) rotate(0);}25%{opacity:1;}100%{opacity:0;transform:scale(1.3) rotate(12deg);}}
+@media (prefers-reduced-motion:reduce){ .hero-title .wave-btn.hi5 .wave-hand,.hero-title .wave-btn.hi5 .hi5-burst{animation:none;} }
+
 /* typography system */
 h1,h2,h3{font-family:var(--font-sans);letter-spacing:-.035em!important;}
 .code-label{letter-spacing:-.035em!important;}
@@ -854,7 +898,7 @@ code,pre{
 /* fluid, readable type scale */
 body{font-size:var(--text-base);}
 .bt{font-size:var(--text-lg);}
-nav a,.nav-cta{font-size:var(--text-sm);}
+header nav a,.nav-cta{font-size:var(--text-sm);}
 .btn-primary,.btn-ghost{font-size:var(--text-sm);}
 .hero-title .ht-hello{font-size:clamp(1.85rem,8.9vw,4rem);line-height:1.04;white-space:nowrap;}
 .hero-title .ht-role{font-size:var(--heading-sm);line-height:1.22;}
@@ -871,7 +915,7 @@ nav a,.nav-cta{font-size:var(--text-sm);}
 .contact h2{font-size:clamp(2rem,1.62rem + 1.65vw,3rem);line-height:1.1;}
 .contact-alt,.footer-tagline,.footer-bottom{font-size:var(--text-sm);}
 @media (max-width:640px){
-  nav a{font-size:var(--text-xs);}
+  header nav a{font-size:var(--text-xs);}
   .hero-title .ht-hello{line-height:1.08;}
   .hero-title .ht-role{line-height:1.28;}
 }
@@ -904,35 +948,32 @@ html,body{overflow-x:clip;}
 .portfolio-card .portfolio-cta{margin-top:auto;padding-top:14px;}
 @media (max-width:520px){ .case-metrics div + div{padding-left:14px;} }
 
-/* ---- BRANDS: calm static logo grid (logos pre-processed to one ink colour, 2x files, see images/logos) ---- */
-.clients{padding:clamp(64px,8vw,96px) 32px;border-bottom:1px solid var(--line);}
-.clients-inner{max-width:1056px;margin:0 auto;}
-.clients-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 32px;margin-bottom:28px;}
-.clients-head .code-label{margin-bottom:0;}
-.clients-head p{font-size:var(--text-sm);color:var(--ink-soft);max-width:460px;}
-.clients-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--paper-alt);}
-.client{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:30px 12px 22px;border-left:1px solid var(--line);transition:background .25s ease;}
-.client:first-child{border-left:none;}
-.client-mark{display:flex;align-items:center;justify-content:center;gap:8px;height:52px;max-width:100%;opacity:.72;transition:opacity .25s ease;}
-.client-mark img{display:block;max-width:100%;height:auto;}
-.client-word{font-family:var(--font-sans);font-weight:700;font-size:1.125rem;letter-spacing:-.03em;color:var(--ink);white-space:nowrap;}
-.client-industry{font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
-.client:hover{background:var(--paper);}
-.client:hover .client-mark{opacity:1;}
-@media (max-width:1100px){
-  .clients-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
-  .client:nth-child(3n+1){border-left:none;}
-  .client:nth-child(n+4){border-top:1px solid var(--line);}
+/* ---- BRANDS: minimal caption + slow logo loop with blurred, fading edges (continues the dark "What I do" band) ---- */
+.clients{background:#0C1814;color:var(--paper);padding:clamp(56px,7vw,80px) 0 clamp(64px,8vw,96px);overflow:hidden;border-top:1px solid rgba(254,244,222,.07);}
+.clients-head{max-width:520px;margin:0 auto clamp(32px,4vw,44px);padding:0 24px;text-align:center;}
+.clients-head h2{font-family:var(--font-sans);font-weight:400;font-size:var(--text-base);line-height:1.55;letter-spacing:-.01em;color:rgba(254,244,222,.72);}
+.marquee{position:relative;
+  -webkit-mask:linear-gradient(90deg,transparent 0,#000 16%,#000 84%,transparent 100%);mask:linear-gradient(90deg,transparent 0,#000 16%,#000 84%,transparent 100%);}
+/* blur that strengthens toward each edge */
+.marquee::before,.marquee::after{content:"";position:absolute;top:-10px;bottom:-10px;width:18%;z-index:2;pointer-events:none;-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);}
+.marquee::before{left:0;-webkit-mask:linear-gradient(90deg,#000 20%,transparent);mask:linear-gradient(90deg,#000 20%,transparent);}
+.marquee::after{right:0;-webkit-mask:linear-gradient(270deg,#000 20%,transparent);mask:linear-gradient(270deg,#000 20%,transparent);}
+.marquee-track{display:flex;width:max-content;animation:brands-loop 60s linear infinite;will-change:transform;}
+.marquee:hover .marquee-track{animation-play-state:paused;}
+.marquee-group{display:flex;align-items:center;list-style:none;margin:0;padding:0;}
+.marquee-group li{flex:none;display:flex;align-items:center;gap:8px;height:56px;padding:0 clamp(28px,3.4vw,46px);}
+.marquee-group img{display:block;filter:brightness(0) invert(.96) sepia(.08);opacity:.88;}
+.logo-word{font-family:var(--font-sans);font-weight:700;font-size:17px;letter-spacing:-.03em;color:rgba(254,244,222,.92);white-space:nowrap;}
+@keyframes brands-loop{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (max-width:520px){ .marquee-group li{height:48px;} .marquee-group img{transform:scale(.85);} }
+/* reduced motion: a still, centred row of the six logos */
+@media (prefers-reduced-motion:reduce){
+  .marquee-track{animation:none;width:auto;justify-content:center;}
+  .marquee-group{flex-wrap:wrap;justify-content:center;row-gap:12px;}
+  .marquee-group li[aria-hidden="true"],.marquee-group[aria-hidden="true"]{display:none;}
+  .marquee{-webkit-mask:none;mask:none;}
+  .marquee::before,.marquee::after{display:none;}
 }
-@media (max-width:520px){
-  .clients{padding-left:20px;padding-right:20px;}
-  .clients-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-  .client{padding:24px 8px 18px;}
-  .client:nth-child(3n+1){border-left:1px solid var(--line);}
-  .client:nth-child(2n+1){border-left:none;}
-  .client:nth-child(n+3){border-top:1px solid var(--line);}
-}
-@media (prefers-reduced-motion:reduce){ .client,.client-mark{transition:none;} }
 
 /* tablets: keep the service demo cards and the portrait at a sensible size */
 @media (min-width:521px) and (max-width:860px){
@@ -943,15 +984,16 @@ html,body{overflow-x:clip;}
 /* comfortable tap targets for nav links on touch screens */
 @media (max-width:640px){
   .nav-inner{gap:12px;}
-  nav ul{gap:4px;}
-  nav a{display:inline-block;padding:10px 6px;}
+  header nav ul{gap:4px;}
+  header nav a{display:inline-block;padding:10px 6px;}
 }
 @media (max-width:360px){
-  nav a{padding:10px 4px;}
+  header nav a{padding:10px 4px;}
 }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header>
   <div class="nav-inner">
@@ -969,12 +1011,12 @@ html,body{overflow-x:clip;}
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <div class="intro-split">
   <div class="intro-left">
     <section class="hero">
       <div class="hero-text">
-            <h1 class="hero-title"><span class="ht-hello">Ahoy! I'm Firat <span class="wave-hand" aria-hidden="true">👋</span></span> <span class="ht-role">Omnichannel Marketing Strategist.</span> <span class="ht-role">SEO &amp; AI-search Consultant.</span> <span class="ht-role"><span class="accent">Curious by Default.</span></span></h1>
+            <h1 class="hero-title"><span class="ht-hello">Ahoy! I'm Firat <button type="button" class="wave-btn" id="hi5" aria-label="Give Firat a high five"><span class="wave-hand" aria-hidden="true">👋</span><span class="hi5-burst" aria-hidden="true"></span></button></span> <span class="ht-role">Omnichannel Marketing Strategist.</span> <span class="ht-role">SEO &amp; AI-search Consultant.</span> <span class="ht-role"><span class="accent">Curious by Default.</span></span></h1>
         <p class="hero-sub">
           Search is splitting between Google and AI answers, and paid clicks cost
           more every quarter. I run SEO, AI visibility, paid media and email as one
@@ -1010,7 +1052,7 @@ html,body{overflow-x:clip;}
   </div>
   <div class="intro-right">
     <div class="hero-visual">
-      <div class="hero-tilt glow-yellow" id="heroTilt" role="button" tabindex="0" aria-label="Change the portrait background glow">
+      <div class="hero-tilt glow-yellow" id="heroTilt">
         <div class="hero-glow" aria-hidden="true"></div>
         <div class="hero-grid" aria-hidden="true"></div>
         <img class="hero-image" src="images/firat-ulupinar.jpg" alt="Firat Ulupinar, digital marketing strategist, outdoors by a mountain lake" width="960" height="1280" loading="eager" fetchpriority="high" decoding="async">
@@ -1027,10 +1069,10 @@ html,body{overflow-x:clip;}
     <h2 class="code-label" id="services-heading"><span class="code-slashes" aria-hidden="true">//</span> WHAT I DO</h2>
     <ol class="svc-list">
 
-      <li class="svc">
+      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-1">
         <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
         <div class="svc-body">
-          <h3>AI Search</h3>
+          <h3 id="svc-1">AI Search</h3>
           <p class="svc-line">Be the business AI recommends.</p>
           <ul class="svc-tags"><li>AI visibility audit</li><li>Content AI can quote</li><li>Schema &amp; entity signals</li><li>Third-party mentions</li><li>Citation tracking</li></ul>
         </div>
@@ -1047,10 +1089,10 @@ html,body{overflow-x:clip;}
         </div></div>
       </li>
 
-      <li class="svc">
+      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-2">
         <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
         <div class="svc-body">
-          <h3>SEO</h3>
+          <h3 id="svc-2">SEO</h3>
           <p class="svc-line">Rank for the searches that bring in customers.</p>
           <ul class="svc-tags"><li>Technical SEO</li><li>Keyword &amp; intent research</li><li>On-page optimization</li><li>Local SEO</li><li>Monthly reporting</li></ul>
         </div>
@@ -1065,10 +1107,10 @@ html,body{overflow-x:clip;}
         </div></div>
       </li>
 
-      <li class="svc">
+      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-3">
         <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
         <div class="svc-body">
-          <h3>Email Marketing</h3>
+          <h3 id="svc-3">Email Marketing</h3>
           <p class="svc-line">Turn your list into repeat revenue.</p>
           <ul class="svc-tags"><li>Lifecycle flows</li><li>Segmentation</li><li>Campaign calendar</li><li>Deliverability</li><li>Revenue reporting</li></ul>
         </div>
@@ -1080,10 +1122,10 @@ html,body{overflow-x:clip;}
         </div></div>
       </li>
 
-      <li class="svc">
+      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-4">
         <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
         <div class="svc-body">
-          <h3>PPC</h3>
+          <h3 id="svc-4">PPC</h3>
           <p class="svc-line">Paid traffic that pays for itself.</p>
           <ul class="svc-tags"><li>Google Ads</li><li>Meta Ads</li><li>Landing pages</li><li>Conversion tracking</li><li>Creative testing</li></ul>
         </div>
@@ -1097,10 +1139,10 @@ html,body{overflow-x:clip;}
         </div></div>
       </li>
 
-      <li class="svc">
+      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-5">
         <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
         <div class="svc-body">
-          <h3>Copywriting</h3>
+          <h3 id="svc-5">Copywriting</h3>
           <p class="svc-line">Words that make people act.</p>
           <ul class="svc-tags"><li>Website copy</li><li>Landing pages</li><li>Email copy</li><li>Ad copy</li><li>Brand voice</li></ul>
         </div>
@@ -1118,19 +1160,41 @@ html,body{overflow-x:clip;}
 </section>
 
 <section class="clients" aria-labelledby="brands-heading">
-  <div class="clients-inner">
-    <div class="clients-head">
-      <h2 class="code-label" id="brands-heading"><span class="code-slashes" aria-hidden="true">//</span> BRANDS I'VE WORKED WITH</h2>
-      <p>In-house and hands-on across energy, D2C ecommerce, robotics, hospitality and fitness.</p>
+  <div class="clients-head">
+    <h2 id="brands-heading">Brands I&rsquo;ve worked with, across energy, D2C ecommerce, robotics, hospitality and fitness.</h2>
+  </div>
+  <!-- Slow, seamless logo loop. Each group holds the logos twice so it is wider than the screen; the second group is a visual copy. -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <ul class="marquee-group" aria-label="Brands I&rsquo;ve worked with">
+          <li><img src="images/logos/accuenergy.png" alt="Accuenergy logo" width="135" height="22" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos/newell-outdoors.png" alt="Newell Outdoors logo" width="109" height="39" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos/sisu-wellness.png" alt="SISU Wellness logo" width="38" height="47" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos/proco-machinery.png" alt="Proco Machinery logo" width="112" height="38" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos/yankee-lady.png" alt="Yankee Lady Yacht Charters logo" width="93" height="46" loading="lazy" decoding="async"></li>
+          <li><img src="images/logos/fitfinder.png" alt="FitFinder logo" width="40" height="30" loading="lazy" decoding="async"><span class="logo-word" aria-hidden="true">FitFinder</span></li>
+          <li aria-hidden="true"><img src="images/logos/accuenergy.png" alt="" width="135" height="22" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/newell-outdoors.png" alt="" width="109" height="39" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/sisu-wellness.png" alt="" width="38" height="47" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/proco-machinery.png" alt="" width="112" height="38" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/yankee-lady.png" alt="" width="93" height="46" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/fitfinder.png" alt="" width="40" height="30" loading="lazy" decoding="async"><span class="logo-word" aria-hidden="true">FitFinder</span></li>
+      </ul>
+      <ul class="marquee-group" aria-hidden="true">
+          <li aria-hidden="true"><img src="images/logos/accuenergy.png" alt="" width="135" height="22" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/newell-outdoors.png" alt="" width="109" height="39" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/sisu-wellness.png" alt="" width="38" height="47" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/proco-machinery.png" alt="" width="112" height="38" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/yankee-lady.png" alt="" width="93" height="46" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/fitfinder.png" alt="" width="40" height="30" loading="lazy" decoding="async"><span class="logo-word" aria-hidden="true">FitFinder</span></li>
+          <li aria-hidden="true"><img src="images/logos/accuenergy.png" alt="" width="135" height="22" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/newell-outdoors.png" alt="" width="109" height="39" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/sisu-wellness.png" alt="" width="38" height="47" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/proco-machinery.png" alt="" width="112" height="38" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/yankee-lady.png" alt="" width="93" height="46" loading="lazy" decoding="async"></li>
+          <li aria-hidden="true"><img src="images/logos/fitfinder.png" alt="" width="40" height="30" loading="lazy" decoding="async"><span class="logo-word" aria-hidden="true">FitFinder</span></li>
+      </ul>
     </div>
-    <ul class="clients-grid">
-      <li class="client"><span class="client-mark"><img src="images/logos/accuenergy.png" alt="Accuenergy logo" width="150" height="24" loading="lazy" decoding="async"></span><span class="client-industry">Energy</span></li>
-      <li class="client"><span class="client-mark"><img src="images/logos/newell-outdoors.png" alt="Newell Outdoors logo" width="121" height="43" loading="lazy" decoding="async"></span><span class="client-industry">Outdoor D2C</span></li>
-      <li class="client"><span class="client-mark"><img src="images/logos/sisu-wellness.png" alt="SISU Wellness logo" width="42" height="52" loading="lazy" decoding="async"></span><span class="client-industry">Wellness D2C</span></li>
-      <li class="client"><span class="client-mark"><img src="images/logos/proco-machinery.png" alt="Proco Machinery logo" width="125" height="42" loading="lazy" decoding="async"></span><span class="client-industry">Robotics</span></li>
-      <li class="client"><span class="client-mark"><img src="images/logos/yankee-lady.png" alt="Yankee Lady Yacht Charters logo" width="103" height="51" loading="lazy" decoding="async"></span><span class="client-industry">Hospitality</span></li>
-      <li class="client"><span class="client-mark client-lockup"><img src="images/logos/fitfinder.png" alt="FitFinder logo" width="45" height="34" loading="lazy" decoding="async"><span class="client-word" aria-hidden="true">FitFinder</span></span><span class="client-industry">Fitness</span></li>
-    </ul>
   </div>
 </section>
 
@@ -1198,8 +1262,8 @@ html,body{overflow-x:clip;}
   </div>
 </section>
 
-<section class="contact" id="contact">
-  <h2>Is your business <span class="accent">missing from AI answers?</span> Let's look at it together.</h2>
+<section class="contact" id="contact" aria-labelledby="contact-heading">
+  <h2 id="contact-heading">Is your business <span class="accent">missing from AI answers?</span> Let's look at it together.</h2>
   <div class="contact-row">
     <a class="btn-primary" href="contact.html#book">Book an Intro Call</a>
     <a class="btn-ghost" href="about.html">Learn more about me</a>
@@ -1215,17 +1279,17 @@ html,body{overflow-x:clip;}
       <p class="footer-tagline">Digital marketing strategist &amp; AI-search consultant — SEO, AI search, email, PPC and copywriting.</p>
     </div>
     <div>
-      <div class="footer-col-label">Navigate</div>
-      <ul class="footer-links">
+      <div class="footer-col-label" id="footer-nav-label">Navigate</div>
+      <nav aria-labelledby="footer-nav-label"><ul class="footer-links">
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-      </ul>
+      </ul></nav>
     </div>
     <div>
       <div class="footer-col-label">Connect</div>
       <ul class="footer-links">
-        <li><a href="https://www.linkedin.com/in/firat-ulupinar" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://www.linkedin.com/in/firat-ulupinar" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (opens in new tab)</span></a></li>
         <li><a href="mailto:fredulupinar@gmail.com">fredulupinar@gmail.com</a></li>
       </ul>
     </div>
@@ -1287,6 +1351,46 @@ html,body{overflow-x:clip;}
     if('IntersectionObserver' in window){
       new IntersectionObserver((es) => es.forEach(e => svcSection.classList.toggle('is-visible', e.isIntersecting)), { threshold: 0.05 }).observe(svcSection);
     } else { svcSection.classList.add('is-visible'); }
+  }
+
+  // High-five: clicking the waving hand plays a short synthesized clap (no audio file) and a pop animation.
+  const hi5 = document.getElementById('hi5');
+  if(hi5){
+    let audio = null;
+    function clap(){
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if(!AC) return;
+      audio = audio || new AC();
+      if(audio.state === 'suspended') audio.resume();
+      const t = audio.currentTime;
+      const out = audio.createGain(); out.gain.value = 0.55; out.connect(audio.destination);
+      // two quick layers of filtered noise = the "slap" of two palms
+      [0, 0.011].forEach((delay, i) => {
+        const len = Math.floor(audio.sampleRate * 0.16);
+        const buf = audio.createBuffer(1, len, audio.sampleRate);
+        const data = buf.getChannelData(0);
+        for(let n = 0; n < len; n++){ data[n] = (Math.random() * 2 - 1) * Math.pow(1 - n / len, 4); }
+        const src = audio.createBufferSource(); src.buffer = buf;
+        const band = audio.createBiquadFilter(); band.type = 'bandpass'; band.frequency.value = i ? 2400 : 1500; band.Q.value = 0.9;
+        const g = audio.createGain();
+        g.gain.setValueAtTime(0.0001, t + delay);
+        g.gain.exponentialRampToValueAtTime(i ? 0.6 : 1, t + delay + 0.003);
+        g.gain.exponentialRampToValueAtTime(0.0001, t + delay + 0.14);
+        src.connect(band).connect(g).connect(out);
+        src.start(t + delay); src.stop(t + delay + 0.16);
+      });
+      // a soft low thump underneath for body
+      const osc = audio.createOscillator(); osc.type = 'sine';
+      osc.frequency.setValueAtTime(170, t); osc.frequency.exponentialRampToValueAtTime(70, t + 0.08);
+      const og = audio.createGain();
+      og.gain.setValueAtTime(0.35, t); og.gain.exponentialRampToValueAtTime(0.0001, t + 0.1);
+      osc.connect(og).connect(out); osc.start(t); osc.stop(t + 0.11);
+    }
+    hi5.addEventListener('click', () => {
+      try { clap(); } catch(e) {}
+      hi5.classList.remove('hi5'); void hi5.offsetWidth; hi5.classList.add('hi5');
+    });
+    hi5.addEventListener('animationend', (e) => { if(e.animationName === 'hi5-burst') hi5.classList.remove('hi5'); });
   }
 
   // Back-to-top button
