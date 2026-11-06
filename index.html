@@ -868,16 +868,15 @@ footer{
 .hero-title .wave-hand{
   display:inline-block;
   transform-origin:72% 78%;
-  animation:wave-hand 2.8s ease-in-out infinite;
+  animation:wave-hand .9s ease-in-out .45s 1 both;
 }
 @keyframes wave-hand{
-  0%,58%,100%{transform:rotate(0deg);}
-  64%{transform:rotate(18deg);}
-  70%{transform:rotate(-10deg);}
-  76%{transform:rotate(16deg);}
-  82%{transform:rotate(-6deg);}
+  0%,100%{transform:rotate(0deg);}
+  18%{transform:rotate(18deg);}
+  36%{transform:rotate(-10deg);}
+  54%{transform:rotate(16deg);}
+  72%{transform:rotate(-6deg);}
   88%{transform:rotate(10deg);}
-  94%{transform:rotate(0deg);}
 }
 @media (prefers-reduced-motion:reduce){.hero-title .wave-hand{animation:none;}}
 
@@ -885,7 +884,7 @@ footer{
 .hero-title .wave-btn{display:inline-block;position:relative;background:none;border:0;padding:0 .04em;margin:0;font:inherit;line-height:1;color:inherit;cursor:pointer;vertical-align:baseline;border-radius:14px;-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
 .hero-title .wave-btn:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}
 @media (max-width:640px){ .hero-title .wave-btn{padding:6px;margin:-6px -6px -6px -2px;} } /* bigger tap area, same visual position */
-.hero-title .wave-btn:hover .wave-hand{animation-play-state:paused;transform:rotate(14deg) scale(1.08);transition:transform .2s ease;}
+@media (hover:hover){.hero-title .wave-btn:hover .wave-hand{animation:wave-hand .9s ease-in-out 1 both;}}
 .hero-title .hi5-burst{display:block;position:absolute;left:50%;top:50%;width:1.7em;height:1.7em;margin:-.85em 0 0 -.85em;pointer-events:none;opacity:0;
   background:repeating-conic-gradient(var(--accent) 0 7deg,transparent 7deg 45deg);
   -webkit-mask:radial-gradient(circle,transparent 46%,#000 47%,#000 64%,transparent 65%);mask:radial-gradient(circle,transparent 46%,#000 47%,#000 64%,transparent 65%);}
@@ -921,7 +920,8 @@ header nav a,.nav-cta{font-size:var(--text-sm);}
 .btn-primary,.btn-ghost{font-size:var(--text-sm);}
 .hero-title .ht-hello{font-size:clamp(1.85rem,8.9vw,4rem);line-height:1.04;white-space:nowrap;}
 .hero-title .ht-role{font-size:var(--heading-sm);line-height:1.22;}
-.hero-sub,.whoami-main p,.svc-line{font-size:var(--text-base);}
+.hero-sub{font-size:19px;}
+.whoami-main p,.svc-line{font-size:var(--text-base);}
 .code-label{font-size:var(--text-xs);line-height:1.4;}
 .hero-proof li{font-size:var(--text-xs);}
 .hero-proof strong{font-size:clamp(1.4rem,1.24rem + .65vw,1.75rem);}
@@ -952,7 +952,31 @@ html,body{overflow-x:clip;}
 .work-head .code-label{margin-bottom:0;}
 .work-all{font-family:var(--font-mono);font-size:var(--text-xs);font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:2px;white-space:nowrap;}
 .work-all:hover,.work-all:focus-visible{color:var(--accent-ink);background:var(--accent-soft);}
-.portfolio-grid{gap:56px 40px;}
+.portfolio-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+  padding:22px 4px 42px;
+  perspective:1500px;
+  perspective-origin:50% 42%;
+  align-items:stretch;
+}
+.portfolio-grid .portfolio-card{
+  position:relative;
+  margin:0;
+  padding:18px;
+  background:var(--paper-alt);
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:0 24px 46px -32px rgba(21,42,36,.52),0 8px 18px -14px rgba(21,42,36,.28);
+  transform-style:preserve-3d;
+  backface-visibility:hidden;
+  transition:transform .42s cubic-bezier(.22,.9,.32,1),box-shadow .42s ease,border-color .25s ease,background .25s ease;
+}
+.portfolio-grid .portfolio-card:nth-child(1){transform:rotateY(8deg) rotateZ(.9deg) translateX(10px);transform-origin:right center;}
+.portfolio-grid .portfolio-card:nth-child(2){z-index:2;transform:translateY(-13px) translateZ(42px) scale(1.025);box-shadow:0 34px 58px -34px rgba(21,42,36,.62),0 14px 28px -18px rgba(21,42,36,.34);}
+.portfolio-grid .portfolio-card:nth-child(3){transform:rotateY(-8deg) rotateZ(-.9deg) translateX(-10px);transform-origin:left center;}
+.portfolio-grid .portfolio-card:hover,.portfolio-grid .portfolio-card:focus-visible{z-index:4;transform:translateY(-10px) translateZ(54px) rotateY(0) rotateZ(0) scale(1.025);border-color:rgba(245,185,35,.72);box-shadow:0 40px 68px -34px rgba(21,42,36,.65),0 16px 30px -18px rgba(21,42,36,.36);}
+.portfolio-grid .portfolio-image{aspect-ratio:4/3;}
 .portfolio-card .portfolio-image-wrap{margin-bottom:18px;}
 .portfolio-card p.case-meta{display:flex;flex-wrap:wrap;gap:4px 12px;font-family:var(--font-mono);font-size:var(--text-xs);font-weight:600;letter-spacing:.02em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px;}
 .case-meta span + span::before{content:"\00B7";margin-right:12px;color:var(--accent);font-weight:700;}
@@ -966,8 +990,14 @@ html,body{overflow-x:clip;}
 .case-tags li{font-family:var(--font-mono);font-size:11px;font-weight:600;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper-alt);color:var(--ink);}
 .portfolio-card .portfolio-cta{margin-top:auto;padding-top:14px;}
 @media (max-width:520px){ .case-metrics div + div{padding-left:14px;} }
+@media (max-width:900px){
+  .portfolio-grid{grid-template-columns:1fr;max-width:620px;margin:0 auto;gap:24px;padding:8px 0 20px;perspective:none;}
+  .portfolio-grid .portfolio-card,.portfolio-grid .portfolio-card:nth-child(1),.portfolio-grid .portfolio-card:nth-child(2),.portfolio-grid .portfolio-card:nth-child(3){transform:none;transform-origin:center;}
+  .portfolio-grid .portfolio-card:hover,.portfolio-grid .portfolio-card:focus-visible{transform:translateY(-5px);}
+}
+@media (prefers-reduced-motion:reduce){.portfolio-grid .portfolio-card{transition:none;}}
 
-/* ---- BRANDS: quiet cream logo strip right after "Who am I" (slow glide, blurred fading edges) ---- */
+/* ---- BRANDS: quiet cream logo strip right after "Who am I" (slow glide, soft fading edges) ---- */
 .clients{background:var(--paper);color:var(--ink);padding:0 0 clamp(56px,7vw,80px);overflow:hidden;}
 .clients-head{max-width:1120px;margin:0 auto 26px;padding:0 32px;text-align:left;}
 .clients-head .code-label{margin:0;color:var(--ink-soft);}
@@ -976,11 +1006,11 @@ html,body{overflow-x:clip;}
 .marquee::before,.marquee::after{content:"";position:absolute;top:-8px;bottom:-8px;width:20%;z-index:2;pointer-events:none;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);}
 .marquee::before{left:0;-webkit-mask:linear-gradient(90deg,#000 15%,transparent);mask:linear-gradient(90deg,#000 15%,transparent);}
 .marquee::after{right:0;-webkit-mask:linear-gradient(270deg,#000 15%,transparent);mask:linear-gradient(270deg,#000 15%,transparent);}
-.marquee-track{display:flex;width:max-content;animation:brands-loop 70s linear infinite;will-change:transform;}
+.marquee-track{display:flex;width:max-content;animation:brands-loop 95s linear infinite;will-change:transform;}
 .marquee:hover .marquee-track{animation-play-state:paused;}
 .marquee-group{display:flex;align-items:center;list-style:none;margin:0;padding:0;}
-.marquee-group li{flex:none;display:flex;align-items:center;gap:7px;height:48px;padding:0 clamp(40px,4.6vw,64px);opacity:.5;transition:opacity .3s ease;}
-.marquee-group li:hover{opacity:.9;}
+.marquee-group li{flex:none;display:flex;align-items:center;gap:7px;height:48px;padding:0 clamp(40px,4.6vw,64px);opacity:.66;transition:opacity .3s ease;}
+.marquee-group li:hover{opacity:1;}
 .marquee-group img{display:block;transform:scale(.86);transform-origin:center;}
 .logo-word{font-family:var(--font-sans);font-weight:700;font-size:15px;letter-spacing:-.03em;color:var(--ink);white-space:nowrap;}
 @keyframes brands-loop{from{transform:translateX(0);}to{transform:translateX(-50%);}}
@@ -1056,7 +1086,7 @@ html,body{overflow-x:clip;}
           Your target audience moves between Google, AI platforms, social feeds, and their
           inboxes before they ever talk to you.<br><strong>I unify SEO, AI-search, paid media, social,
           and email into one cross-channel strategy, so you show up at every step and turn
-          that attention into revenue.</strong>
+          that attention into actual business growth.</strong>
         </p>
         <ul class="hero-proof" aria-label="At a glance">
           <li><strong class="counter" data-target="6" data-suffix="+">6+</strong> years in marketing</li>
@@ -1300,19 +1330,6 @@ html,body{overflow-x:clip;}
           <div><dt>email open rate</dt><dd>+30%</dd></div>
         </dl>
         <ul class="case-tags" aria-label="Services"><li>Content</li><li>Email</li><li>SEO</li></ul>
-        <span class="portfolio-cta">Read case study <span class="arrow" aria-hidden="true">&rarr;</span></span>
-      </a>
-      <a class="portfolio-card reveal" href="case-studies/yankee-lady.html">
-        <div class="portfolio-image-wrap">
-          <img class="portfolio-image" src="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20400%20300%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23152A24%22/%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%238a5f12%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url%28%23g%29%22/%3E%3Ctext%20x%3D%22200%22%20y%3D%22155%22%20font-family%3D%22Arial%2C%20sans-serif%22%20font-size%3D%2215%22%20fill%3D%22%23FEF4DE%22%20text-anchor%3D%22middle%22%20opacity%3D%220.95%22%3EAdd%20Yankee%20Lady%20image%3C/text%3E%3C/svg%3E" alt="Yankee Lady — replace with your own image" width="400" height="300" loading="lazy" decoding="async">
-        </div>
-        <p class="case-meta"><span>Yankee Lady</span><span>Hospitality</span><span>2020&ndash;22</span></p>
-        <h3>Put 105 keywords on Google's first page for a Toronto yacht charter</h3>
-        <dl class="case-metrics">
-          <div><dt>top-10 keywords</dt><dd>105</dd></div>
-          <div><dt>outbound leads</dt><dd>+20%</dd></div>
-        </dl>
-        <ul class="case-tags" aria-label="Services"><li>SEO</li><li>PPC</li><li>Email</li></ul>
         <span class="portfolio-cta">Read case study <span class="arrow" aria-hidden="true">&rarr;</span></span>
       </a>
     </div>
