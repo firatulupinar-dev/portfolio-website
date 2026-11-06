@@ -78,11 +78,12 @@
       "description": "Digital marketing strategist and AI-search consultant offering SEO, AI search optimization, email marketing, PPC and copywriting.",
       "founder": { "@id": "https://www.firatulupinar.com/#person" },
       "makesOffer": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Search Optimization" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Email Marketing" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "PPC Advertising" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Copywriting" } }
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Search Optimization" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Marketing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Paid Media (Google, Meta & LinkedIn Ads)" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Content & Copywriting" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Email & CRM Automation" } }
       ]
     }
   ]
@@ -271,15 +272,6 @@ header nav a:hover,header nav a.active{opacity:1;}
   z-index:3;
   pointer-events:none;
 }
-.hero-corner{
-  position:absolute;width:22px;height:22px;
-  border:2px solid var(--accent);
-  transform:translateZ(72px);
-  z-index:4;
-  pointer-events:none;
-}
-.hero-corner.tl{top:-8px;left:-8px;border-right:none;border-bottom:none;}
-.hero-corner.br{bottom:-8px;right:-8px;border-left:none;border-top:none;}
 @media (prefers-reduced-motion: reduce){
   .hero-tilt{transition:none;}
   .hero-glow{transition:none;}
@@ -611,7 +603,7 @@ footer{
   header nav a{font-size:12px;white-space:nowrap;}
   .bt-last{display:none;}
   .hero-tilt{aspect-ratio:1/1;}
-  .hero-grid,.hero-corner{display:none;}
+  .hero-grid{display:none;}
   .hero-proof{gap:0;}
   .hero-proof li + li{padding-left:18px;}
 }
@@ -765,6 +757,30 @@ footer{
 @keyframes ppc-bar{0%{transform:scaleY(0)}28%,88%{transform:scaleY(1)}100%{transform:scaleY(0)}}
 @keyframes ppc-line{0%,25%{stroke-dashoffset:200}55%,88%{stroke-dashoffset:0}100%{stroke-dashoffset:200}}
 
+/* 06 Social: content calendar fills up, then a scheduled post goes live */
+.viz-social{padding:14px 16px;}
+.soc-head{display:flex;justify-content:space-between;align-items:center;font-weight:600;margin-bottom:10px;}
+.soc-pill{display:flex;align-items:center;gap:5px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:#E3F1E4;color:#2F6B37;padding:3px 8px;border-radius:999px;}
+.soc-pill i{width:6px;height:6px;border-radius:50%;background:#5FA968;}
+.soc-days,.soc-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;}
+.soc-days{margin-bottom:4px;font-size:9px;font-weight:600;color:var(--ink-soft);text-align:center;}
+.soc-cal span{height:22px;border-radius:5px;background:#fff;border:1px solid var(--line);}
+.soc-cal .post{position:relative;}
+.soc-cal .post::after{content:"";position:absolute;inset:3px;border-radius:3px;background:var(--accent);transform:scale(0);animation:soc-fill 7s infinite;}
+.soc-cal .p2::after,.soc-cal .p5::after{background:var(--ink);}
+.soc-cal .p1::after{animation-delay:.2s}.soc-cal .p2::after{animation-delay:.5s}.soc-cal .p3::after{animation-delay:.8s}
+.soc-cal .p4::after{animation-delay:1.1s}.soc-cal .p5::after{animation-delay:1.4s}.soc-cal .p6::after{animation-delay:1.7s}
+.soc-post{display:flex;align-items:center;gap:8px;margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 10px;animation:soc-post 7s infinite;}
+.soc-avatar{width:16px;height:16px;border-radius:50%;background:var(--ink);flex-shrink:0;}
+.soc-lines{display:flex;flex-direction:column;gap:4px;flex:1;}
+.soc-lines .bar{width:100%;}
+.soc-lines .bar.short{width:60%;}
+.soc-like{margin-left:auto;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--accent);color:var(--accent-ink);padding:2px 7px;border-radius:999px;white-space:nowrap;animation:soc-like 7s infinite;}
+.soc-like b{font-weight:700;}
+@keyframes soc-fill{0%,4%{transform:scale(0)}10%,90%{transform:scale(1)}100%{transform:scale(0)}}
+@keyframes soc-post{0%,38%{opacity:0;transform:translateY(8px)}46%,92%{opacity:1;transform:none}100%{opacity:0}}
+@keyframes soc-like{0%,56%{transform:scale(0)}62%{transform:scale(1.15)}66%,92%{transform:scale(1)}100%{transform:scale(0)}}
+
 /* 05 Copy: typed headline + CTA click */
 .viz-copy{padding:14px 16px;}
 .cp-nav{display:flex;gap:5px;margin-bottom:16px;}
@@ -906,7 +922,7 @@ header nav a,.nav-cta{font-size:var(--text-sm);}
 .code-label{font-size:var(--text-xs);line-height:1.4;}
 .hero-proof li{font-size:var(--text-xs);}
 .hero-proof strong{font-size:clamp(1.4rem,1.24rem + .65vw,1.75rem);}
-.whoami-main h2{font-size:var(--heading-md);line-height:1.12;}
+.whoami-main h2{font-size:clamp(2rem,1.65rem + 1.5vw,2.625rem);line-height:1.12;text-wrap:balance;}
 .skill-list h3,.portfolio-card h3{font-size:clamp(1.0625rem,1rem + .25vw,1.1875rem);}
 .skill-list p,.portfolio-card p:not(.portfolio-role){font-size:var(--text-sm);}
 .portfolio-card p.portfolio-metric{font-size:clamp(1.0625rem,1rem + .3vw,1.25rem);}
@@ -948,32 +964,48 @@ html,body{overflow-x:clip;}
 .portfolio-card .portfolio-cta{margin-top:auto;padding-top:14px;}
 @media (max-width:520px){ .case-metrics div + div{padding-left:14px;} }
 
-/* ---- BRANDS: minimal caption + slow logo loop with blurred, fading edges (continues the dark "What I do" band) ---- */
-.clients{background:#0C1814;color:var(--paper);padding:clamp(56px,7vw,80px) 0 clamp(64px,8vw,96px);overflow:hidden;border-top:1px solid rgba(254,244,222,.07);}
-.clients-head{max-width:520px;margin:0 auto clamp(32px,4vw,44px);padding:0 24px;text-align:center;}
-.clients-head h2{font-family:var(--font-sans);font-weight:400;font-size:var(--text-base);line-height:1.55;letter-spacing:-.01em;color:rgba(254,244,222,.72);}
-.marquee{position:relative;
-  -webkit-mask:linear-gradient(90deg,transparent 0,#000 16%,#000 84%,transparent 100%);mask:linear-gradient(90deg,transparent 0,#000 16%,#000 84%,transparent 100%);}
-/* blur that strengthens toward each edge */
-.marquee::before,.marquee::after{content:"";position:absolute;top:-10px;bottom:-10px;width:18%;z-index:2;pointer-events:none;-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);}
-.marquee::before{left:0;-webkit-mask:linear-gradient(90deg,#000 20%,transparent);mask:linear-gradient(90deg,#000 20%,transparent);}
-.marquee::after{right:0;-webkit-mask:linear-gradient(270deg,#000 20%,transparent);mask:linear-gradient(270deg,#000 20%,transparent);}
-.marquee-track{display:flex;width:max-content;animation:brands-loop 60s linear infinite;will-change:transform;}
+/* ---- BRANDS: quiet cream logo strip right after "Who am I" (slow glide, blurred fading edges) ---- */
+.clients{background:var(--paper);color:var(--ink);padding:0 0 clamp(56px,7vw,80px);overflow:hidden;}
+.clients-head{max-width:1120px;margin:0 auto 26px;padding:0 32px;text-align:left;}
+.clients-head .code-label{margin:0;color:var(--ink-soft);}
+.marquee{position:relative;max-width:1180px;margin:0 auto;
+  -webkit-mask:linear-gradient(90deg,transparent 0,#000 18%,#000 82%,transparent 100%);mask:linear-gradient(90deg,transparent 0,#000 18%,#000 82%,transparent 100%);}
+.marquee::before,.marquee::after{content:"";position:absolute;top:-8px;bottom:-8px;width:20%;z-index:2;pointer-events:none;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);}
+.marquee::before{left:0;-webkit-mask:linear-gradient(90deg,#000 15%,transparent);mask:linear-gradient(90deg,#000 15%,transparent);}
+.marquee::after{right:0;-webkit-mask:linear-gradient(270deg,#000 15%,transparent);mask:linear-gradient(270deg,#000 15%,transparent);}
+.marquee-track{display:flex;width:max-content;animation:brands-loop 70s linear infinite;will-change:transform;}
 .marquee:hover .marquee-track{animation-play-state:paused;}
 .marquee-group{display:flex;align-items:center;list-style:none;margin:0;padding:0;}
-.marquee-group li{flex:none;display:flex;align-items:center;gap:8px;height:56px;padding:0 clamp(28px,3.4vw,46px);}
-.marquee-group img{display:block;filter:brightness(0) invert(.96) sepia(.08);opacity:.88;}
-.logo-word{font-family:var(--font-sans);font-weight:700;font-size:17px;letter-spacing:-.03em;color:rgba(254,244,222,.92);white-space:nowrap;}
+.marquee-group li{flex:none;display:flex;align-items:center;gap:7px;height:48px;padding:0 clamp(40px,4.6vw,64px);opacity:.5;transition:opacity .3s ease;}
+.marquee-group li:hover{opacity:.9;}
+.marquee-group img{display:block;transform:scale(.86);transform-origin:center;}
+.logo-word{font-family:var(--font-sans);font-weight:700;font-size:15px;letter-spacing:-.03em;color:var(--ink);white-space:nowrap;}
 @keyframes brands-loop{from{transform:translateX(0);}to{transform:translateX(-50%);}}
-@media (max-width:520px){ .marquee-group li{height:48px;} .marquee-group img{transform:scale(.85);} }
-/* reduced motion: a still, centred row of the six logos */
+@media (max-width:520px){ .clients-head{padding:0 20px;} .marquee-group li{height:42px;padding:0 30px;} .marquee-group img{transform:scale(.74);} }
 @media (prefers-reduced-motion:reduce){
   .marquee-track{animation:none;width:auto;justify-content:center;}
-  .marquee-group{flex-wrap:wrap;justify-content:center;row-gap:12px;}
+  .marquee-group{flex-wrap:wrap;justify-content:center;row-gap:8px;}
   .marquee-group li[aria-hidden="true"],.marquee-group[aria-hidden="true"]{display:none;}
-  .marquee{-webkit-mask:none;mask:none;}
+  .marquee,.marquee::before,.marquee::after{-webkit-mask:none;mask:none;}
   .marquee::before,.marquee::after{display:none;}
+  .marquee-group li{transition:none;}
 }
+
+/* ---- Customer journey path beside the pinned photo (desktop only; positioned by JS) ---- */
+.journey,.j-traveler,.j-label{display:none;}
+@media (min-width:861px){
+  .journey{display:block;position:absolute;top:0;left:-40px;width:40px;height:100%;pointer-events:none;z-index:0;}
+  .journey-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;}
+  .j-track{fill:none;stroke:rgba(30,58,50,.2);stroke-width:1.5;stroke-dasharray:2 7;stroke-linecap:round;}
+  .j-fill{fill:none;stroke:rgba(245,185,35,.5);stroke-width:1.5;stroke-linecap:round;}
+  .j-stop{position:absolute;left:50%;top:0;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;background:var(--paper);box-shadow:0 0 0 1.5px rgba(30,58,50,.28);transition:background .35s ease,box-shadow .35s ease;}
+  .j-stop.is-on{background:rgba(245,185,35,.55);box-shadow:0 0 0 1.5px rgba(245,185,35,.55);}
+  .j-traveler{display:block;position:absolute;top:0;left:0;will-change:transform;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 3px var(--paper),0 0 0 4px rgba(245,185,35,.45);z-index:6;}
+  .j-label{display:block;position:absolute;left:0;top:calc(100% + 18px);font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;transition:opacity .25s ease;}
+  .j-label b{color:var(--ink);font-weight:600;}
+  .j-ch{display:block;margin-top:5px;font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);}
+}
+@media (min-width:861px) and (prefers-reduced-motion:reduce){ .j-stop,.j-label{transition:none;} }
 
 /* tablets: keep the service demo cards and the portrait at a sensible size */
 @media (min-width:521px) and (max-width:860px){
@@ -1016,11 +1048,12 @@ html,body{overflow-x:clip;}
   <div class="intro-left">
     <section class="hero">
       <div class="hero-text">
-            <h1 class="hero-title"><span class="ht-hello">Ahoy! I'm Firat <button type="button" class="wave-btn" id="hi5" aria-label="Give Firat a high five"><span class="wave-hand" aria-hidden="true">👋</span><span class="hi5-burst" aria-hidden="true"></span></button></span> <span class="ht-role">Omnichannel Marketing Strategist.</span> <span class="ht-role">SEO &amp; AI-search Consultant.</span> <span class="ht-role"><span class="accent">Curious by Default.</span></span></h1>
+            <h1 class="hero-title"><span class="ht-hello">Ahoy! I'm Firat <button type="button" class="wave-btn" id="hi5" aria-label="Give Firat a high five"><span class="wave-hand" aria-hidden="true">👋</span><span class="hi5-burst" aria-hidden="true"></span></button></span> <span class="ht-role">Digital Marketing Strategist.</span> <span class="ht-role">SEO &amp; AI-search Consultant.</span> <span class="ht-role"><span class="accent">Curious by Default.</span></span></h1>
         <p class="hero-sub">
-          Search is splitting between Google and AI answers, and paid clicks cost
-          more every quarter. I run SEO, AI visibility, paid media and email as one
-          ecosystem, so each channel feeds the others instead of competing for budget.
+          Your target audience move between Google, AI, social feeds and their inbox
+          before they ever talk to you. I connect SEO, AI-search, paid media, social and
+          email into one strategy, so you show up at every step and turn that attention
+          into pipeline.
         </p>
         <ul class="hero-proof" aria-label="At a glance">
           <li><strong class="counter" data-target="6" data-suffix="+">6+</strong> years in marketing</li>
@@ -1036,133 +1069,44 @@ html,body{overflow-x:clip;}
       <div class="whoami-grid">
         <div class="whoami-main reveal">
           <span class="code-label"><span class="code-slashes" aria-hidden="true">//</span> WHO AM I</span>
-          <h2 id="whoami-heading">Helping businesses stay visible as search moves to AI.</h2>
-          <p>I'm a Toronto-based digital marketing strategist with six years of
-            hands-on work across SEO, paid search, email and content. I've run marketing
-            in-house at <strong>Proco Machinery</strong>, <strong>Newell Outdoors</strong>, <strong>SISU Wellness</strong>,
-            <strong>Accuenergy</strong> and <strong>Yankee Lady</strong>, tripling organic
-            traffic, growing online sales 30% and helping drive $1M+ in new sales along the way.</p>
-          <p>Today I focus on what's changing fastest: helping businesses show up in
-            AI answers on ChatGPT, Perplexity and Google's AI Overviews, without losing
-            the search traffic that still pays the bills.</p>
-          <p class="whoami-personal">[Add a line about you outside work.]</p>
+          <h2 id="whoami-heading">Helping businesses grow with connected marketing.</h2>
+          <p>I'm a Toronto-based digital marketing strategist with six years of experience
+            across industries including energy, robotics and automation, hospitality,
+            e-commerce, and SaaS.</p>
+          <p>My approach starts with understanding your business, your customers, and where your
+            biggest growth opportunities are. I use data to see what's working, identify what's
+            holding you back, and build marketing strategies around the channels that connect you
+            with the right audience, in the right place, at the right time.</p>
+          <p class="whoami-personal">Outside of work, I'm a firm believer in dad jokes. I tried telling an email
+            marketing joke once, but nobody opened it.</p>
         </div>
       </div>
     </section>
   </div>
   <div class="intro-right">
+    <!-- Customer journey path (decorative, desktop only): the pinned photo "travels" down it as you scroll -->
+    <div class="journey" id="journey" aria-hidden="true">
+      <svg class="journey-svg"><path class="j-track"></path><path class="j-fill"></path></svg>
+      <span class="j-stop" data-stage="Awareness" data-channels="SEO &middot; AI search &middot; Social"></span>
+      <span class="j-stop" data-stage="Consideration" data-channels="Content &middot; Paid media"></span>
+      <span class="j-stop" data-stage="Purchase" data-channels="Landing pages &middot; Conversion Rate Optimization"></span>
+      <span class="j-stop" data-stage="Service" data-channels="Email &middot; Automation"></span>
+      <span class="j-stop" data-stage="Loyalty" data-channels="Retention &middot; Referrals"></span>
+      <span class="j-traveler" id="jTraveler"></span>
+    </div>
     <div class="hero-visual">
       <div class="hero-tilt glow-yellow" id="heroTilt">
         <div class="hero-glow" aria-hidden="true"></div>
         <div class="hero-grid" aria-hidden="true"></div>
         <img class="hero-image" src="images/firat-ulupinar.jpg" alt="Firat Ulupinar, digital marketing strategist, outdoors by a mountain lake" width="960" height="1280" loading="eager" fetchpriority="high" decoding="async">
         <div class="hero-frame" aria-hidden="true"></div>
-        <span class="hero-corner tl" aria-hidden="true"></span>
-        <span class="hero-corner br" aria-hidden="true"></span>
       </div>
+      <span class="j-label" id="jLabel" aria-hidden="true"></span>
     </div>
   </div>
 </div>
 
-<section class="services" id="services" aria-labelledby="services-heading">
-  <div class="services-inner">
-    <h2 class="code-label" id="services-heading"><span class="code-slashes" aria-hidden="true">//</span> WHAT I DO</h2>
-    <ol class="svc-list">
-
-      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-1">
-        <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
-        <div class="svc-body">
-          <h3 id="svc-1">AI Search</h3>
-          <p class="svc-line">Be the business AI recommends.</p>
-          <ul class="svc-tags"><li>AI visibility audit</li><li>Content AI can quote</li><li>Schema &amp; entity signals</li><li>Third-party mentions</li><li>Citation tracking</li></ul>
-        </div>
-        <div class="viz-wrap"><div class="viz viz-ai" aria-hidden="true">
-          <div class="ai-head"><span class="ai-dot"></span>AI answer</div>
-          <div class="ai-q">Who's the best HVAC company near me?</div>
-          <div class="ai-typing"><i></i><i></i><i></i></div>
-          <div class="ai-a">
-            <p>Here are top-rated options:</p>
-            <div class="ai-pick is-you"><b>1</b>Your Business<span class="ai-cite">Cited</span></div>
-            <div class="ai-pick"><b>2</b><span class="bar"></span></div>
-            <div class="ai-pick"><b>3</b><span class="bar short"></span></div>
-          </div>
-        </div></div>
-      </li>
-
-      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-2">
-        <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
-        <div class="svc-body">
-          <h3 id="svc-2">SEO</h3>
-          <p class="svc-line">Rank for the searches that bring in customers.</p>
-          <ul class="svc-tags"><li>Technical SEO</li><li>Keyword &amp; intent research</li><li>On-page optimization</li><li>Local SEO</li><li>Monthly reporting</li></ul>
-        </div>
-        <div class="viz-wrap"><div class="viz viz-seo" aria-hidden="true">
-          <div class="seo-bar"><span class="seo-icon"></span>hvac repair near me</div>
-          <div class="seo-results">
-            <div class="seo-row r1"><span class="seo-fav"></span><span class="bar"></span></div>
-            <div class="seo-row r2"><span class="seo-fav"></span><span class="bar short"></span></div>
-            <div class="seo-row r3"><span class="seo-fav"></span><span class="bar"></span></div>
-            <div class="seo-row you"><span class="seo-fav you-fav"></span><b>yourbusiness.com</b><span class="seo-rank">#1</span></div>
-          </div>
-        </div></div>
-      </li>
-
-      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-3">
-        <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
-        <div class="svc-body">
-          <h3 id="svc-3">Email Marketing</h3>
-          <p class="svc-line">Turn your list into repeat revenue.</p>
-          <ul class="svc-tags"><li>Lifecycle flows</li><li>Segmentation</li><li>Campaign calendar</li><li>Deliverability</li><li>Revenue reporting</li></ul>
-        </div>
-        <div class="viz-wrap"><div class="viz viz-email" aria-hidden="true">
-          <div class="mail-flow"><span class="node">Sign-up</span><span class="node">Welcome</span><span class="node">Offer</span><i class="mail-pulse"></i></div>
-          <div class="mail m1"><span class="env"></span><span class="subj">Welcome aboard</span><em>Opened</em></div>
-          <div class="mail m2"><span class="env"></span><span class="subj">Your first tip</span><em>Opened</em></div>
-          <div class="mail m3"><span class="env"></span><span class="subj">A little thank-you</span><em class="clicked">Clicked</em></div>
-        </div></div>
-      </li>
-
-      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-4">
-        <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
-        <div class="svc-body">
-          <h3 id="svc-4">PPC</h3>
-          <p class="svc-line">Paid traffic that pays for itself.</p>
-          <ul class="svc-tags"><li>Google Ads</li><li>Meta Ads</li><li>Landing pages</li><li>Conversion tracking</li><li>Creative testing</li></ul>
-        </div>
-        <div class="viz-wrap"><div class="viz viz-ppc" aria-hidden="true">
-          <div class="ppc-top"><span>Campaign overview</span><span class="ppc-pill"><i></i>Live</span></div>
-          <div class="ppc-chart">
-            <span style="--h:28%;--d:0s"></span><span style="--h:36%;--d:.08s"></span><span style="--h:44%;--d:.16s"></span><span style="--h:52%;--d:.24s"></span><span style="--h:63%;--d:.32s"></span><span style="--h:74%;--d:.4s"></span><span style="--h:88%;--d:.48s"></span>
-            <svg class="ppc-line" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline points="2,6 18,10 34,14 50,20 66,25 82,30 98,34" vector-effect="non-scaling-stroke"/></svg>
-          </div>
-          <div class="ppc-legend"><span><i class="lg-bar"></i>Leads</span><span><i class="lg-line"></i>Cost per lead</span></div>
-        </div></div>
-      </li>
-
-      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-5">
-        <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
-        <div class="svc-body">
-          <h3 id="svc-5">Copywriting</h3>
-          <p class="svc-line">Words that make people act.</p>
-          <ul class="svc-tags"><li>Website copy</li><li>Landing pages</li><li>Email copy</li><li>Ad copy</li><li>Brand voice</li></ul>
-        </div>
-        <div class="viz-wrap"><div class="viz viz-copy" aria-hidden="true">
-          <div class="cp-nav"><i></i><i></i><i></i></div>
-          <div class="cp-head">Get more calls this week.</div>
-          <div class="cp-lines"><span></span><span class="s"></span></div>
-          <div class="cp-btn">Book a free quote</div>
-          <svg class="cp-cursor" viewBox="0 0 24 24" width="18" height="18"><path d="M4 2l15 8.5-6.5 1.5L9.5 19z" fill="#152A24" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg>
-        </div></div>
-      </li>
-
-    </ol>
-  </div>
-</section>
-
-<section class="clients" aria-labelledby="brands-heading">
-  <div class="clients-head">
-    <h2 id="brands-heading">Brands I&rsquo;ve worked with, across energy, D2C ecommerce, robotics, hospitality and fitness.</h2>
-  </div>
+<section class="clients" aria-label="Brands I&rsquo;ve worked with">
   <!-- Slow, seamless logo loop. Each group holds the logos twice so it is wider than the screen; the second group is a visual copy. -->
   <div class="marquee">
     <div class="marquee-track">
@@ -1195,6 +1139,116 @@ html,body{overflow-x:clip;}
           <li aria-hidden="true"><img src="images/logos/fitfinder.png" alt="" width="40" height="30" loading="lazy" decoding="async"><span class="logo-word" aria-hidden="true">FitFinder</span></li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="services-heading">
+  <div class="services-inner">
+    <h2 class="code-label" id="services-heading"><span class="code-slashes" aria-hidden="true">//</span> WHAT I DO</h2>
+    <ol class="svc-list">
+
+      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-1">
+        <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
+        <div class="svc-body">
+          <h3 id="svc-1">SEO</h3>
+          <p class="svc-line">Rank for the searches your customers already make.</p>
+          <ul class="svc-tags"><li>Technical SEO audits</li><li>Keyword &amp; intent research</li><li>On-page optimization</li><li>Local SEO</li><li>Link building</li></ul>
+        </div>
+        <div class="viz-wrap"><div class="viz viz-seo" aria-hidden="true">
+          <div class="seo-bar"><span class="seo-icon"></span>hvac repair near me</div>
+          <div class="seo-results">
+            <div class="seo-row r1"><span class="seo-fav"></span><span class="bar"></span></div>
+            <div class="seo-row r2"><span class="seo-fav"></span><span class="bar short"></span></div>
+            <div class="seo-row r3"><span class="seo-fav"></span><span class="bar"></span></div>
+            <div class="seo-row you"><span class="seo-fav you-fav"></span><b>yourbusiness.com</b><span class="seo-rank">#1</span></div>
+          </div>
+        </div></div>
+      </li>
+
+      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-2">
+        <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
+        <div class="svc-body">
+          <h3 id="svc-2">AI Search</h3>
+          <p class="svc-line">Get your brand cited and recommended in AI answers.</p>
+          <ul class="svc-tags"><li>AI visibility audit</li><li>Answer-ready content</li><li>Schema &amp; entity signals</li><li>Brand mentions</li><li>Citation tracking</li></ul>
+        </div>
+        <div class="viz-wrap"><div class="viz viz-ai" aria-hidden="true">
+          <div class="ai-head"><span class="ai-dot"></span>AI answer</div>
+          <div class="ai-q">Who's the best HVAC company near me?</div>
+          <div class="ai-typing"><i></i><i></i><i></i></div>
+          <div class="ai-a">
+            <p>Here are top-rated options:</p>
+            <div class="ai-pick is-you"><b>1</b>Your Business<span class="ai-cite">Cited</span></div>
+            <div class="ai-pick"><b>2</b><span class="bar"></span></div>
+            <div class="ai-pick"><b>3</b><span class="bar short"></span></div>
+          </div>
+        </div></div>
+      </li>
+
+      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-3">
+        <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
+        <div class="svc-body">
+          <h3 id="svc-3">Social Media</h3>
+          <p class="svc-line">Build an audience that knows and trusts your brand.</p>
+          <ul class="svc-tags"><li>Content calendar</li><li>Platform strategy</li><li>Post creation</li><li>Community engagement</li><li>Performance reporting</li></ul>
+        </div>
+        <div class="viz-wrap"><div class="viz viz-social" aria-hidden="true">
+          <div class="soc-head"><span>Content calendar</span><span class="soc-pill"><i></i>Scheduled</span></div>
+          <div class="soc-days"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+          <div class="soc-cal"><span></span><span class="post p1"></span><span></span><span class="post p2"></span><span></span><span class="post p3"></span><span></span><span></span><span class="post p4"></span><span></span><span class="post p5"></span><span></span><span class="post p6"></span><span></span></div>
+          <div class="soc-post"><span class="soc-avatar"></span><span class="soc-lines"><span class="bar"></span><span class="bar short"></span></span><span class="soc-like">&#9829; <b>Engaged</b></span></div>
+        </div></div>
+      </li>
+
+      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-4">
+        <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
+        <div class="svc-body">
+          <h3 id="svc-4">Paid Media</h3>
+          <p class="svc-line">Reach ready-to-buy audiences and turn clicks into leads.</p>
+          <ul class="svc-tags"><li>Google Ads</li><li>Meta &amp; LinkedIn Ads</li><li>Audience targeting</li><li>Landing page A/B tests</li><li>Conversion tracking</li></ul>
+        </div>
+        <div class="viz-wrap"><div class="viz viz-ppc" aria-hidden="true">
+          <div class="ppc-top"><span>Campaign overview</span><span class="ppc-pill"><i></i>Live</span></div>
+          <div class="ppc-chart">
+            <span style="--h:28%;--d:0s"></span><span style="--h:36%;--d:.08s"></span><span style="--h:44%;--d:.16s"></span><span style="--h:52%;--d:.24s"></span><span style="--h:63%;--d:.32s"></span><span style="--h:74%;--d:.4s"></span><span style="--h:88%;--d:.48s"></span>
+            <svg class="ppc-line" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline points="2,6 18,10 34,14 50,20 66,25 82,30 98,34" vector-effect="non-scaling-stroke"/></svg>
+          </div>
+          <div class="ppc-legend"><span><i class="lg-bar"></i>Leads</span><span><i class="lg-line"></i>Cost per lead</span></div>
+        </div></div>
+      </li>
+
+      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-5">
+        <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
+        <div class="svc-body">
+          <h3 id="svc-5">Content &amp; Copywriting</h3>
+          <p class="svc-line">Turn visitors into leads with clear, persuasive messaging.</p>
+          <ul class="svc-tags"><li>Website &amp; landing page copy</li><li>SEO blog content</li><li>Product launch content</li><li>Video scripts &amp; press releases</li><li>Brand voice</li></ul>
+        </div>
+        <div class="viz-wrap"><div class="viz viz-copy" aria-hidden="true">
+          <div class="cp-nav"><i></i><i></i><i></i></div>
+          <div class="cp-head">Get more calls this week.</div>
+          <div class="cp-lines"><span></span><span class="s"></span></div>
+          <div class="cp-btn">Book a free quote</div>
+          <svg class="cp-cursor" viewBox="0 0 24 24" width="18" height="18"><path d="M4 2l15 8.5-6.5 1.5L9.5 19z" fill="#152A24" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg>
+        </div></div>
+      </li>
+
+      <li class="svc" tabindex="0" role="group" aria-labelledby="svc-6">
+        <span class="svc-num" aria-hidden="true"><span class="svc-cursor"></span></span>
+        <div class="svc-body">
+          <h3 id="svc-6">Email &amp; CRM Automation</h3>
+          <p class="svc-line">Nurture leads into customers, and customers into repeat buyers.</p>
+          <ul class="svc-tags"><li>CRM setup &amp; integration</li><li>Automated lifecycle flows</li><li>Lead nurturing</li><li>Segmentation &amp; A/B testing</li><li>HubSpot &amp; Mailchimp</li></ul>
+        </div>
+        <div class="viz-wrap"><div class="viz viz-email" aria-hidden="true">
+          <div class="mail-flow"><span class="node">New lead</span><span class="node">Nurture</span><span class="node">Customer</span><i class="mail-pulse"></i></div>
+          <div class="mail m1"><span class="env"></span><span class="subj">Welcome aboard</span><em>Opened</em></div>
+          <div class="mail m2"><span class="env"></span><span class="subj">Your first tip</span><em>Opened</em></div>
+          <div class="mail m3"><span class="env"></span><span class="subj">Ready to talk?</span><em class="clicked">Clicked</em></div>
+        </div></div>
+      </li>
+
+    </ol>
   </div>
 </section>
 
@@ -1351,6 +1405,82 @@ html,body{overflow-x:clip;}
     if('IntersectionObserver' in window){
       new IntersectionObserver((es) => es.forEach(e => svcSection.classList.toggle('is-visible', e.isIntersecting)), { threshold: 0.05 }).observe(svcSection);
     } else { svcSection.classList.add('is-visible'); }
+  }
+
+  // Customer journey path: the pinned photo "travels" down a gentle wavy path; stages light up as it passes.
+  // Purely scroll-driven (nothing animates on its own) and desktop-only, where the photo is sticky.
+  const journey = document.getElementById('journey');
+  if(journey){
+    const col = journey.parentElement, visual = col.querySelector('.hero-visual'), textCol = document.querySelector('.intro-left');
+    const track = journey.querySelector('.j-track'), fill = journey.querySelector('.j-fill'), svg = journey.querySelector('svg');
+    const stops = [...journey.querySelectorAll('.j-stop')];
+    const traveler = document.getElementById('jTraveler'), label = document.getElementById('jLabel');
+    let pts = [], cum = [], total = 0, stopY = [], active = -1, ticking = false;
+    let photoStart = 0, photoEnd = 1, waveStart = 0, waveSeg = 1;
+
+    function layout(){
+      if(window.innerWidth <= 860){ col.style.paddingBottom = ''; return; }
+      // Stop the pinned photo so that, at the last stage, the label's bottom line sits level with
+      // the last line of the "Who am I" text.
+      if(!label.textContent){ label.innerHTML = '01 &middot; <b>Stage</b><span class="j-ch">Channels</span>'; }
+      const lastText = textCol.querySelector('.whoami-main p:last-of-type');
+      if(lastText){
+        col.style.paddingBottom = '';
+        const lt = lastText.getBoundingClientRect(), cTop = col.getBoundingClientRect().top;
+        const lineH = parseFloat(getComputedStyle(lastText).lineHeight) || 0;
+        const reveal = lastText.closest('.reveal');                                   // ignore the fade-in slide offset
+        const slide = reveal && window.DOMMatrixReadOnly ? new DOMMatrixReadOnly(getComputedStyle(reveal).transform).m42 : 0;
+        const textBottom = lt.bottom - slide - cTop - Math.max(0, (lineH - parseFloat(getComputedStyle(lastText).fontSize)) / 2);
+        const labelBottom = label.offsetTop + label.offsetHeight - visual.offsetHeight;   // label bottom below the photo
+        col.style.paddingBottom = Math.max(0, col.offsetHeight - (textBottom - labelBottom)) + 'px';
+      }
+      const c = col.getBoundingClientRect(), v = visual.getBoundingClientRect(), t = textCol.getBoundingClientRect();
+      const pathX = t.right + (v.left - t.right) * 0.32;      // closer to the text, leaving more air before the photo
+      journey.style.left = (pathX - c.left - 20) + 'px';
+      const H = col.offsetHeight, half = visual.offsetHeight / 2;
+      const top = parseFloat(getComputedStyle(visual).marginTop) || 0;
+      const pad = parseFloat(getComputedStyle(col).paddingBottom) || 0;
+      // the path (and the first stage) starts level with the first line of the hero intro paragraph
+      const intro = textCol.querySelector('.hero-sub'), ic = intro ? getComputedStyle(intro) : null;
+      const pathTop = intro ? intro.getBoundingClientRect().top - c.top + (parseFloat(ic.lineHeight) - parseFloat(ic.fontSize)) / 2 : top;
+      const yStart = pathTop, yEnd = H - pad - half, seg = (yEnd - yStart) / (stops.length - 1);
+      stopY = stops.map((s, i) => { const y = yStart + seg * i; s.style.top = y + 'px'; return y; });
+      photoStart = top + half; photoEnd = yEnd; waveStart = yStart; waveSeg = seg;   // photo centre at first and last scroll position
+      // gentle wave that crosses the centre line exactly at each stop; it ends at the last milestone
+      pts = []; for(let y = pathTop; y <= yEnd + 0.1; y += 6){ pts.push([20 + 7 * Math.sin(Math.PI * (y - yStart) / seg), y]); }
+      cum = [0]; for(let i = 1; i < pts.length; i++){ cum.push(cum[i-1] + Math.hypot(pts[i][0]-pts[i-1][0], pts[i][1]-pts[i-1][1])); }
+      total = cum[cum.length - 1];
+      const d = 'M' + pts.map(p => p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' L');
+      svg.setAttribute('viewBox', '0 0 40 ' + H);
+      track.setAttribute('d', d); fill.setAttribute('d', d);
+      fill.style.strokeDasharray = total; active = -1;
+      update();
+    }
+    function update(){
+      ticking = false;
+      if(window.innerWidth <= 860 || !pts.length) return;
+      const c = col.getBoundingClientRect(), v = visual.getBoundingClientRect();
+      // Map the photo's scroll travel onto the path from the first to the last milestone,
+      // so the dot rides the curve and sits exactly on each milestone as that stage switches on.
+      const pc = v.top - c.top + v.height / 2;
+      const p = pc >= photoEnd - 1 ? 1 : Math.max(0, Math.min(1, (pc - photoStart) / Math.max(1, photoEnd - photoStart)));   // snap within 1px (pixel rounding)
+      const ty = stopY[0] + p * (stopY[stopY.length - 1] - stopY[0]);
+      const tx = 20 + 7 * Math.sin(Math.PI * (ty - waveStart) / waveSeg);
+      traveler.style.transform = 'translate(' + tx.toFixed(2) + 'px,' + ty.toFixed(2) + 'px)';
+      let i = Math.max(0, Math.min(pts.length - 1, Math.round((ty - pts[0][1]) / 6)));
+      fill.style.strokeDashoffset = total - cum[i];
+      let cur = 0; stopY.forEach((y, k) => { const on = y <= ty + 1; stops[k].classList.toggle('is-on', on); if(on) cur = k; });
+      if(cur !== active){
+        active = cur;
+        label.innerHTML = '0' + (cur + 1) + ' &middot; <b>' + stops[cur].dataset.stage + '</b><span class="j-ch"></span>';
+        label.querySelector('.j-ch').textContent = stops[cur].dataset.channels || '';
+      }
+    }
+    window.addEventListener('scroll', () => { if(!ticking){ ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    window.addEventListener('resize', layout);
+    window.addEventListener('load', layout);
+    if(document.fonts && document.fonts.ready) document.fonts.ready.then(layout);   // re-measure once web fonts settle
+    layout();
   }
 
   // High-five: clicking the waving hand plays a short synthesized clap (no audio file) and a pop animation.
