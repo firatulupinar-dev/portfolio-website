@@ -142,7 +142,7 @@ body{
 /* NAV */
 header{
   position:sticky;top:0;z-index:20;
-  background:rgba(251,247,240,.92);
+  background:rgba(254,244,222,.94);
   backdrop-filter:blur(6px);
   border-bottom:1px solid var(--line);
 }
@@ -463,14 +463,22 @@ header nav a:hover,header nav a.active{opacity:1;}
 }
 
 /* CONTACT */
-.contact{padding:100px 32px 84px;max-width:1120px;margin:0 auto;border-top:1px solid var(--line);}
-.contact h2{
-  font-family:var(--font-sans);font-weight:700;font-size:clamp(1.9rem, 4.6vw, 3.1rem);
-  max-width:680px;line-height:1.15;letter-spacing:-.01em;
-}
-.contact h2 .accent{color:var(--ink);background:linear-gradient(transparent 64%, rgba(245,185,35,.6) 64%, rgba(245,185,35,.6) 92%, transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone;}
-.contact-row{margin-top:36px;display:flex;gap:18px;align-items:center;flex-wrap:wrap;}
+.contact{padding:88px 32px 96px;max-width:1120px;margin:0 auto;}
+/* dark banner card: pitch on the left, one gold button on the right */
+.contact-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px 56px;align-items:center;background:var(--dark);color:var(--paper);border:1px solid rgba(254,244,222,.08);border-radius:18px;padding:52px 56px;box-shadow:0 30px 60px -36px rgba(21,42,36,.7);}
+.contact-card .code-label{margin-bottom:16px;color:var(--accent);font-size:12px;}
+.contact-card .code-slashes{color:var(--accent);}
+.contact .contact-card h2{font-family:var(--font-sans);font-weight:700;font-size:clamp(1.75rem,1.3rem + 1.6vw,2.5rem);max-width:600px;line-height:1.12;letter-spacing:-.03em;color:var(--paper);text-wrap:balance;}
+.contact-card h2 .accent{color:var(--accent);}
+.contact-sub{margin-top:16px;max-width:520px;font-size:1.0625rem;line-height:1.6;color:rgba(254,244,222,.68);}
+.contact-row{display:flex;flex-direction:column;align-items:flex-start;gap:14px;text-align:left;}
+.contact-card .btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--accent-ink);border-radius:10px;padding:15px 22px;font-weight:700;transition:background .2s,transform .2s;}
+.contact-card .btn-primary svg{width:16px;height:16px;flex-shrink:0;}
+.contact-card .btn-primary:hover{background:var(--paper);color:var(--accent-ink);}
 .contact-alt{font-family:var(--font-sans);font-size:13px;color:var(--ink-soft);}
+.contact .contact-alt{font-family:var(--font-sans);font-size:13px;line-height:1.55;color:rgba(254,244,222,.6);}
+.contact-alt a{color:var(--paper);font-weight:600;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px;}
+@media (max-width:900px){ .contact-card{grid-template-columns:1fr;gap:28px;padding:40px 28px;} .contact-row{align-items:flex-start;text-align:left;} }
 
 /* BACK TO TOP */
 .back-to-top{
@@ -694,6 +702,7 @@ footer{
 .ai-pick{display:flex;align-items:center;gap:8px;padding:3px 0;}
 .ai-pick b{width:16px;height:16px;border-radius:50%;background:var(--paper-alt);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:9px;}
 .ai-pick.is-you{font-weight:700;}
+.ai-pick small{font-size:9px;font-weight:500;color:var(--ink-soft);}
 .ai-pick.is-you b{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);}
 .ai-cite{margin-left:auto;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--accent);color:var(--accent-ink);padding:2px 7px;border-radius:999px;animation:ai-cite 7s infinite;}
 @keyframes ai-q{0%{opacity:0;transform:translateY(6px)}6%,92%{opacity:1;transform:none}100%{opacity:0}}
@@ -710,6 +719,9 @@ footer{
 .seo-results{position:relative;height:138px;}
 .seo-row{position:absolute;left:0;right:0;top:0;height:30px;display:flex;align-items:center;gap:8px;padding:0 10px;background:#fff;border:1px solid var(--line);border-radius:7px;}
 .seo-fav{width:12px;height:12px;border-radius:3px;background:#E9E1CF;flex-shrink:0;}
+.seo-row{font-size:10px;}
+.seo-row b{flex-shrink:0;}
+.seo-t{flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;color:var(--ink-soft);}
 .seo-row.you{border-color:var(--accent);box-shadow:0 0 0 2px rgba(245,185,35,.25);z-index:2;transform:translateY(0);animation:seo-you 7s infinite;}
 .you-fav{background:var(--accent);}
 .seo-rank{margin-left:auto;font-weight:700;font-size:10px;background:var(--accent);color:var(--accent-ink);padding:2px 7px;border-radius:999px;animation:seo-rank 7s infinite;}
@@ -724,15 +736,16 @@ footer{
 
 /* 03 Email flow */
 .viz-email{padding:14px 16px;}
-.mail-flow{position:relative;display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+.em-head{display:flex;justify-content:space-between;align-items:center;font-weight:600;margin-bottom:10px;}
+.mail-flow{position:relative;display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
 .mail-flow::before{content:"";position:absolute;left:12%;right:12%;top:50%;height:2px;background:var(--line);}
 .mail-flow .node{position:relative;z-index:1;background:#fff;border:1px solid var(--line);border-radius:6px;padding:5px 9px;font-size:10px;font-weight:600;}
 .mail-pulse{position:absolute;z-index:0;top:calc(50% - 4px);left:86%;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px rgba(245,185,35,.3);animation:mail-pulse 6s infinite;}
-.mail{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:7px;padding:7px 10px;margin-bottom:6px;}
+.mail{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:7px;padding:6px 10px;margin-bottom:6px;}
 .env{width:14px;height:10px;border:1.5px solid var(--ink-soft);border-radius:2px;flex-shrink:0;position:relative;}
 .env::after{content:"";position:absolute;left:1px;right:1px;top:-1px;height:6px;border-bottom:1.5px solid var(--ink-soft);transform:skewY(0);clip-path:polygon(0 0,50% 100%,100% 0);background:var(--ink-soft);opacity:.35;}
-.mail .subj{font-weight:600;}
-.mail em{margin-left:auto;font-style:normal;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#2F6B37;background:#E3F1E4;padding:2px 7px;border-radius:999px;}
+.mail .subj{flex:1;min-width:0;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.mail em{margin-left:auto;flex-shrink:0;white-space:nowrap;font-style:normal;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#2F6B37;background:#E3F1E4;padding:2px 7px;border-radius:999px;}
 .mail em.clicked{color:var(--accent-ink);background:var(--accent);}
 .mail.m1{animation:mail-in1 6s infinite;}.mail.m2{animation:mail-in2 6s infinite;}.mail.m3{animation:mail-in3 6s infinite;}
 .mail.m1 em{animation:tag-in1 6s infinite;}.mail.m2 em{animation:tag-in2 6s infinite;}.mail.m3 em{animation:tag-in3 6s infinite;}
@@ -746,10 +759,15 @@ footer{
 
 /* 04 PPC chart */
 .viz-ppc{padding:14px 16px;}
-.ppc-top{display:flex;justify-content:space-between;align-items:center;font-weight:600;margin-bottom:10px;}
+.ppc-top{display:flex;justify-content:space-between;align-items:center;font-weight:600;margin-bottom:8px;}
+.ppc-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:10px;}
+.ppc-kpis div{background:#fff;border:1px solid var(--line);border-radius:6px;padding:4px 8px;}
+.ppc-kpis span{display:block;font-size:8.5px;font-weight:600;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.04em;}
+.ppc-kpis b{font-size:13px;letter-spacing:-.02em;}
+.ppc-kpis i{font-style:normal;font-size:9px;font-weight:700;color:#2F6B37;margin-left:4px;}
 .ppc-pill{display:flex;align-items:center;gap:5px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;background:#E3F1E4;color:#2F6B37;padding:3px 8px;border-radius:999px;}
 .ppc-pill i{width:6px;height:6px;border-radius:50%;background:#5FA968;}
-.ppc-chart{position:relative;height:118px;display:flex;align-items:flex-end;gap:9px;padding:0 4px;border-bottom:1px solid var(--line);}
+.ppc-chart{position:relative;height:72px;display:flex;align-items:flex-end;gap:9px;padding:0 4px;border-bottom:1px solid var(--line);}
 .ppc-chart span{flex:1;height:var(--h);background:linear-gradient(180deg,var(--accent),#E9C46A);border-radius:4px 4px 0 0;transform-origin:bottom;animation:ppc-bar 6s infinite;animation-delay:var(--d);}
 .ppc-line{position:absolute;inset:6px 4px 10px;width:calc(100% - 8px);height:calc(100% - 16px);overflow:visible;}
 .ppc-line polyline{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:200;stroke-dashoffset:0;animation:ppc-line 6s infinite;}
@@ -768,14 +786,16 @@ footer{
 .soc-days,.soc-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;}
 .soc-days{margin-bottom:4px;font-size:9px;font-weight:600;color:var(--ink-soft);text-align:center;}
 .soc-cal span{height:22px;border-radius:5px;background:#fff;border:1px solid var(--line);}
-.soc-cal .post{position:relative;}
-.soc-cal .post::after{content:"";position:absolute;inset:3px;border-radius:3px;background:var(--accent);transform:scale(0);animation:soc-fill 7s infinite;}
-.soc-cal .p2::after,.soc-cal .p5::after{background:var(--ink);}
-.soc-cal .p1::after{animation-delay:.2s}.soc-cal .p2::after{animation-delay:.5s}.soc-cal .p3::after{animation-delay:.8s}
-.soc-cal .p4::after{animation-delay:1.1s}.soc-cal .p5::after{animation-delay:1.4s}.soc-cal .p6::after{animation-delay:1.7s}
+.soc-cal .post{position:relative;display:flex;align-items:center;justify-content:center;}
+.soc-cal .post::after{content:"";position:absolute;inset:3px;border-radius:3px;background:var(--accent);transform:scale(0);animation:soc-fill 7s infinite;animation-delay:var(--d);}
+.soc-cal .dk::after{background:var(--ink);}
+.soc-cal .post b{position:relative;z-index:1;font-size:8px;font-weight:700;color:var(--accent-ink);transform:scale(0);animation:soc-fill 7s infinite;animation-delay:var(--d);}
+.soc-cal .dk b{color:var(--paper);}
 .soc-post{display:flex;align-items:center;gap:8px;margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:7px 10px;animation:soc-post 7s infinite;}
 .soc-avatar{width:16px;height:16px;border-radius:50%;background:var(--ink);flex-shrink:0;}
-.soc-lines{display:flex;flex-direction:column;gap:4px;flex:1;}
+.soc-lines{display:flex;flex-direction:column;gap:1px;flex:1;min-width:0;}
+.soc-lines b{font-size:10px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.soc-lines small{font-size:9px;color:var(--ink-soft);}
 .soc-lines .bar{width:100%;}
 .soc-lines .bar.short{width:60%;}
 .soc-like{margin-left:auto;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:var(--accent);color:var(--accent-ink);padding:2px 7px;border-radius:999px;white-space:nowrap;animation:soc-like 7s infinite;}
@@ -786,11 +806,13 @@ footer{
 
 /* 05 Copy: typed headline + CTA click */
 .viz-copy{padding:14px 16px;}
-.cp-nav{display:flex;gap:5px;margin-bottom:16px;}
+.cp-nav{display:flex;align-items:center;gap:5px;margin-bottom:14px;}
+.cp-nav span{margin-left:8px;font-size:9px;color:var(--ink-soft);background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 10px;}
 .cp-nav i{width:7px;height:7px;border-radius:50%;background:#E9E1CF;}
-.cp-head{font-size:19px;font-weight:800;letter-spacing:-.02em;white-space:nowrap;margin-bottom:10px;clip-path:inset(0 0 0 0);animation:cp-type 7s infinite steps(25,end);}
-.cp-lines span{display:block;height:7px;border-radius:4px;background:#E9E1CF;width:88%;margin-bottom:6px;}
-.cp-lines span.s{width:62%;}
+.cp-head{font-size:19px;font-weight:800;letter-spacing:-.02em;white-space:nowrap;margin-bottom:10px;clip-path:inset(0 0 0 0);animation:cp-type 7s infinite steps(26,end);}
+.cp-sub{font-size:10.5px;line-height:1.45;color:var(--ink-soft);max-width:250px;}
+.cp-ab{position:absolute;right:14px;bottom:14px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;background:#E3F1E4;color:#2F6B37;padding:3px 8px;border-radius:999px;animation:cp-ab 7s infinite;}
+@keyframes cp-ab{0%,74%{opacity:0;transform:translateY(6px)}80%,92%{opacity:1;transform:none}100%{opacity:0}}
 .cp-btn{display:inline-block;margin-top:10px;background:var(--ink);color:var(--paper);font-weight:700;padding:8px 14px;border-radius:5px;animation:cp-btn 7s infinite;}
 .cp-cursor{position:absolute;left:86px;top:128px;animation:cp-cursor 7s infinite;}
 @keyframes cp-type{0%{clip-path:inset(0 100% 0 0)}38%,92%{clip-path:inset(0 0 0 0)}100%{clip-path:inset(0 100% 0 0)}}
@@ -963,13 +985,28 @@ html,body{overflow-x:clip;}
 .cover-pair img{max-width:none;}
 .cover-pair i{width:1px;height:28px;background:rgba(254,244,222,.25);}
 .work-body{flex:1;display:flex;flex-direction:column;padding:18px 4px 0;}
-.work-meta{display:flex;flex-wrap:wrap;gap:4px 10px;font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px;}
+.work-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:10px;}
+.work-meta span:first-child{color:var(--ink);font-weight:700;}
 .work-meta span + span::before{content:"\00B7";margin-right:10px;color:var(--accent);font-weight:700;}
 .work-card h3{font-size:clamp(1.0625rem,1rem + .35vw,1.25rem);font-weight:700;line-height:1.3;letter-spacing:-.025em;color:var(--ink);margin-bottom:16px;transition:color .25s ease;}
-.work-stats{display:flex;gap:28px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line);}
-.work-stats div{display:flex;flex-direction:column-reverse;gap:2px;}
-.work-stats dd{font-size:1.375rem;font-weight:700;letter-spacing:-.035em;line-height:1.1;color:var(--ink);}
-.work-stats dt{font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);}
+/* key result: one big number with a gold trend badge, label stacked beside it */
+.work-stats{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);}
+.work-stats div{display:flex;flex-direction:row-reverse;justify-content:flex-end;align-items:center;gap:12px;}
+.work-stats dd{display:flex;align-items:center;gap:12px;font-size:2.125rem;font-weight:800;letter-spacing:-.045em;line-height:1;color:var(--ink);}
+.work-stats dd::before{content:"";flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23152A24' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M7 17L17 7M9 7h8v8'/%3E%3C/svg%3E") center/15px no-repeat;}
+.work-stats dt{max-width:9ch;font-family:var(--font-mono);font-size:10.5px;font-weight:600;line-height:1.4;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);}
+.work-stats .no-trend dd::before{display:none;}
+/* option B (default): result number lives in the stat row; cover keeps the centred ring */
+.cover-result{display:none;}
+/* option A (.v-result): the result is the hero of the cover, the channel ring becomes a side accent */
+.v-result .cover-result{position:absolute;z-index:1;left:8%;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;max-width:44%;}
+.v-result .cover-result b{font-size:clamp(2.25rem,1.6rem + 1.6vw,3rem);font-weight:800;letter-spacing:-.05em;line-height:.95;color:var(--accent);}
+.v-result .cover-result small{font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;line-height:1.4;color:rgba(254,244,222,.75);}
+.v-result .work-cover .ring{left:auto;right:4%;height:76%;transform:translate(0,-50%) rotate(0deg);}
+.v-result .work-card:hover .ring,.v-result .work-card:focus-visible .ring{transform:translate(0,-50%) rotate(14deg);}
+.v-result .work-stats{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+.v-result .work-card h3{margin-bottom:0;}
+@media (prefers-reduced-motion:reduce){ .v-result .work-card:hover .ring{transform:translate(0,-50%);} }
 .work-card:hover .work-cover,.work-card:focus-visible .work-cover{transform:translateY(-4px);box-shadow:0 26px 44px -26px rgba(21,42,36,.6);}
 .work-card:focus-visible .work-cover{outline:2px solid var(--accent);outline-offset:3px;}
 /* channel ring: visible at rest so the channels are spotted first; draws in once as the card scrolls into view;
@@ -1070,6 +1107,31 @@ html,body{overflow-x:clip;}
 @media (max-width:360px){
   header nav a{padding:10px 4px;}
 }
+
+/* ---- OPEN HEADER: no bar. Logo and name left, links centred, call to action right; the top fades softly into the page ---- */
+header{background:linear-gradient(to bottom,var(--paper) 0%,rgba(254,244,222,.9) 55%,rgba(254,244,222,0) 100%);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:0;transition:background .3s ease;}
+.nav-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;max-width:1120px;padding:16px 32px 30px;}
+.wordmark-group{grid-column:1;grid-row:1;justify-self:start;}
+header nav{grid-column:2;grid-row:1;justify-self:center;}
+.nav-cta{grid-column:3;grid-row:1;justify-self:end;}
+.brand .logo{width:30px;height:30px;}
+header nav ul{gap:6px;}
+header nav a{display:inline-block;padding:6px 12px;border:1px solid transparent;border-radius:8px;font-size:15px;font-weight:400;color:var(--ink);opacity:1;transition:border-color .2s ease,background .2s ease;}
+header nav a:hover,header nav a:focus-visible,header nav a[aria-current]{border-color:rgba(21,42,36,.16);background:rgba(255,255,255,.5);opacity:1;outline:none;}
+.nav-cta{padding:9px 16px;border:1px solid var(--ink);border-radius:8px;background:var(--ink);color:var(--paper);font-size:14px;font-weight:600;transition:background .2s ease,border-color .2s ease,color .2s ease;}
+.nav-cta:hover,.nav-cta:focus-visible{background:var(--accent);border-color:var(--accent);color:var(--dark);}
+/* over a dark section the header flips to a dark fade with cream text */
+header.on-dark{background:linear-gradient(to bottom,var(--dark) 0%,rgba(21,42,36,.9) 55%,rgba(21,42,36,0) 100%);}
+header.on-dark .bt,header.on-dark nav a{color:var(--paper);}
+header.on-dark nav a:hover,header.on-dark nav a:focus-visible,header.on-dark nav a[aria-current]{border-color:rgba(254,244,222,.25);background:rgba(254,244,222,.08);}
+header.on-dark .nav-cta{background:var(--accent);border-color:var(--accent);color:var(--dark);}
+header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);}
+@media (max-width:860px){
+  .nav-inner{grid-template-columns:auto 1fr;padding:14px 20px 26px;}
+  header nav{grid-column:2;justify-self:end;}
+}
+@media (max-width:640px){ header nav ul{gap:0;} header nav a{padding:6px 8px;font-size:14px;} }
+@media (max-width:360px){ header nav a{padding:6px 5px;} }
 </style>
 </head>
 <body>
@@ -1090,6 +1152,18 @@ html,body{overflow-x:clip;}
     <a class="nav-cta" href="contact.html#book">Book a call</a>
   </div>
 </header>
+<script>
+/* flip the open header to its dark style while it sits over the dark What I do section */
+document.addEventListener('DOMContentLoaded', function(){
+  var header = document.querySelector('header'), dark = document.getElementById('services');
+  if(!header || !dark) return;
+  var ticking = false;
+  function check(){ ticking = false; var r = dark.getBoundingClientRect(), mid = header.offsetHeight / 2; header.classList.toggle('on-dark', r.top < mid && r.bottom > mid); }
+  window.addEventListener('scroll', function(){ if(!ticking){ ticking = true; requestAnimationFrame(check); } }, { passive: true });
+  window.addEventListener('resize', check);
+  check();
+});
+</script>
 
 <main id="main" tabindex="-1">
 <div class="intro-split">
@@ -1203,12 +1277,12 @@ html,body{overflow-x:clip;}
           <ul class="svc-tags"><li>On-page &amp; technical SEO audits</li><li>Keyword &amp; intent research</li><li>Content &amp; keyword mapping</li><li>Local SEO</li><li>Link building</li></ul>
         </div>
         <div class="viz-wrap"><div class="viz viz-seo" aria-hidden="true">
-          <div class="seo-bar"><span class="seo-icon"></span>hvac repair near me</div>
+          <div class="seo-bar"><span class="seo-icon"></span>emergency ac repair toronto</div>
           <div class="seo-results">
-            <div class="seo-row r1"><span class="seo-fav"></span><span class="bar"></span></div>
-            <div class="seo-row r2"><span class="seo-fav"></span><span class="bar short"></span></div>
-            <div class="seo-row r3"><span class="seo-fav"></span><span class="bar"></span></div>
-            <div class="seo-row you"><span class="seo-fav you-fav"></span><b>yourbusiness.com</b><span class="seo-rank">#1</span></div>
+            <div class="seo-row r1"><span class="seo-fav" style="background:#D9534F"></span><b>yelp.ca</b><span class="seo-t">10 Best AC Repair Services in Toronto</span></div>
+            <div class="seo-row r2"><span class="seo-fav" style="background:#5B8DEF"></span><b>homestars.com</b><span class="seo-t">Top-Rated HVAC Contractors</span></div>
+            <div class="seo-row r3"><span class="seo-fav" style="background:#8C8C8C"></span><b>coolairpros.ca</b><span class="seo-t">AC Repair &amp; Installation</span></div>
+            <div class="seo-row you"><span class="seo-fav you-fav"></span><b>yourbusiness.com</b><span class="seo-t">24/7 AC Repair in Toronto</span><span class="seo-rank">#1</span></div>
           </div>
         </div></div>
       </li>
@@ -1225,10 +1299,10 @@ html,body{overflow-x:clip;}
           <div class="ai-q">Who's the best HVAC company near me?</div>
           <div class="ai-typing"><i></i><i></i><i></i></div>
           <div class="ai-a">
-            <p>Here are top-rated options:</p>
-            <div class="ai-pick is-you"><b>1</b>Your Business<span class="ai-cite">Cited</span></div>
-            <div class="ai-pick"><b>2</b><span class="bar"></span></div>
-            <div class="ai-pick"><b>3</b><span class="bar short"></span></div>
+            <p>Top-rated options in Toronto:</p>
+            <div class="ai-pick is-you"><b>1</b>Your Business<small>4.9&#9733; &middot; 24/7</small><span class="ai-cite">Cited</span></div>
+            <div class="ai-pick"><b>2</b>CoolAir Pros<small>4.6&#9733;</small></div>
+            <div class="ai-pick"><b>3</b>Metro Heating &amp; Air<small>4.4&#9733;</small></div>
           </div>
         </div></div>
       </li>
@@ -1241,10 +1315,10 @@ html,body{overflow-x:clip;}
           <ul class="svc-tags"><li>Content calendar</li><li>Platform strategy</li><li>Post creation</li><li>Community engagement</li><li>Performance reporting</li></ul>
         </div>
         <div class="viz-wrap"><div class="viz viz-social" aria-hidden="true">
-          <div class="soc-head"><span>Content calendar</span><span class="soc-pill"><i></i>Scheduled</span></div>
+          <div class="soc-head"><span>Content calendar &middot; June</span><span class="soc-pill"><i></i>6 scheduled</span></div>
           <div class="soc-days"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
-          <div class="soc-cal"><span></span><span class="post p1"></span><span></span><span class="post p2"></span><span></span><span class="post p3"></span><span></span><span></span><span class="post p4"></span><span></span><span class="post p5"></span><span></span><span class="post p6"></span><span></span></div>
-          <div class="soc-post"><span class="soc-avatar"></span><span class="soc-lines"><span class="bar"></span><span class="bar short"></span></span><span class="soc-like">&#9829; <b>Engaged</b></span></div>
+          <div class="soc-cal"><span></span><span class="post" style="--d:.2s"><b>Reel</b></span><span></span><span class="post dk" style="--d:.5s"><b>Blog</b></span><span></span><span class="post" style="--d:.8s"><b>Post</b></span><span></span><span></span><span class="post" style="--d:1.1s"><b>Story</b></span><span></span><span class="post dk" style="--d:1.4s"><b>Ad</b></span><span></span><span class="post" style="--d:1.7s"><b>Reel</b></span><span></span></div>
+          <div class="soc-post"><span class="soc-avatar"></span><span class="soc-lines"><b>5 signs your AC needs a tune-up</b><small>Instagram &middot; Reel</small></span><span class="soc-like">&#9829; <b>1.2K</b></span></div>
         </div></div>
       </li>
 
@@ -1256,7 +1330,8 @@ html,body{overflow-x:clip;}
           <ul class="svc-tags"><li>Google Ads</li><li>Meta &amp; LinkedIn Ads</li><li>Audience targeting</li><li>Landing page A/B tests</li><li>Conversion tracking</li></ul>
         </div>
         <div class="viz-wrap"><div class="viz viz-ppc" aria-hidden="true">
-          <div class="ppc-top"><span>Campaign overview</span><span class="ppc-pill"><i></i>Live</span></div>
+          <div class="ppc-top"><span>Google Ads &middot; Summer AC campaign</span><span class="ppc-pill"><i></i>Live</span></div>
+          <div class="ppc-kpis"><div><span>Clicks</span><b>2,431</b></div><div><span>Leads</span><b>186</b></div><div><span>Cost / lead</span><b>$18</b><i>&darr; 32%</i></div></div>
           <div class="ppc-chart">
             <span style="--h:28%;--d:0s"></span><span style="--h:36%;--d:.08s"></span><span style="--h:44%;--d:.16s"></span><span style="--h:52%;--d:.24s"></span><span style="--h:63%;--d:.32s"></span><span style="--h:74%;--d:.4s"></span><span style="--h:88%;--d:.48s"></span>
             <svg class="ppc-line" viewBox="0 0 100 40" preserveAspectRatio="none"><polyline points="2,6 18,10 34,14 50,20 66,25 82,30 98,34" vector-effect="non-scaling-stroke"/></svg>
@@ -1273,10 +1348,11 @@ html,body{overflow-x:clip;}
           <ul class="svc-tags"><li>Website &amp; landing page copy</li><li>SEO blog content</li><li>Product launch content</li><li>Video scripts &amp; press releases</li><li>Brand voice</li></ul>
         </div>
         <div class="viz-wrap"><div class="viz viz-copy" aria-hidden="true">
-          <div class="cp-nav"><i></i><i></i><i></i></div>
-          <div class="cp-head">Get more calls this week.</div>
-          <div class="cp-lines"><span></span><span class="s"></span></div>
+          <div class="cp-nav"><i></i><i></i><i></i><span>yourbusiness.com/ac-repair</span></div>
+          <div class="cp-head">Fixed today, or it's free.</div>
+          <p class="cp-sub">Licensed Toronto techs at your door in 4 hours. Upfront pricing, no surprises.</p>
           <div class="cp-btn">Book a free quote</div>
+          <span class="cp-ab">Variant B &middot; +18% conversions</span>
           <svg class="cp-cursor" viewBox="0 0 24 24" width="18" height="18"><path d="M4 2l15 8.5-6.5 1.5L9.5 19z" fill="#152A24" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg>
         </div></div>
       </li>
@@ -1286,13 +1362,14 @@ html,body{overflow-x:clip;}
         <div class="svc-body">
           <h3 id="svc-6">Email &amp; CRM Automation</h3>
           <p class="svc-line">Nurture leads into customers, and customers into repeat buyers.</p>
-          <ul class="svc-tags"><li>CRM setup &amp; integration</li><li>Automated lifecycle flows</li><li>Lead nurturing</li><li>Segmentation &amp; A/B testing</li><li>HubSpot &amp; Mailchimp</li></ul>
+          <ul class="svc-tags"><li>CRM setup &amp; integration</li><li>Automated lifecycle flows</li><li>Customer retention</li><li>Segmentation &amp; A/B testing</li><li>HubSpot &amp; Mailchimp</li></ul>
         </div>
         <div class="viz-wrap"><div class="viz viz-email" aria-hidden="true">
-          <div class="mail-flow"><span class="node">New lead</span><span class="node">Nurture</span><span class="node">Customer</span><i class="mail-pulse"></i></div>
-          <div class="mail m1"><span class="env"></span><span class="subj">Welcome aboard</span><em>Opened</em></div>
-          <div class="mail m2"><span class="env"></span><span class="subj">Your first tip</span><em>Opened</em></div>
-          <div class="mail m3"><span class="env"></span><span class="subj">Ready to talk?</span><em class="clicked">Clicked</em></div>
+          <div class="em-head"><span>HubSpot workflow &middot; New lead nurture</span><span class="ppc-pill"><i></i>Active</span></div>
+          <div class="mail-flow"><span class="node">Form fill</span><span class="node">Nurture</span><span class="node">Sales</span><i class="mail-pulse"></i></div>
+          <div class="mail m1"><span class="env"></span><span class="subj">Your free AC maintenance checklist</span><em>64% open</em></div>
+          <div class="mail m2"><span class="env"></span><span class="subj">How we cut a client's bills 30%</span><em>21% click</em></div>
+          <div class="mail m3"><span class="env"></span><span class="subj">Book your free assessment</span><em class="clicked">Deal created</em></div>
         </div></div>
       </li>
 
@@ -1307,39 +1384,36 @@ html,body{overflow-x:clip;}
       <a class="work-all" href="portfolio.html">All case studies <span aria-hidden="true">&rarr;</span></a>
     </div>
     <!-- Card anatomy: logo cover → company · industry · years → one-line result → 2 numbers. Swap a cover for a real screenshot any time. -->
-    <div class="work-grid">
+    <div class="work-grid v-result">
       <a class="work-card reveal" href="case-studies/proco-machinery.html">
-        <div class="work-cover" aria-hidden="true"><svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><path class="seg seg-gold" style="--len:84.0;--i:0" d="M104.52 26.14 A74 74 0 0 1 168.85 72.88"/><path id="proco-t1" d="M104.52 26.14 A74 74 0 0 1 168.85 72.88" fill="none"/><text class="lbl lbl-dark" style="--i:0" dy="3.2"><textPath href="#proco-t1" startOffset="50%" text-anchor="middle">EMAIL</textPath></text><path class="seg seg-cream" style="--len:84.0;--i:1" d="M171.64 81.47 A74 74 0 0 1 147.07 157.10"/><path id="proco-t2" d="M147.07 157.10 A74 74 0 0 0 171.64 81.47" fill="none"/><text class="lbl lbl-light" style="--i:1" dy="3.2"><textPath href="#proco-t2" startOffset="50%" text-anchor="middle">CRM</textPath></text><path class="seg seg-gold" style="--len:84.0;--i:2" d="M139.76 162.41 A74 74 0 0 1 60.24 162.41"/><path id="proco-t3" d="M60.24 162.41 A74 74 0 0 0 139.76 162.41" fill="none"/><text class="lbl lbl-dark" style="--i:2" dy="3.2"><textPath href="#proco-t3" startOffset="50%" text-anchor="middle">GOOGLE ADS</textPath></text><path class="seg seg-cream" style="--len:84.0;--i:3" d="M52.93 157.10 A74 74 0 0 1 28.36 81.47"/><path id="proco-t4" d="M28.36 81.47 A74 74 0 0 0 52.93 157.10" fill="none"/><text class="lbl lbl-light" style="--i:3" dy="3.2"><textPath href="#proco-t4" startOffset="50%" text-anchor="middle">SEO</textPath></text><path class="seg seg-gold" style="--len:84.0;--i:4" d="M31.15 72.88 A74 74 0 0 1 95.48 26.14"/><path id="proco-t5" d="M31.15 72.88 A74 74 0 0 1 95.48 26.14" fill="none"/><text class="lbl lbl-dark" style="--i:4" dy="3.2"><textPath href="#proco-t5" startOffset="50%" text-anchor="middle">CONTENT</textPath></text><g class="hub"><path class="spoke" pathLength="1" style="--i:0" d="M134.09 53.08L110.58 85.44"/><path class="spoke" pathLength="1" style="--i:1" d="M155.16 117.92L117.12 105.56"/><path class="spoke" pathLength="1" style="--i:2" d="M100 158L100 118"/><path class="spoke" pathLength="1" style="--i:3" d="M44.84 117.92L82.88 105.56"/><path class="spoke" pathLength="1" style="--i:4" d="M65.91 53.08L89.42 85.44"/><circle class="hub-pulse" cx="100" cy="100" r="14"/><g class="hub-person"><circle class="hub-ring" cx="100" cy="100" r="14"/><circle class="hub-head" cx="100" cy="96" r="3.6"/><path class="hub-body" d="M93.5 107.5a6.5 6 0 0 1 13 0z"/></g></g></svg></div>
+        <div class="work-cover" aria-hidden="true"><svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><path class="seg seg-gold" style="--len:84.0;--i:0" d="M104.52 26.14 A74 74 0 0 1 168.85 72.88"/><path id="proco-t1" d="M104.52 26.14 A74 74 0 0 1 168.85 72.88" fill="none"/><text class="lbl lbl-dark" style="--i:0" dy="3.2"><textPath href="#proco-t1" startOffset="50%" text-anchor="middle">EMAIL</textPath></text><path class="seg seg-cream" style="--len:84.0;--i:1" d="M171.64 81.47 A74 74 0 0 1 147.07 157.10"/><path id="proco-t2" d="M147.07 157.10 A74 74 0 0 0 171.64 81.47" fill="none"/><text class="lbl lbl-light" style="--i:1" dy="3.2"><textPath href="#proco-t2" startOffset="50%" text-anchor="middle">CRM</textPath></text><path class="seg seg-gold" style="--len:84.0;--i:2" d="M139.76 162.41 A74 74 0 0 1 60.24 162.41"/><path id="proco-t3" d="M60.24 162.41 A74 74 0 0 0 139.76 162.41" fill="none"/><text class="lbl lbl-dark" style="--i:2" dy="3.2"><textPath href="#proco-t3" startOffset="50%" text-anchor="middle">GOOGLE ADS</textPath></text><path class="seg seg-cream" style="--len:84.0;--i:3" d="M52.93 157.10 A74 74 0 0 1 28.36 81.47"/><path id="proco-t4" d="M28.36 81.47 A74 74 0 0 0 52.93 157.10" fill="none"/><text class="lbl lbl-light" style="--i:3" dy="3.2"><textPath href="#proco-t4" startOffset="50%" text-anchor="middle">SEO</textPath></text><path class="seg seg-gold" style="--len:84.0;--i:4" d="M31.15 72.88 A74 74 0 0 1 95.48 26.14"/><path id="proco-t5" d="M31.15 72.88 A74 74 0 0 1 95.48 26.14" fill="none"/><text class="lbl lbl-dark" style="--i:4" dy="3.2"><textPath href="#proco-t5" startOffset="50%" text-anchor="middle">CONTENT</textPath></text><g class="hub"><path class="spoke" pathLength="1" style="--i:0" d="M134.09 53.08L110.58 85.44"/><path class="spoke" pathLength="1" style="--i:1" d="M155.16 117.92L117.12 105.56"/><path class="spoke" pathLength="1" style="--i:2" d="M100 158L100 118"/><path class="spoke" pathLength="1" style="--i:3" d="M44.84 117.92L82.88 105.56"/><path class="spoke" pathLength="1" style="--i:4" d="M65.91 53.08L89.42 85.44"/><circle class="hub-pulse" cx="100" cy="100" r="14"/><g class="hub-person"><circle class="hub-ring" cx="100" cy="100" r="14"/><circle class="hub-head" cx="100" cy="96" r="3.6"/><path class="hub-body" d="M93.5 107.5a6.5 6 0 0 1 13 0z"/></g></g></svg><span class="cover-result"><b>$1M+</b><small>automation sales</small></span></div>
         <div class="work-body">
-          <p class="work-meta"><span>Proco Machinery</span><span>Robotics</span><span>2022&ndash;23</span></p>
-          <h3>Tripled organic traffic and influenced $1M+ in automation sales</h3>
+          <p class="work-meta"><span>Proco Machinery</span><span>Robotics</span></p>
+          <h3>Tripled organic traffic for a robotics manufacturer</h3>
           <dl class="work-stats">
-            <div><dt>organic traffic</dt><dd>+200%</dd></div>
-            <div><dt>part sales</dt><dd>+30%</dd></div>
+            <div><dt>automation sales</dt><dd>$1M+</dd></div>
           </dl>
           <span class="sr-only">Read the case study</span>
         </div>
       </a>
       <a class="work-card reveal" href="case-studies/newell-outdoors-sisu-wellness.html">
-        <div class="work-cover" aria-hidden="true"><svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><path class="seg seg-gold" style="--len:107.2;--i:0" d="M104.52 26.14 A74 74 0 0 1 173.86 95.48"/><path id="newell-t1" d="M104.52 26.14 A74 74 0 0 1 173.86 95.48" fill="none"/><text class="lbl lbl-dark" style="--i:0" dy="3.2"><textPath href="#newell-t1" startOffset="50%" text-anchor="middle">PAID MEDIA</textPath></text><path class="seg seg-cream" style="--len:107.2;--i:1" d="M173.86 104.52 A74 74 0 0 1 104.52 173.86"/><path id="newell-t2" d="M104.52 173.86 A74 74 0 0 0 173.86 104.52" fill="none"/><text class="lbl lbl-light" style="--i:1" dy="3.2"><textPath href="#newell-t2" startOffset="50%" text-anchor="middle">SEO</textPath></text><path class="seg seg-gold" style="--len:107.2;--i:2" d="M95.48 173.86 A74 74 0 0 1 26.14 104.52"/><path id="newell-t3" d="M26.14 104.52 A74 74 0 0 0 95.48 173.86" fill="none"/><text class="lbl lbl-dark" style="--i:2" dy="3.2"><textPath href="#newell-t3" startOffset="50%" text-anchor="middle">EMAIL</textPath></text><path class="seg seg-cream" style="--len:107.2;--i:3" d="M26.14 95.48 A74 74 0 0 1 95.48 26.14"/><path id="newell-t4" d="M26.14 95.48 A74 74 0 0 1 95.48 26.14" fill="none"/><text class="lbl lbl-light" style="--i:3" dy="3.2"><textPath href="#newell-t4" startOffset="50%" text-anchor="middle">CONTENT</textPath></text><g class="hub"><path class="spoke" pathLength="1" style="--i:0" d="M141.01 58.99L112.73 87.27"/><path class="spoke" pathLength="1" style="--i:1" d="M141.01 141.01L112.73 112.73"/><path class="spoke" pathLength="1" style="--i:2" d="M58.99 141.01L87.27 112.73"/><path class="spoke" pathLength="1" style="--i:3" d="M58.99 58.99L87.27 87.27"/><circle class="hub-pulse" cx="100" cy="100" r="14"/><g class="hub-person"><circle class="hub-ring" cx="100" cy="100" r="14"/><circle class="hub-head" cx="100" cy="96" r="3.6"/><path class="hub-body" d="M93.5 107.5a6.5 6 0 0 1 13 0z"/></g></g></svg></div>
+        <div class="work-cover" aria-hidden="true"><svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><path class="seg seg-gold" style="--len:84.0;--i:0" d="M104.52 26.14 A74 74 0 0 1 168.85 72.88"/><path id="newell-t1" d="M104.52 26.14 A74 74 0 0 1 168.85 72.88" fill="none"/><text class="lbl lbl-dark" style="--i:0" dy="3.2"><textPath href="#newell-t1" startOffset="50%" text-anchor="middle">WEB DESIGN</textPath></text><path class="seg seg-cream" style="--len:84.0;--i:1" d="M171.64 81.47 A74 74 0 0 1 147.07 157.10"/><path id="newell-t2" d="M147.07 157.10 A74 74 0 0 0 171.64 81.47" fill="none"/><text class="lbl lbl-light" style="--i:1" dy="3.2"><textPath href="#newell-t2" startOffset="50%" text-anchor="middle">PAID MEDIA</textPath></text><path class="seg seg-gold" style="--len:84.0;--i:2" d="M139.76 162.41 A74 74 0 0 1 60.24 162.41"/><path id="newell-t3" d="M60.24 162.41 A74 74 0 0 0 139.76 162.41" fill="none"/><text class="lbl lbl-dark" style="--i:2" dy="3.2"><textPath href="#newell-t3" startOffset="50%" text-anchor="middle">SEO</textPath></text><path class="seg seg-cream" style="--len:84.0;--i:3" d="M52.93 157.10 A74 74 0 0 1 28.36 81.47"/><path id="newell-t4" d="M28.36 81.47 A74 74 0 0 0 52.93 157.10" fill="none"/><text class="lbl lbl-light" style="--i:3" dy="3.2"><textPath href="#newell-t4" startOffset="50%" text-anchor="middle">EMAIL</textPath></text><path class="seg seg-gold" style="--len:84.0;--i:4" d="M31.15 72.88 A74 74 0 0 1 95.48 26.14"/><path id="newell-t5" d="M31.15 72.88 A74 74 0 0 1 95.48 26.14" fill="none"/><text class="lbl lbl-dark" style="--i:4" dy="3.2"><textPath href="#newell-t5" startOffset="50%" text-anchor="middle">CONTENT</textPath></text><g class="hub"><path class="spoke" pathLength="1" style="--i:0" d="M134.09 53.08L110.58 85.44"/><path class="spoke" pathLength="1" style="--i:1" d="M155.16 117.92L117.12 105.56"/><path class="spoke" pathLength="1" style="--i:2" d="M100 158L100 118"/><path class="spoke" pathLength="1" style="--i:3" d="M44.84 117.92L82.88 105.56"/><path class="spoke" pathLength="1" style="--i:4" d="M65.91 53.08L89.42 85.44"/><circle class="hub-pulse" cx="100" cy="100" r="14"/><g class="hub-person"><circle class="hub-ring" cx="100" cy="100" r="14"/><circle class="hub-head" cx="100" cy="96" r="3.6"/><path class="hub-body" d="M93.5 107.5a6.5 6 0 0 1 13 0z"/></g></g></svg><span class="cover-result"><b>+30%</b><small>online sales YOY</small></span></div>
         <div class="work-body">
-          <p class="work-meta"><span>Newell &amp; SISU</span><span>D2C Ecommerce</span><span>2024&ndash;25</span></p>
-          <h3>Grew online sales 30% year over year for two D2C ecommerce brands</h3>
+          <p class="work-meta"><span>Newell Outdoors</span><span>D2C Ecommerce</span></p>
+          <h3>Grew organic traffic 40% with a full-funnel D2C strategy</h3>
           <dl class="work-stats">
-            <div><dt>return on ad spend</dt><dd>3&times;</dd></div>
-            <div><dt>organic traffic</dt><dd>+40%</dd></div>
+            <div><dt>online sales YOY</dt><dd>+30%</dd></div>
           </dl>
           <span class="sr-only">Read the case study</span>
         </div>
       </a>
       <a class="work-card reveal" href="case-studies/accuenergy.html">
-        <div class="work-cover" aria-hidden="true"><svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><path class="seg seg-gold" style="--len:84.0;--i:0" d="M104.52 26.14 A74 74 0 0 1 168.85 72.88"/><path id="accu-t1" d="M104.52 26.14 A74 74 0 0 1 168.85 72.88" fill="none"/><text class="lbl lbl-dark" style="--i:0" dy="3.2"><textPath href="#accu-t1" startOffset="50%" text-anchor="middle">CONTENT</textPath></text><path class="seg seg-cream" style="--len:84.0;--i:1" d="M171.64 81.47 A74 74 0 0 1 147.07 157.10"/><path id="accu-t2" d="M147.07 157.10 A74 74 0 0 0 171.64 81.47" fill="none"/><text class="lbl lbl-light" style="--i:1" dy="3.2"><textPath href="#accu-t2" startOffset="50%" text-anchor="middle">EMAIL</textPath></text><path class="seg seg-gold" style="--len:84.0;--i:2" d="M139.76 162.41 A74 74 0 0 1 60.24 162.41"/><path id="accu-t3" d="M60.24 162.41 A74 74 0 0 0 139.76 162.41" fill="none"/><text class="lbl lbl-dark" style="--i:2" dy="3.2"><textPath href="#accu-t3" startOffset="50%" text-anchor="middle">SEO</textPath></text><path class="seg seg-cream" style="--len:84.0;--i:3" d="M52.93 157.10 A74 74 0 0 1 28.36 81.47"/><path id="accu-t4" d="M28.36 81.47 A74 74 0 0 0 52.93 157.10" fill="none"/><text class="lbl lbl-light" style="--i:3" dy="3.2"><textPath href="#accu-t4" startOffset="50%" text-anchor="middle">SOCIAL</textPath></text><path class="seg seg-gold" style="--len:84.0;--i:4" d="M31.15 72.88 A74 74 0 0 1 95.48 26.14"/><path id="accu-t5" d="M31.15 72.88 A74 74 0 0 1 95.48 26.14" fill="none"/><text class="lbl lbl-dark" style="--i:4" dy="3.2"><textPath href="#accu-t5" startOffset="50%" text-anchor="middle">PAID MEDIA</textPath></text><g class="hub"><path class="spoke" pathLength="1" style="--i:0" d="M134.09 53.08L110.58 85.44"/><path class="spoke" pathLength="1" style="--i:1" d="M155.16 117.92L117.12 105.56"/><path class="spoke" pathLength="1" style="--i:2" d="M100 158L100 118"/><path class="spoke" pathLength="1" style="--i:3" d="M44.84 117.92L82.88 105.56"/><path class="spoke" pathLength="1" style="--i:4" d="M65.91 53.08L89.42 85.44"/><circle class="hub-pulse" cx="100" cy="100" r="14"/><g class="hub-person"><circle class="hub-ring" cx="100" cy="100" r="14"/><circle class="hub-head" cx="100" cy="96" r="3.6"/><path class="hub-body" d="M93.5 107.5a6.5 6 0 0 1 13 0z"/></g></g></svg></div>
+        <div class="work-cover" aria-hidden="true"><svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><path class="seg seg-gold" style="--len:84.0;--i:0" d="M104.52 26.14 A74 74 0 0 1 168.85 72.88"/><path id="accu-t1" d="M104.52 26.14 A74 74 0 0 1 168.85 72.88" fill="none"/><text class="lbl lbl-dark" style="--i:0" dy="3.2"><textPath href="#accu-t1" startOffset="50%" text-anchor="middle">PAID MEDIA</textPath></text><path class="seg seg-cream" style="--len:84.0;--i:1" d="M171.64 81.47 A74 74 0 0 1 147.07 157.10"/><path id="accu-t2" d="M147.07 157.10 A74 74 0 0 0 171.64 81.47" fill="none"/><text class="lbl lbl-light" style="--i:1" dy="3.2"><textPath href="#accu-t2" startOffset="50%" text-anchor="middle">COPYWRITING</textPath></text><path class="seg seg-gold" style="--len:84.0;--i:2" d="M139.76 162.41 A74 74 0 0 1 60.24 162.41"/><path id="accu-t3" d="M60.24 162.41 A74 74 0 0 0 139.76 162.41" fill="none"/><text class="lbl lbl-dark" style="--i:2" dy="3.2"><textPath href="#accu-t3" startOffset="50%" text-anchor="middle">SOCIAL</textPath></text><path class="seg seg-cream" style="--len:84.0;--i:3" d="M52.93 157.10 A74 74 0 0 1 28.36 81.47"/><path id="accu-t4" d="M28.36 81.47 A74 74 0 0 0 52.93 157.10" fill="none"/><text class="lbl lbl-light" style="--i:3" dy="3.2"><textPath href="#accu-t4" startOffset="50%" text-anchor="middle">SEO &amp; AI</textPath></text><path class="seg seg-gold" style="--len:84.0;--i:4" d="M31.15 72.88 A74 74 0 0 1 95.48 26.14"/><path id="accu-t5" d="M31.15 72.88 A74 74 0 0 1 95.48 26.14" fill="none"/><text class="lbl lbl-dark" style="--i:4" dy="3.2"><textPath href="#accu-t5" startOffset="50%" text-anchor="middle">EMAIL</textPath></text><g class="hub"><path class="spoke" pathLength="1" style="--i:0" d="M134.09 53.08L110.58 85.44"/><path class="spoke" pathLength="1" style="--i:1" d="M155.16 117.92L117.12 105.56"/><path class="spoke" pathLength="1" style="--i:2" d="M100 158L100 118"/><path class="spoke" pathLength="1" style="--i:3" d="M44.84 117.92L82.88 105.56"/><path class="spoke" pathLength="1" style="--i:4" d="M65.91 53.08L89.42 85.44"/><circle class="hub-pulse" cx="100" cy="100" r="14"/><g class="hub-person"><circle class="hub-ring" cx="100" cy="100" r="14"/><circle class="hub-head" cx="100" cy="96" r="3.6"/><path class="hub-body" d="M93.5 107.5a6.5 6 0 0 1 13 0z"/></g></g></svg><span class="cover-result"><b>340</b><small>leads per month</small></span></div>
         <div class="work-body">
-          <p class="work-meta"><span>Accuenergy</span><span>Energy</span><span>2025&ndash;26</span></p>
-          <h3>Marketed 15+ product launches and averaged 340 leads a month</h3>
+          <p class="work-meta"><span>Accuenergy</span><span>Energy</span></p>
+          <h3>Marketed 15+ product launches and grew website traffic 25%</h3>
           <dl class="work-stats">
-            <div><dt>website traffic</dt><dd>+25%</dd></div>
-            <div><dt>email open rate</dt><dd>+30%</dd></div>
+            <div class="no-trend"><dt>leads per month</dt><dd>340</dd></div>
           </dl>
           <span class="sr-only">Read the case study</span>
         </div>
@@ -1349,12 +1423,17 @@ html,body{overflow-x:clip;}
 </section>
 
 <section class="contact" id="contact" aria-labelledby="contact-heading">
-  <h2 id="contact-heading">Is your business <span class="accent">missing from AI answers?</span> Let's look at it together.</h2>
-  <div class="contact-row">
-    <a class="btn-primary" href="contact.html#book">Book an Intro Call</a>
-    <a class="btn-ghost" href="about.html">Learn more about me</a>
+ <div class="contact-card">
+  <div class="contact-pitch">
+    <p class="code-label"><span class="code-slashes" aria-hidden="true">//</span> LET&rsquo;S HAVE A CHAT</p>
+    <h2 id="contact-heading">Your customers move between channels. <span class="accent">Your marketing should too.</span></h2>
+    <p class="contact-sub">Book a free intro call. We&rsquo;ll look at how customers find you, where they drop off, and what to fix first.</p>
   </div>
-  <p class="contact-alt" style="margin-top:18px;">or write to <a href="mailto:fredulupinar@gmail.com">fredulupinar@gmail.com</a></p>
+  <div class="contact-row">
+    <a class="btn-primary" href="contact.html#book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>Book an intro call <span aria-hidden="true">&rarr;</span></a>
+    <p class="contact-alt">Prefer email?<br>Write to me at <a href="mailto:fredulupinar@gmail.com">fredulupinar@gmail.com</a></p>
+  </div>
+ </div>
 </section>
 </main>
 
@@ -1365,7 +1444,7 @@ html,body{overflow-x:clip;}
         <svg class="footer-logo" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect class="logo-box" x="0" y="0" width="32" height="32" rx="7"></rect><path class="logo-letter" d="M9 23V9.5h10M9 16h7.5" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"></path><rect class="footer-logo-cursor" x="20.5" y="21" width="6.5" height="2.4" rx="1.2"></rect></svg>
         <span class="footer-brand">Firat Ulupinar</span>
       </a>
-      <p class="footer-tagline">Digital marketing strategist &amp; AI-search consultant — SEO, AI search, email, PPC and copywriting.</p>
+      <p class="footer-tagline">Digital Marketing Strategist<br>Specializing in SEO and AI search</p>
     </div>
     <div>
       <div class="footer-col-label" id="footer-nav-label">Navigate</div>
@@ -1384,7 +1463,7 @@ html,body{overflow-x:clip;}
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; Firat Ulupinar</span>
+    <span>&copy; 2026 Firat Ulupinar. Toronto, Ontario</span>
   </div>
 </footer>
 
