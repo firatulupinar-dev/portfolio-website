@@ -943,6 +943,10 @@ header nav a,.nav-cta{font-size:var(--text-sm);}
 .hero-title .ht-hello{font-size:clamp(1.85rem,8.9vw,4rem);line-height:1.04;white-space:nowrap;}
 .hero-title .ht-role{font-size:var(--heading-sm);line-height:1.22;}
 .hero-sub{font-size:19px;}
+/* small custom gap between the two hero paragraphs (less than a full blank line) */
+.hero-sub .hero-sub-lead{display:block;margin-top:12px;color:var(--ink);font-weight:400;}
+/* key phrases in the hero intro: bold with the same yellow marker as the headlines */
+.hero-sub .hero-mark{font-weight:700;color:var(--ink);background:linear-gradient(transparent 62%, rgba(245,185,35,.55) 62%, rgba(245,185,35,.55) 92%, transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone;}
 .whoami-main p,.svc-line{font-size:var(--text-base);}
 .code-label{font-size:var(--text-xs);line-height:1.4;}
 .hero-proof li{font-size:var(--text-xs);}
@@ -1076,21 +1080,6 @@ html,body{overflow-x:clip;}
   .marquee-group li{transition:none;}
 }
 
-/* ---- Customer journey path beside the pinned photo (desktop only; positioned by JS) ---- */
-.journey,.j-traveler,.j-label{display:none;}
-@media (min-width:861px){
-  .journey{display:block;position:absolute;top:0;left:-40px;width:40px;height:100%;pointer-events:none;z-index:0;}
-  .journey-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;}
-  .j-track{fill:none;stroke:rgba(30,58,50,.2);stroke-width:1.5;stroke-dasharray:2 7;stroke-linecap:round;}
-  .j-fill{fill:none;stroke:rgba(245,185,35,.5);stroke-width:1.5;stroke-linecap:round;}
-  .j-stop{position:absolute;left:50%;top:0;width:9px;height:9px;margin:-4.5px 0 0 -4.5px;border-radius:50%;background:var(--paper);box-shadow:0 0 0 1.5px rgba(30,58,50,.28);transition:background .35s ease,box-shadow .35s ease;}
-  .j-stop.is-on{background:rgba(245,185,35,.55);box-shadow:0 0 0 1.5px rgba(245,185,35,.55);}
-  .j-traveler{display:block;position:absolute;top:0;left:0;will-change:transform;width:13px;height:13px;margin:-6.5px 0 0 -6.5px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 3px var(--paper),0 0 0 4px rgba(245,185,35,.45);z-index:6;}
-  .j-label{display:block;position:absolute;left:0;top:calc(100% + 18px);font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap;transition:opacity .25s ease;}
-  .j-label b{color:var(--ink);font-weight:600;}
-  .j-ch{display:block;margin-top:5px;font-family:var(--font-mono);font-size:10.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);}
-}
-@media (min-width:861px) and (prefers-reduced-motion:reduce){ .j-stop,.j-label{transition:none;} }
 
 /* tablets: keep the service demo cards and the portrait at a sensible size */
 @media (min-width:521px) and (max-width:860px){
@@ -1144,7 +1133,7 @@ header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);
     </div>
     <nav aria-label="Primary">
       <ul>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="portfolio.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -1170,12 +1159,12 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="intro-left">
     <section class="hero">
       <div class="hero-text">
-            <h1 class="hero-title"><span class="ht-hello">Ahoy! I'm Firat <button type="button" class="wave-btn" id="hi5" aria-label="Give Firat a high five"><span class="wave-hand" aria-hidden="true">👋</span><span class="hi5-burst" aria-hidden="true"></span></button></span> <span class="ht-role">Digital Marketing Strategist.</span> <span class="ht-role"><span class="accent">Curious by Default.</span></span></h1>
+            <h1 class="hero-title"><span class="ht-hello">Ahoy! I'm Firat <button type="button" class="wave-btn" id="hi5" aria-label="Give Firat a high five"><span class="wave-hand" aria-hidden="true">👋</span><span class="hi5-burst" aria-hidden="true"></span></button></span> <span class="ht-role">Digital Marketing Strategist.</span> <span class="ht-role">Curious by Default.</span></h1>
         <p class="hero-sub">
-          Your target audience moves between Google, AI platforms, social feeds, and their
-          inboxes before they ever talk to you.<br><strong>I unify SEO, AI-search, paid media, social,
-          and email into one cross-channel strategy, so you show up at every step and turn
-          that attention into actual business growth.</strong>
+          Your customers move between Google, AI, social feeds, and their
+          inboxes before they ever talk to you.<span class="hero-sub-lead">I unify SEO, AI-search, paid media, social,
+          and email into one cross-channel strategy, so you <strong class="hero-mark">show up at every step</strong> and turn
+          that attention into <strong class="hero-mark">actual business growth</strong>.</span>
         </p>
         <ul class="hero-proof" aria-label="At a glance">
           <li><strong class="counter" data-target="6" data-suffix="+">6+</strong> years in marketing</li>
@@ -1206,16 +1195,6 @@ document.addEventListener('DOMContentLoaded', function(){
     </section>
   </div>
   <div class="intro-right">
-    <!-- Customer journey path (decorative, desktop only): the pinned photo "travels" down it as you scroll -->
-    <div class="journey" id="journey" aria-hidden="true">
-      <svg class="journey-svg"><path class="j-track"></path><path class="j-fill"></path></svg>
-      <span class="j-stop" data-stage="Awareness" data-channels="SEO &middot; AI search &middot; Social"></span>
-      <span class="j-stop" data-stage="Consideration" data-channels="Content &middot; Paid media"></span>
-      <span class="j-stop" data-stage="Purchase" data-channels="Landing pages &middot; Conversion Rate Optimization"></span>
-      <span class="j-stop" data-stage="Service" data-channels="Email &middot; Automation"></span>
-      <span class="j-stop" data-stage="Loyalty" data-channels="Retention &middot; Referrals"></span>
-      <span class="j-traveler" id="jTraveler"></span>
-    </div>
     <div class="hero-visual">
       <div class="hero-tilt glow-yellow" id="heroTilt">
         <div class="hero-glow" aria-hidden="true"></div>
@@ -1223,7 +1202,6 @@ document.addEventListener('DOMContentLoaded', function(){
         <img class="hero-image" src="images/firat-ulupinar.jpg" alt="Firat Ulupinar, digital marketing strategist, outdoors by a mountain lake" width="960" height="1280" loading="eager" fetchpriority="high" decoding="async">
         <div class="hero-frame" aria-hidden="true"></div>
       </div>
-      <span class="j-label" id="jLabel" aria-hidden="true"></span>
     </div>
   </div>
 </div>
@@ -1449,7 +1427,7 @@ document.addEventListener('DOMContentLoaded', function(){
     <div>
       <div class="footer-col-label" id="footer-nav-label">Navigate</div>
       <nav aria-labelledby="footer-nav-label"><ul class="footer-links">
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="portfolio.html">Work</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul></nav>
@@ -1519,82 +1497,6 @@ document.addEventListener('DOMContentLoaded', function(){
     if('IntersectionObserver' in window){
       new IntersectionObserver((es) => es.forEach(e => svcSection.classList.toggle('is-visible', e.isIntersecting)), { threshold: 0.05 }).observe(svcSection);
     } else { svcSection.classList.add('is-visible'); }
-  }
-
-  // Customer journey path: the pinned photo "travels" down a gentle wavy path; stages light up as it passes.
-  // Purely scroll-driven (nothing animates on its own) and desktop-only, where the photo is sticky.
-  const journey = document.getElementById('journey');
-  if(journey){
-    const col = journey.parentElement, visual = col.querySelector('.hero-visual'), textCol = document.querySelector('.intro-left');
-    const track = journey.querySelector('.j-track'), fill = journey.querySelector('.j-fill'), svg = journey.querySelector('svg');
-    const stops = [...journey.querySelectorAll('.j-stop')];
-    const traveler = document.getElementById('jTraveler'), label = document.getElementById('jLabel');
-    let pts = [], cum = [], total = 0, stopY = [], active = -1, ticking = false;
-    let photoStart = 0, photoEnd = 1, waveStart = 0, waveSeg = 1;
-
-    function layout(){
-      if(window.innerWidth <= 860){ col.style.paddingBottom = ''; return; }
-      // Stop the pinned photo so that, at the last stage, the label's bottom line sits level with
-      // the last line of the "Who am I" text.
-      if(!label.textContent){ label.innerHTML = '01 &middot; <b>Stage</b><span class="j-ch">Channels</span>'; }
-      const lastText = textCol.querySelector('.whoami-main p:last-of-type');
-      if(lastText){
-        col.style.paddingBottom = '';
-        const lt = lastText.getBoundingClientRect(), cTop = col.getBoundingClientRect().top;
-        const lineH = parseFloat(getComputedStyle(lastText).lineHeight) || 0;
-        const reveal = lastText.closest('.reveal');                                   // ignore the fade-in slide offset
-        const slide = reveal && window.DOMMatrixReadOnly ? new DOMMatrixReadOnly(getComputedStyle(reveal).transform).m42 : 0;
-        const textBottom = lt.bottom - slide - cTop - Math.max(0, (lineH - parseFloat(getComputedStyle(lastText).fontSize)) / 2);
-        const labelBottom = label.offsetTop + label.offsetHeight - visual.offsetHeight;   // label bottom below the photo
-        col.style.paddingBottom = Math.max(0, col.offsetHeight - (textBottom - labelBottom)) + 'px';
-      }
-      const c = col.getBoundingClientRect(), v = visual.getBoundingClientRect(), t = textCol.getBoundingClientRect();
-      const pathX = t.right + (v.left - t.right) * 0.32;      // closer to the text, leaving more air before the photo
-      journey.style.left = (pathX - c.left - 20) + 'px';
-      const H = col.offsetHeight, half = visual.offsetHeight / 2;
-      const top = parseFloat(getComputedStyle(visual).marginTop) || 0;
-      const pad = parseFloat(getComputedStyle(col).paddingBottom) || 0;
-      // the path (and the first stage) starts level with the first line of the hero intro paragraph
-      const intro = textCol.querySelector('.hero-sub'), ic = intro ? getComputedStyle(intro) : null;
-      const pathTop = intro ? intro.getBoundingClientRect().top - c.top + (parseFloat(ic.lineHeight) - parseFloat(ic.fontSize)) / 2 : top;
-      const yStart = pathTop, yEnd = H - pad - half, seg = (yEnd - yStart) / (stops.length - 1);
-      stopY = stops.map((s, i) => { const y = yStart + seg * i; s.style.top = y + 'px'; return y; });
-      photoStart = top + half; photoEnd = yEnd; waveStart = yStart; waveSeg = seg;   // photo centre at first and last scroll position
-      // gentle wave that crosses the centre line exactly at each stop; it ends at the last milestone
-      pts = []; for(let y = pathTop; y <= yEnd + 0.1; y += 6){ pts.push([20 + 7 * Math.sin(Math.PI * (y - yStart) / seg), y]); }
-      cum = [0]; for(let i = 1; i < pts.length; i++){ cum.push(cum[i-1] + Math.hypot(pts[i][0]-pts[i-1][0], pts[i][1]-pts[i-1][1])); }
-      total = cum[cum.length - 1];
-      const d = 'M' + pts.map(p => p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' L');
-      svg.setAttribute('viewBox', '0 0 40 ' + H);
-      track.setAttribute('d', d); fill.setAttribute('d', d);
-      fill.style.strokeDasharray = total; active = -1;
-      update();
-    }
-    function update(){
-      ticking = false;
-      if(window.innerWidth <= 860 || !pts.length) return;
-      const c = col.getBoundingClientRect(), v = visual.getBoundingClientRect();
-      // Map the photo's scroll travel onto the path from the first to the last milestone,
-      // so the dot rides the curve and sits exactly on each milestone as that stage switches on.
-      const pc = v.top - c.top + v.height / 2;
-      const p = pc >= photoEnd - 1 ? 1 : Math.max(0, Math.min(1, (pc - photoStart) / Math.max(1, photoEnd - photoStart)));   // snap within 1px (pixel rounding)
-      const ty = stopY[0] + p * (stopY[stopY.length - 1] - stopY[0]);
-      const tx = 20 + 7 * Math.sin(Math.PI * (ty - waveStart) / waveSeg);
-      traveler.style.transform = 'translate(' + tx.toFixed(2) + 'px,' + ty.toFixed(2) + 'px)';
-      let i = Math.max(0, Math.min(pts.length - 1, Math.round((ty - pts[0][1]) / 6)));
-      fill.style.strokeDashoffset = total - cum[i];
-      let cur = 0; stopY.forEach((y, k) => { const on = y <= ty + 1; stops[k].classList.toggle('is-on', on); if(on) cur = k; });
-      if(cur !== active){
-        active = cur;
-        label.innerHTML = '0' + (cur + 1) + ' &middot; <b>' + stops[cur].dataset.stage + '</b><span class="j-ch"></span>';
-        label.querySelector('.j-ch').textContent = stops[cur].dataset.channels || '';
-      }
-    }
-    window.addEventListener('scroll', () => { if(!ticking){ ticking = true; requestAnimationFrame(update); } }, { passive: true });
-    window.addEventListener('resize', layout);
-    window.addEventListener('load', layout);
-    if(document.fonts && document.fonts.ready) document.fonts.ready.then(layout);   // re-measure once web fonts settle
-    layout();
   }
 
   // High-five: clicking the waving hand plays a short synthesized clap (no audio file) and a pop animation.
