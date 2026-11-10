@@ -718,9 +718,9 @@ header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);
 @media (max-width:900px){ .wk-cert-grid{grid-template-columns:1fr;} }
 @media (prefers-reduced-motion:reduce){ .wk-cert-grid li{transition:none;} .wk-cert-grid li:hover{transform:none;} .wk-cert-grid li:hover .wk-tm{transform:none;} }
 
-/* ---- CASE STUDY ROADMAP: the engagement told TOFU → BOFU → retention.
-   Left: a sticky funnel that narrows stage by stage and follows the reader.
-   Right: one section per stage, always in the same order (channels, what I did, result). ---- */
+/* ---- CASE STUDY GROWTH ROADMAP: three connected business outcomes.
+   Left: sticky outcome navigation that follows the reader.
+   Right: one section per outcome, with channels, tools, actions and results. ---- */
 .cs-hero{overflow:hidden;}
 .rm{max-width:1120px;margin:auto;padding:clamp(64px,9vw,112px) 32px 0;}
 .rm-head{max-width:760px;margin-bottom:clamp(36px,5vw,56px);}
@@ -729,7 +729,7 @@ header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);
 .rm-head p strong{color:var(--ink);}
 .rm-grid{display:grid;grid-template-columns:260px minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start;}
 
-/* the funnel */
+/* the workstream navigation */
 .rm-nav{position:sticky;top:104px;}
 .rm-nav ol{list-style:none;display:flex;flex-direction:column;align-items:center;gap:6px;}
 .rm-nav li{display:flex;justify-content:center;width:100%;}
@@ -738,6 +738,20 @@ header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);
 .rm-nav li:nth-child(3) .rm-layer{width:76%;}
 .rm-nav li:nth-child(4) .rm-layer{width:64%;}
 .rm-layer{display:grid;grid-template-columns:1fr auto;grid-template-areas:"abbr kpi" "name kpi";align-items:center;column-gap:8px;padding:12px 24px;clip-path:polygon(0 0,100% 0,calc(100% - 12px) 100%,12px 100%);background:#F2E5C6;color:var(--ink);text-decoration:none;transition:background .3s ease,color .3s ease;}
+.rm-nav-no-abbr .rm-layer{grid-template-areas:"name kpi";}
+.rm-nav-workstreams li:nth-child(n) .rm-layer{width:100%;}
+.rm-nav-funnel li:nth-child(1) .rm-layer{width:100%;}
+.rm-nav-funnel li:nth-child(2) .rm-layer{width:92%;}
+.rm-nav-funnel li:nth-child(3) .rm-layer{width:84%;}
+.rm-nav-funnel li.rm-nav-data{position:relative;margin-top:11px;}
+.rm-nav-funnel li.rm-nav-data::before{content:"";position:absolute;top:-11px;left:50%;width:1px;height:11px;background:var(--line);}
+.rm-nav-funnel li.rm-nav-data .rm-layer{width:100%;box-shadow:inset 3px 0 0 var(--accent);}
+.rm-nav-workstreams .rm-layer{grid-template-columns:30px minmax(0,1fr);grid-template-areas:"icon name";gap:10px;min-height:58px;padding:10px 13px;border:1px solid var(--line);border-radius:12px;clip-path:none;}
+.rm-nav-workstreams .rm-name{font-size:.78125rem;letter-spacing:-.018em;white-space:nowrap;}
+.rm-nav-icon{grid-area:icon;display:grid;width:30px;height:30px;place-items:center;border-radius:9px;background:#fff;color:var(--ink);transition:background .25s ease,color .25s ease;}
+.rm-nav-icon svg{width:19px;height:19px;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.rm-nav-workstreams .rm-layer:hover .rm-nav-icon,
+.rm-nav-workstreams .rm-layer.is-active .rm-nav-icon{background:var(--accent);color:var(--dark);}
 .rm-layer:hover{background:#EADBB6;}
 .rm-layer:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 .rm-abbr{grid-area:abbr;font-family:var(--font-mono);font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
@@ -756,6 +770,12 @@ header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);
 .rm-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;background:var(--dark);font-family:var(--font-mono);font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);}
 .rm-stage h3{margin:16px 0 24px;font-size:clamp(1.5rem,1.25rem + 1vw,2.125rem);line-height:1.12;letter-spacing:-.035em;color:var(--ink);text-wrap:balance;}
 .rm-body{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:clamp(24px,3.5vw,44px);align-items:start;}
+.rm-body-result-aligned{grid-template-areas:"meta meta" "actions result";row-gap:0;}
+.rm-body-result-aligned .rm-stage-meta{grid-area:meta;}
+.rm-body-result-aligned .rm-stage-actions{grid-area:actions;}
+.rm-body-result-aligned .rm-result{grid-area:result;}
+.rm-body-data{grid-template-columns:1fr;}
+.rm-data-stage .rm-proof-list{grid-template-columns:1fr;}
 .rm-sub{margin-bottom:10px;font-family:var(--font-mono);font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
 .rm-ch{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;}
 .rm-ch li{padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper-alt);font-size:.8125rem;font-weight:600;color:var(--ink);}
@@ -767,6 +787,11 @@ header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);
 .rm-result{display:flex;flex-direction:column;padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--paper-alt);}
 .rm-result b{margin-top:2px;font-size:clamp(2.5rem,2rem + 1.4vw,3.25rem);font-weight:800;line-height:1;letter-spacing:-.05em;color:var(--ink);font-variant-numeric:tabular-nums;}
 .rm-result-label{margin-top:8px;font-size:.9375rem;font-weight:600;line-height:1.35;color:var(--ink-soft);}
+.rm-result-combined dl{display:flex;flex-direction:column;}
+.rm-result-combined dl div{padding:4px 0 18px;}
+.rm-result-combined dl div+div{padding:18px 0 0;border-top:1px solid var(--line);}
+.rm-result-combined dd{font-size:clamp(2.5rem,2rem + 1.4vw,3.25rem);font-weight:800;line-height:1;letter-spacing:-.05em;color:var(--ink);font-variant-numeric:tabular-nums;}
+.rm-result-combined dt{margin-top:8px;font-size:.9375rem;font-weight:600;line-height:1.35;color:var(--ink-soft);}
 .rm-tools{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:.8125rem;line-height:1.55;color:var(--ink-soft);}
 .rm-tools span{display:block;margin-bottom:4px;font-family:var(--font-mono);font-size:.625rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);}
 .rm-measure{padding:clamp(24px,3vw,32px);border-radius:16px;background:var(--dark);color:rgba(254,244,222,.78);}
@@ -774,7 +799,7 @@ header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);
 .rm-measure p{margin-top:12px;font-size:1.0625rem;line-height:1.65;}
 .rm-measure strong{color:var(--paper);}
 
-/* tablet and phone: the funnel becomes a sticky row of stages under the header */
+/* tablet and phone: the workstreams become a sticky row under the header */
 @media (max-width:900px){
   .rm-grid{grid-template-columns:1fr;gap:28px;}
   .rm-nav{top:62px;z-index:5;margin:0 -20px;padding:10px 20px;background:var(--paper);border-bottom:1px solid var(--line);}
@@ -783,8 +808,15 @@ header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);
   .rm-nav li{width:auto;flex:1 0 auto;}
   .rm-nav li:nth-child(n) .rm-layer{width:100%;}
   .rm-layer{grid-template-areas:"abbr" "name";grid-template-columns:1fr;padding:8px 12px;border-radius:10px;clip-path:none;text-align:center;}
+  .rm-nav-no-abbr .rm-layer{grid-template-areas:"name";}
+  .rm-nav-workstreams .rm-layer{grid-template-columns:26px minmax(0,1fr);grid-template-areas:"icon name";gap:7px;min-height:50px;padding:7px 9px;text-align:left;}
+  .rm-nav-workstreams .rm-nav-icon{width:26px;height:26px;border-radius:8px;}
+  .rm-nav-workstreams .rm-nav-icon svg{width:17px;height:17px;}
+  .rm-nav-workstreams .rm-name{font-size:.75rem;}
   .rm-kpi,.rm-measure-link{display:none;}
   .rm-body{grid-template-columns:1fr;}
+  .rm-body-result-aligned{grid-template-areas:"meta" "actions" "result";row-gap:0;}
+  .rm-body-result-aligned .rm-result{margin-top:24px;}
   .rm-stage,.rm-measure{scroll-margin-top:140px;}
 }
 @media (max-width:640px){ .rm{padding-left:20px;padding-right:20px;} }
@@ -803,6 +835,8 @@ header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);
    opened full size in a lightbox. Empty slots show what to add. ---- */
 .rm-proof{margin-top:30px;}
 .rm-proof-list{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+.rm-proof-wide{grid-column:1/-1;}
+.rm-proof-wide .rm-sample-frame{aspect-ratio:2/1;}
 .rm-sample{margin:0;}
 .rm-sample-frame{position:relative;display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:16/10;padding:0;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:var(--paper-alt);font:inherit;color:inherit;}
 button.rm-sample-frame{cursor:zoom-in;transition:border-color .25s ease,box-shadow .3s ease;}
@@ -828,7 +862,10 @@ button.rm-sample-frame:focus-visible{outline:2px solid var(--accent);outline-off
 .rm-measure .rm-sample.is-empty .rm-sample-frame{border-color:rgba(254,244,222,.25);background:transparent;}
 .rm-measure .rm-sample.is-empty .rm-sample-frame::before{color:var(--accent);}
 .rm-measure .rm-sample-hint,.rm-measure .rm-sample figcaption{color:rgba(254,244,222,.65);}
-@media (max-width:520px){ .rm-proof-list,.rm-measure .rm-proof-list{grid-template-columns:1fr;} }
+@media (max-width:520px){
+  .rm-proof-list,.rm-measure .rm-proof-list{grid-template-columns:1fr;}
+  .rm-proof-wide .rm-sample-frame{aspect-ratio:16/10;}
+}
 
 /* lightbox */
 .rm-lightbox{max-width:min(1100px,94vw);max-height:92vh;padding:0;border:0;border-radius:16px;background:var(--paper);box-shadow:0 40px 80px -30px rgba(0,0,0,.5);overflow:hidden;}
@@ -890,7 +927,8 @@ button.rm-sample-frame:focus-visible{outline:2px solid var(--accent);outline-off
 /* ---- ROADMAP TOOLS: sit under Channels as pills with the real logo (Simple Icons, CC0) in ink;
    the logo takes its brand colour on hover ---- */
 .rm-tl li{display:inline-flex;align-items:center;gap:7px;background:#fff;}
-.rm-logo{width:14px;height:14px;flex:none;background:var(--ink);-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;transition:background .2s ease;}
-.rm-tl li:hover .rm-logo{background:var(--brand,var(--ink));}
-/* a stage can show more than one result: cards stack in the result column */
-.rm-results{display:flex;flex-direction:column;gap:12px;align-self:start;min-width:0;}
+.rm-logo{width:14px;height:14px;flex:none;background:var(--brand,var(--ink));-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;transition:transform .2s ease;}
+.rm-tl li:hover .rm-logo{transform:scale(1.1);}
+.rm-tl-two-lines{display:grid;grid-template-columns:repeat(4,max-content);gap:7px;}
+.rm-tl-two-lines li{white-space:nowrap;}
+@media (max-width:640px){.rm-tl-two-lines{grid-template-columns:repeat(2,max-content);}}
