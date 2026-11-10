@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#F7F3EA"/>
+  <text x="60" y="72" font-size="32" font-weight="800" fill="#152A24">Content Calendar</text>
+  <text x="60" y="106" font-size="21" fill="#6B7A72">Launches, education, events and company news, balanced across channels so buyers find something useful every week</text>
+  <g font-size="16" font-weight="600" fill="#3E4C46">
+    <rect x="60" y="139" width="14" height="14" rx="3" fill="#C8920F"/><text x="81" y="152">Product launch</text>
+    <rect x="230" y="139" width="14" height="14" rx="3" fill="#152A24"/><text x="251" y="152">Product highlight</text>
+    <rect x="425" y="139" width="14" height="14" rx="3" fill="#2F6B37"/><text x="446" y="152">Trade show</text>
+    <rect x="561" y="139" width="14" height="14" rx="3" fill="#4F7FA8"/><text x="582" y="152">Industry event</text>
+    <rect x="731" y="139" width="14" height="14" rx="3" fill="#C2603A"/><text x="752" y="152">Seasonal</text>
+    <rect x="850" y="139" width="14" height="14" rx="3" fill="#8A7F6A"/><text x="871" y="152">Company news</text>
+    <rect x="1003" y="139" width="14" height="14" rx="3" fill="#7A4E9C"/><text x="1024" y="152">Press release</text>
+    <rect x="1164" y="139" width="14" height="14" rx="3" fill="#1F8A8A"/><text x="1185" y="152">Blog post</text>
+    <rect x="1291" y="139" width="14" height="14" rx="3" fill="#9C6B1F"/><text x="1312" y="152">How-to guide</text>
+  </g>
+  <g font-size="15" font-weight="700" fill="#6B7A72" letter-spacing="1">
+    <text x="64" y="208">MON</text>
+    <text x="362" y="208">TUE</text>
+    <text x="660" y="208">WED</text>
+    <text x="958" y="208">THU</text>
+    <text x="1256" y="208">FRI</text>
+  </g>
+  <rect x="60" y="226" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="74" y="252" font-size="16" font-weight="700" fill="#8A948F">4</text>
+  <rect x="358" y="226" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="372" y="252" font-size="16" font-weight="700" fill="#8A948F">5</text>
+  <rect x="656" y="226" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="670" y="252" font-size="16" font-weight="700" fill="#8A948F">6</text>
+  <rect x="954" y="226" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="968" y="252" font-size="16" font-weight="700" fill="#8A948F">7</text>
+  <rect x="1252" y="226" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="1266" y="252" font-size="16" font-weight="700" fill="#8A948F">8</text>
+  <rect x="60" y="410" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="74" y="436" font-size="16" font-weight="700" fill="#8A948F">11</text>
+  <rect x="358" y="410" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="372" y="436" font-size="16" font-weight="700" fill="#8A948F">12</text>
+  <rect x="656" y="410" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="670" y="436" font-size="16" font-weight="700" fill="#8A948F">13</text>
+  <rect x="954" y="410" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="968" y="436" font-size="16" font-weight="700" fill="#8A948F">14</text>
+  <rect x="1252" y="410" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="1266" y="436" font-size="16" font-weight="700" fill="#8A948F">15</text>
+  <rect x="60" y="594" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="74" y="620" font-size="16" font-weight="700" fill="#8A948F">18</text>
+  <rect x="358" y="594" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="372" y="620" font-size="16" font-weight="700" fill="#8A948F">19</text>
+  <rect x="656" y="594" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="670" y="620" font-size="16" font-weight="700" fill="#8A948F">20</text>
+  <rect x="954" y="594" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="968" y="620" font-size="16" font-weight="700" fill="#8A948F">21</text>
+  <rect x="1252" y="594" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="1266" y="620" font-size="16" font-weight="700" fill="#8A948F">22</text>
+  <rect x="60" y="778" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="74" y="804" font-size="16" font-weight="700" fill="#8A948F">25</text>
+  <rect x="358" y="778" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="372" y="804" font-size="16" font-weight="700" fill="#8A948F">26</text>
+  <rect x="656" y="778" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="670" y="804" font-size="16" font-weight="700" fill="#8A948F">27</text>
+  <rect x="954" y="778" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="968" y="804" font-size="16" font-weight="700" fill="#8A948F">28</text>
+  <rect x="1252" y="778" width="288" height="174" rx="10" fill="#FFFFFF" stroke="#E6DFD0" stroke-width="2"/><text x="1266" y="804" font-size="16" font-weight="700" fill="#8A948F">29</text>
+  <rect x="70" y="264" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="70" y="264" width="5" height="60" rx="2" fill="#1F8A8A"/>
+  <text x="85" y="281" font-size="11" font-weight="800" letter-spacing="1" fill="#1F8A8A">BLOG POST</text><text x="85" y="300" font-size="16" font-weight="700" fill="#152A24">Cut peak demand charges</text><text x="85" y="317" font-size="13" fill="#7C8781">Website · LinkedIn</text>
+  <rect x="368" y="264" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="368" y="264" width="5" height="60" rx="2" fill="#9C6B1F"/>
+  <text x="383" y="281" font-size="11" font-weight="800" letter-spacing="1" fill="#9C6B1F">HOW-TO GUIDE</text><text x="383" y="300" font-size="16" font-weight="700" fill="#152A24">3 common wiring mistakes</text><text x="383" y="317" font-size="13" fill="#7C8781">YouTube · LinkedIn</text>
+  <rect x="666" y="264" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="666" y="264" width="5" height="60" rx="2" fill="#152A24"/>
+  <text x="681" y="281" font-size="11" font-weight="800" letter-spacing="1" fill="#152A24">PRODUCT HIGHLIGHT</text><text x="681" y="300" font-size="16" font-weight="700" fill="#152A24">Feature spotlight: alarms</text><text x="681" y="317" font-size="13" fill="#7C8781">LinkedIn · Facebook</text>
+  <rect x="1262" y="264" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="1262" y="264" width="5" height="60" rx="2" fill="#8A7F6A"/>
+  <text x="1277" y="281" font-size="11" font-weight="800" letter-spacing="1" fill="#8A7F6A">COMPANY NEWS</text><text x="1277" y="300" font-size="16" font-weight="700" fill="#152A24">Meet our new team members</text><text x="1277" y="317" font-size="13" fill="#7C8781">LinkedIn</text>
+  <rect x="70" y="448" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="70" y="448" width="5" height="60" rx="2" fill="#2F6B37"/>
+  <text x="85" y="465" font-size="11" font-weight="800" letter-spacing="1" fill="#2F6B37">TRADE SHOW</text><text x="85" y="484" font-size="16" font-weight="700" fill="#152A24">Visit our booth next week</text><text x="85" y="501" font-size="13" fill="#7C8781">LinkedIn · X</text>
+  <rect x="368" y="448" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="368" y="448" width="5" height="60" rx="2" fill="#7A4E9C"/>
+  <text x="383" y="465" font-size="11" font-weight="800" letter-spacing="1" fill="#7A4E9C">PRESS RELEASE</text><text x="383" y="484" font-size="16" font-weight="700" fill="#152A24">Partnership announcement</text><text x="383" y="501" font-size="13" fill="#7C8781">Newswire · Website</text>
+  <rect x="666" y="448" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="666" y="448" width="5" height="60" rx="2" fill="#2F6B37"/>
+  <text x="681" y="465" font-size="11" font-weight="800" letter-spacing="1" fill="#2F6B37">TRADE SHOW</text><text x="681" y="484" font-size="16" font-weight="700" fill="#152A24">Live from the show floor</text><text x="681" y="501" font-size="13" fill="#7C8781">LinkedIn · X</text>
+  <rect x="964" y="448" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="964" y="448" width="5" height="60" rx="2" fill="#1F8A8A"/>
+  <text x="979" y="465" font-size="11" font-weight="800" letter-spacing="1" fill="#1F8A8A">BLOG POST</text><text x="979" y="484" font-size="16" font-weight="700" fill="#152A24">Submetering for tenants</text><text x="979" y="501" font-size="13" fill="#7C8781">Website · Newsletter</text>
+  <rect x="1262" y="448" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="1262" y="448" width="5" height="60" rx="2" fill="#2F6B37"/>
+  <text x="1277" y="465" font-size="11" font-weight="800" letter-spacing="1" fill="#2F6B37">TRADE SHOW</text><text x="1277" y="484" font-size="16" font-weight="700" fill="#152A24">Show recap + photo album</text><text x="1277" y="501" font-size="13" fill="#7C8781">LinkedIn · Facebook</text>
+  <rect x="70" y="632" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="70" y="632" width="5" height="60" rx="2" fill="#C2603A"/>
+  <text x="85" y="649" font-size="11" font-weight="800" letter-spacing="1" fill="#C2603A">SEASONAL</text><text x="85" y="668" font-size="16" font-weight="700" fill="#152A24">Happy Victoria Day</text><text x="85" y="685" font-size="13" fill="#7C8781">LinkedIn · Facebook</text>
+  <rect x="368" y="632" width="268" height="60" rx="7" fill="#152A24"/><rect x="368" y="632" width="5" height="60" rx="2" fill="#C8920F"/>
+  <text x="383" y="649" font-size="11" font-weight="800" letter-spacing="1" fill="#F5B923">PRODUCT LAUNCH</text><text x="383" y="668" font-size="16" font-weight="700" fill="#FEF4DE">Something new is coming</text><text x="383" y="685" font-size="13" fill="#C9D2CC">LinkedIn · X</text>
+  <rect x="666" y="632" width="268" height="60" rx="7" fill="#152A24"/><rect x="666" y="632" width="5" height="60" rx="2" fill="#C8920F"/>
+  <text x="681" y="649" font-size="11" font-weight="800" letter-spacing="1" fill="#F5B923">PRODUCT LAUNCH</text><text x="681" y="668" font-size="16" font-weight="700" fill="#FEF4DE">Launch day is here</text><text x="681" y="685" font-size="13" fill="#C9D2CC">All channels</text>
+  <rect x="666" y="698" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="666" y="698" width="5" height="60" rx="2" fill="#7A4E9C"/>
+  <text x="681" y="715" font-size="11" font-weight="800" letter-spacing="1" fill="#7A4E9C">PRESS RELEASE</text><text x="681" y="734" font-size="16" font-weight="700" fill="#152A24">Launch announcement</text><text x="681" y="751" font-size="13" fill="#7C8781">Newswire · Website</text>
+  <rect x="964" y="632" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="964" y="632" width="5" height="60" rx="2" fill="#9C6B1F"/>
+  <text x="979" y="649" font-size="11" font-weight="800" letter-spacing="1" fill="#9C6B1F">HOW-TO GUIDE</text><text x="979" y="668" font-size="16" font-weight="700" fill="#152A24">Getting started guide</text><text x="979" y="685" font-size="13" fill="#7C8781">Website · YouTube</text>
+  <rect x="1262" y="632" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="1262" y="632" width="5" height="60" rx="2" fill="#152A24"/>
+  <text x="1277" y="649" font-size="11" font-weight="800" letter-spacing="1" fill="#152A24">PRODUCT HIGHLIGHT</text><text x="1277" y="668" font-size="16" font-weight="700" fill="#152A24">Behind the design</text><text x="1277" y="685" font-size="13" fill="#7C8781">LinkedIn · Facebook</text>
+  <rect x="70" y="816" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="70" y="816" width="5" height="60" rx="2" fill="#1F8A8A"/>
+  <text x="85" y="833" font-size="11" font-weight="800" letter-spacing="1" fill="#1F8A8A">BLOG POST</text><text x="85" y="852" font-size="16" font-weight="700" fill="#152A24">Energy trends to watch</text><text x="85" y="869" font-size="13" fill="#7C8781">Website · LinkedIn</text>
+  <rect x="368" y="816" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="368" y="816" width="5" height="60" rx="2" fill="#4F7FA8"/>
+  <text x="383" y="833" font-size="11" font-weight="800" letter-spacing="1" fill="#4F7FA8">INDUSTRY EVENT</text><text x="383" y="852" font-size="16" font-weight="700" fill="#152A24">Webinar: save your seat</text><text x="383" y="869" font-size="13" fill="#7C8781">LinkedIn · Email</text>
+  <rect x="666" y="816" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="666" y="816" width="5" height="60" rx="2" fill="#8A7F6A"/>
+  <text x="681" y="833" font-size="11" font-weight="800" letter-spacing="1" fill="#8A7F6A">COMPANY NEWS</text><text x="681" y="852" font-size="16" font-weight="700" fill="#152A24">Volunteer day recap</text><text x="681" y="869" font-size="13" fill="#7C8781">LinkedIn · Facebook</text>
+  <rect x="964" y="816" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="964" y="816" width="5" height="60" rx="2" fill="#4F7FA8"/>
+  <text x="979" y="833" font-size="11" font-weight="800" letter-spacing="1" fill="#4F7FA8">INDUSTRY EVENT</text><text x="979" y="852" font-size="16" font-weight="700" fill="#152A24">Live Q&amp;A today</text><text x="979" y="869" font-size="13" fill="#7C8781">LinkedIn · X</text>
+  <rect x="1262" y="816" width="268" height="60" rx="7" fill="#F7F3EA"/><rect x="1262" y="816" width="5" height="60" rx="2" fill="#9C6B1F"/>
+  <text x="1277" y="833" font-size="11" font-weight="800" letter-spacing="1" fill="#9C6B1F">HOW-TO GUIDE</text><text x="1277" y="852" font-size="16" font-weight="700" fill="#152A24">Setting up data logs</text><text x="1277" y="869" font-size="13" fill="#7C8781">Website · LinkedIn</text>
+</svg>

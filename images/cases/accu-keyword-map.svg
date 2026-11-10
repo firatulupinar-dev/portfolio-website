@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#F7F3EA"/>
+  <text x="60" y="72" font-size="32" font-weight="800" fill="#152A24">Keyword and Content Mapping</text>
+  <text x="60" y="106" font-size="21" fill="#6B7A72">One page per search intent, so pages support each other instead of competing</text>
+  <rect x="60" y="140" width="470" height="800" rx="16" fill="#FFFFFF"/>
+  <text x="90" y="184" font-size="15" font-weight="800" fill="#6B7A72" letter-spacing="2">CLUSTER STRUCTURE</text>
+  <g stroke="#C9C0AC" stroke-width="2.5" fill="none">
+    <path d="M295 300 L295 340 L185 340 L185 380"/><path d="M295 340 L405 340 L405 380"/>
+    <path d="M185 470 L185 520"/><path d="M405 470 L405 520"/>
+    <path d="M185 610 L185 660"/><path d="M415 610 L415 660"/>
+  </g>
+  <path d="M285 705 L325 705" stroke="#F5B923" stroke-width="3" stroke-dasharray="8 6"/>
+  <rect x="165" y="214" width="260" height="86" rx="12" fill="#152A24"/>
+  <text x="185" y="244" font-size="12" font-weight="800" fill="#F5B923" letter-spacing="1.5">PILLAR PAGE</text>
+  <text x="185" y="276" font-size="20" font-weight="800" fill="#FEF4DE">Power quality guide</text>
+  <g font-size="12" font-weight="800" letter-spacing="1.5">
+    <rect x="85" y="380" width="200" height="90" rx="12" fill="#F7F3EA"/><text x="103" y="408" fill="#2F5F86">BLOG</text><text x="103" y="436" font-size="17" letter-spacing="0" fill="#152A24">Harmonics</text><text x="103" y="457" font-size="17" letter-spacing="0" fill="#152A24">explained</text>
+    <rect x="305" y="380" width="200" height="90" rx="12" fill="#F7F3EA"/><text x="323" y="408" fill="#2F5F86">BLOG</text><text x="323" y="436" font-size="17" letter-spacing="0" fill="#152A24">Voltage sag</text><text x="323" y="457" font-size="17" letter-spacing="0" fill="#152A24">vs. swell</text>
+    <rect x="85" y="520" width="200" height="90" rx="12" fill="#F7F3EA"/><text x="103" y="548" fill="#8A6410">BLOG</text><text x="103" y="576" font-size="17" letter-spacing="0" fill="#152A24">Analyzer</text><text x="103" y="597" font-size="17" letter-spacing="0" fill="#152A24">vs. meter</text>
+    <rect x="305" y="520" width="200" height="90" rx="12" fill="#F7F3EA"/><text x="323" y="548" fill="#8A6410">HOW-TO</text><text x="323" y="576" font-size="17" letter-spacing="0" fill="#152A24">Install a power</text><text x="323" y="597" font-size="17" letter-spacing="0" fill="#152A24">quality meter</text>
+    <rect x="85" y="660" width="200" height="90" rx="12" fill="#F7F3EA"/><text x="103" y="688" fill="#8A6410">SOLUTION</text><text x="103" y="716" font-size="17" letter-spacing="0" fill="#152A24">Data center</text><text x="103" y="737" font-size="17" letter-spacing="0" fill="#152A24">monitoring</text>
+    <rect x="325" y="660" width="180" height="90" rx="12" fill="#FFFFFF" stroke="#F5B923" stroke-width="3"/><text x="343" y="688" fill="#2F6B37">PRODUCT</text><text x="343" y="716" font-size="17" letter-spacing="0" fill="#152A24">Power quality</text><text x="343" y="737" font-size="17" letter-spacing="0" fill="#152A24">meters</text>
+  </g>
+  <line x1="90" y1="784" x2="500" y2="784" stroke="#EFE9DC" stroke-width="2"/>
+  <text x="90" y="820" font-size="16" font-weight="800" fill="#152A24">Internal linking</text>
+  <text x="90" y="848" font-size="15" fill="#6B7A72">Every page links up to the pillar and</text>
+  <text x="90" y="870" font-size="15" fill="#6B7A72">across to the product page, giving readers</text>
+  <text x="90" y="892" font-size="15" fill="#6B7A72">a clear path from learning to a quote.</text>
+  <rect x="560" y="140" width="980" height="800" rx="16" fill="#FFFFFF"/>
+  <text x="590" y="184" font-size="15" font-weight="800" fill="#6B7A72" letter-spacing="2">KEYWORD MAP</text>
+  <g font-size="13" font-weight="800" fill="#8A948F" letter-spacing="1">
+    <text x="590" y="232">KEYWORD</text><text x="958" y="232" text-anchor="end">VOL.</text><text x="1006" y="232" text-anchor="end">KD</text><text x="1030" y="232">INTENT</text><text x="1170" y="232">MAPPED PAGE</text><text x="1428" y="232">ACTION</text>
+  </g>
+  <line x1="580" y1="248" x2="1520" y2="248" stroke="#E3DACA" stroke-width="2"/>
+  <rect x="580" y="252" width="940" height="60" fill="#FBF8F1"/>
+  <text x="590" y="288" font-size="16" font-weight="600" fill="#152A24">power quality monitoring</text>
+  <text x="958" y="288" font-size="16" fill="#3E4C46" text-anchor="end">1,900</text><text x="1006" y="288" font-size="16" fill="#3E4C46" text-anchor="end">52</text>
+  <rect x="1030" y="267" width="124" height="30" rx="15" fill="#E3EEF5"/><text x="1092" y="287" font-size="13" font-weight="700" fill="#2F5F86" text-anchor="middle">Informational</text>
+  <text x="1170" y="288" font-size="14" font-family="Consolas, 'Courier New', monospace" fill="#152A24">/power-quality-guide</text>
+  <rect x="1428" y="267" width="82" height="30" rx="6" fill="#152A24"/><text x="1469" y="287" font-size="13" font-weight="800" fill="#F5B923" text-anchor="middle">Create</text>
+  <line x1="580" y1="314" x2="1520" y2="314" stroke="#EFE9DC" stroke-width="2"/>
+  <rect x="580" y="316" width="940" height="60" fill="#FBF8F1"/>
+  <text x="590" y="352" font-size="16" font-weight="600" fill="#152A24">what is power quality</text>
+  <text x="958" y="352" font-size="16" fill="#3E4C46" text-anchor="end">880</text><text x="1006" y="352" font-size="16" fill="#3E4C46" text-anchor="end">34</text>
+  <rect x="1030" y="331" width="124" height="30" rx="15" fill="#E3EEF5"/><text x="1092" y="351" font-size="13" font-weight="700" fill="#2F5F86" text-anchor="middle">Informational</text>
+  <text x="1170" y="352" font-size="14" font-family="Consolas, 'Courier New', monospace" fill="#152A24">/power-quality-guide</text>
+  <rect x="1428" y="331" width="82" height="30" rx="6" fill="#152A24"/><text x="1469" y="351" font-size="13" font-weight="800" fill="#F5B923" text-anchor="middle">Create</text>
+  <line x1="580" y1="378" x2="1520" y2="378" stroke="#EFE9DC" stroke-width="2"/>
+  <text x="590" y="416" font-size="16" font-weight="600" fill="#152A24">harmonics in power systems</text>
+  <text x="958" y="416" font-size="16" fill="#3E4C46" text-anchor="end">720</text><text x="1006" y="416" font-size="16" fill="#3E4C46" text-anchor="end">41</text>
+  <rect x="1030" y="395" width="124" height="30" rx="15" fill="#E3EEF5"/><text x="1092" y="415" font-size="13" font-weight="700" fill="#2F5F86" text-anchor="middle">Informational</text>
+  <text x="1170" y="416" font-size="14" font-family="Consolas, 'Courier New', monospace" fill="#152A24">/blog/harmonics-explained</text>
+  <rect x="1428" y="395" width="82" height="30" rx="6" fill="#152A24"/><text x="1469" y="415" font-size="13" font-weight="800" fill="#F5B923" text-anchor="middle">Create</text>
+  <line x1="580" y1="442" x2="1520" y2="442" stroke="#EFE9DC" stroke-width="2"/>
+  <text x="590" y="480" font-size="16" font-weight="600" fill="#152A24">voltage sag vs swell</text>
+  <text x="958" y="480" font-size="16" fill="#3E4C46" text-anchor="end">390</text><text x="1006" y="480" font-size="16" fill="#3E4C46" text-anchor="end">22</text>
+  <rect x="1030" y="459" width="124" height="30" rx="15" fill="#E3EEF5"/><text x="1092" y="479" font-size="13" font-weight="700" fill="#2F5F86" text-anchor="middle">Informational</text>
+  <text x="1170" y="480" font-size="14" font-family="Consolas, 'Courier New', monospace" fill="#152A24">/blog/voltage-sag-vs-swell</text>
+  <rect x="1428" y="459" width="82" height="30" rx="6" fill="#152A24"/><text x="1469" y="479" font-size="13" font-weight="800" fill="#F5B923" text-anchor="middle">Create</text>
+  <line x1="580" y1="506" x2="1520" y2="506" stroke="#EFE9DC" stroke-width="2"/>
+  <text x="590" y="544" font-size="16" font-weight="600" fill="#152A24">power quality analyzer vs meter</text>
+  <text x="958" y="544" font-size="16" fill="#3E4C46" text-anchor="end">260</text><text x="1006" y="544" font-size="16" fill="#3E4C46" text-anchor="end">28</text>
+  <rect x="1030" y="523" width="124" height="30" rx="15" fill="#FEF0CC"/><text x="1092" y="543" font-size="13" font-weight="700" fill="#8A6410" text-anchor="middle">Commercial</text>
+  <text x="1170" y="544" font-size="14" font-family="Consolas, 'Courier New', monospace" fill="#152A24">/blog/analyzer-vs-meter</text>
+  <rect x="1428" y="523" width="82" height="30" rx="6" fill="#152A24"/><text x="1469" y="543" font-size="13" font-weight="800" fill="#F5B923" text-anchor="middle">Create</text>
+  <line x1="580" y1="570" x2="1520" y2="570" stroke="#EFE9DC" stroke-width="2"/>
+  <text x="590" y="608" font-size="16" font-weight="600" fill="#152A24">how to install a power quality meter</text>
+  <text x="958" y="608" font-size="16" fill="#3E4C46" text-anchor="end">170</text><text x="1006" y="608" font-size="16" fill="#3E4C46" text-anchor="end">18</text>
+  <rect x="1030" y="587" width="124" height="30" rx="15" fill="#E3EEF5"/><text x="1092" y="607" font-size="13" font-weight="700" fill="#2F5F86" text-anchor="middle">Informational</text>
+  <text x="1170" y="608" font-size="14" font-family="Consolas, 'Courier New', monospace" fill="#152A24">/guides/install-pq-meter</text>
+  <rect x="1428" y="587" width="82" height="30" rx="6" fill="#152A24"/><text x="1469" y="607" font-size="13" font-weight="800" fill="#F5B923" text-anchor="middle">Create</text>
+  <line x1="580" y1="634" x2="1520" y2="634" stroke="#EFE9DC" stroke-width="2"/>
+  <text x="590" y="672" font-size="16" font-weight="600" fill="#152A24">data center power monitoring</text>
+  <text x="958" y="672" font-size="16" fill="#3E4C46" text-anchor="end">590</text><text x="1006" y="672" font-size="16" fill="#3E4C46" text-anchor="end">47</text>
+  <rect x="1030" y="651" width="124" height="30" rx="15" fill="#FEF0CC"/><text x="1092" y="671" font-size="13" font-weight="700" fill="#8A6410" text-anchor="middle">Commercial</text>
+  <text x="1170" y="672" font-size="14" font-family="Consolas, 'Courier New', monospace" fill="#152A24">/solutions/data-centers</text>
+  <rect x="1428" y="651" width="82" height="30" rx="6" fill="none" stroke="#152A24" stroke-width="2"/><text x="1469" y="671" font-size="13" font-weight="800" fill="#152A24" text-anchor="middle">Optimize</text>
+  <line x1="580" y1="698" x2="1520" y2="698" stroke="#EFE9DC" stroke-width="2"/>
+  <text x="590" y="736" font-size="16" font-weight="600" fill="#152A24">power quality meter</text>
+  <text x="958" y="736" font-size="16" fill="#3E4C46" text-anchor="end">1,300</text><text x="1006" y="736" font-size="16" fill="#3E4C46" text-anchor="end">55</text>
+  <rect x="1030" y="715" width="124" height="30" rx="15" fill="#E3F1E4"/><text x="1092" y="735" font-size="13" font-weight="700" fill="#2F6B37" text-anchor="middle">Transactional</text>
+  <text x="1170" y="736" font-size="14" font-family="Consolas, 'Courier New', monospace" fill="#152A24">/products/pq-meters</text>
+  <rect x="1428" y="715" width="82" height="30" rx="6" fill="none" stroke="#152A24" stroke-width="2"/><text x="1469" y="735" font-size="13" font-weight="800" fill="#152A24" text-anchor="middle">Optimize</text>
+  <line x1="580" y1="762" x2="1520" y2="762" stroke="#EFE9DC" stroke-width="2"/>
+  <text x="590" y="800" font-size="16" font-weight="600" fill="#152A24">power quality meter price</text>
+  <text x="958" y="800" font-size="16" fill="#3E4C46" text-anchor="end">140</text><text x="1006" y="800" font-size="16" fill="#3E4C46" text-anchor="end">15</text>
+  <rect x="1030" y="779" width="124" height="30" rx="15" fill="#E3F1E4"/><text x="1092" y="799" font-size="13" font-weight="700" fill="#2F6B37" text-anchor="middle">Transactional</text>
+  <text x="1170" y="800" font-size="14" font-family="Consolas, 'Courier New', monospace" fill="#152A24">/products/pq-meters</text>
+  <rect x="1428" y="779" width="82" height="30" rx="6" fill="none" stroke="#152A24" stroke-width="2"/><text x="1469" y="799" font-size="13" font-weight="800" fill="#152A24" text-anchor="middle">Optimize</text>
+  <line x1="580" y1="826" x2="1520" y2="826" stroke="#EFE9DC" stroke-width="2"/>
+  <rect x="580" y="852" width="940" height="68" rx="12" fill="#152A24"/>
+  <text x="606" y="895" font-size="19" font-weight="700" fill="#FEF4DE"><tspan fill="#F5B923" font-weight="800">9 keywords → 7 pages</tspan>   ·   5 new pages to create   ·   2 existing pages to optimize</text>
+</svg>

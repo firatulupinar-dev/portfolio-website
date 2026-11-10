@@ -886,3 +886,11 @@ button.rm-sample-frame:focus-visible{outline:2px solid var(--accent);outline-off
 .rm-sample.is-illustration .rm-sample-frame::before{content:"Illustration";position:absolute;left:10px;top:10px;z-index:1;padding:4px 9px;border-radius:999px;background:rgba(255,251,239,.92);font-family:var(--font-mono);font-size:.625rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);box-shadow:0 2px 8px -4px rgba(21,42,36,.4);}
 .rm-sample.is-illustration .rm-sample-frame{background:#fff;}
 .rm-lb-img{width:100%;height:auto;}
+
+/* ---- ROADMAP TOOLS: sit under Channels as pills with the real logo (Simple Icons, CC0) in ink;
+   the logo takes its brand colour on hover ---- */
+.rm-tl li{display:inline-flex;align-items:center;gap:7px;background:#fff;}
+.rm-logo{width:14px;height:14px;flex:none;background:var(--ink);-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat;transition:background .2s ease;}
+.rm-tl li:hover .rm-logo{background:var(--brand,var(--ink));}
+/* a stage can show more than one result: cards stack in the result column */
+.rm-results{display:flex;flex-direction:column;gap:12px;align-self:start;min-width:0;}
