@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#F7F3EA"/>
+  <text x="60" y="80" font-size="32" font-weight="800" fill="#152A24">A/B test · subject line</text>
+  <text x="60" y="118" font-size="22" fill="#6B7A72">50/50 split on a test group, winner sent to the rest of the list</text>
+  <rect x="60" y="170" width="700" height="560" rx="16" fill="#FFFFFF"/>
+  <rect x="96" y="206" width="70" height="40" rx="8" fill="#E3DACA"/><text x="131" y="234" font-size="20" font-weight="800" fill="#152A24" text-anchor="middle">A</text>
+  <text x="96" y="310" font-size="18" font-weight="700" fill="#6B7A72" letter-spacing="2">SUBJECT</text>
+  <text x="96" y="356" font-size="28" font-weight="700" fill="#152A24">Introducing our new</text>
+  <text x="96" y="394" font-size="28" font-weight="700" fill="#152A24">power quality meter</text>
+  <text x="96" y="460" font-size="18" font-weight="700" fill="#6B7A72" letter-spacing="2">PREVIEW</text>
+  <text x="96" y="500" font-size="21" fill="#3E4C46">Features, specs and availability inside.</text>
+  <text x="96" y="620" font-size="20" fill="#6B7A72">Product-first: tells them what it is</text>
+  <rect x="840" y="170" width="700" height="560" rx="16" fill="#FFFFFF" stroke="#F5B923" stroke-width="4"/>
+  <rect x="876" y="206" width="70" height="40" rx="8" fill="#F5B923"/><text x="911" y="234" font-size="20" font-weight="800" fill="#152A24" text-anchor="middle">B</text>
+  <rect x="1330" y="204" width="170" height="44" rx="22" fill="#152A24"/><text x="1415" y="233" font-size="19" font-weight="800" fill="#F5B923" text-anchor="middle">Winner</text>
+  <text x="876" y="310" font-size="18" font-weight="700" fill="#6B7A72" letter-spacing="2">SUBJECT</text>
+  <text x="876" y="356" font-size="28" font-weight="700" fill="#152A24">Sam, catch power issues</text>
+  <text x="876" y="394" font-size="28" font-weight="700" fill="#152A24">before they cause downtime</text>
+  <text x="876" y="460" font-size="18" font-weight="700" fill="#6B7A72" letter-spacing="2">PREVIEW</text>
+  <text x="876" y="500" font-size="21" fill="#3E4C46">See how data centers spot sags in real time.</text>
+  <text x="876" y="620" font-size="20" fill="#2F6B37" font-weight="700">Problem-first and personal: tells them why it matters</text>
+  <rect x="60" y="770" width="1480" height="130" rx="16" fill="#152A24"/>
+  <text x="100" y="828" font-size="20" font-weight="700" fill="#F5B923" letter-spacing="2">WHAT TESTING LIKE THIS ADDED UP TO</text>
+  <text x="100" y="874" font-size="26" font-weight="700" fill="#FEF4DE">+30% open rate  ·  +20% click-through rate across campaigns</text>
+  <text x="60" y="960" font-size="18" fill="#8E8778">Illustration · the subject lines are examples; the totals are the reported results</text>
+</svg>

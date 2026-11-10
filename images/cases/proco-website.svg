@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#E9E4D8"/>
+  <rect x="60" y="40" width="1480" height="900" rx="16" fill="#FFFFFF"/>
+  <rect x="60" y="40" width="1480" height="52" rx="16" fill="#D9D2C2"/><rect x="60" y="70" width="1480" height="22" fill="#D9D2C2"/>
+  <circle cx="96" cy="66" r="9" fill="#C0B6A2"/><circle cx="124" cy="66" r="9" fill="#C0B6A2"/><circle cx="152" cy="66" r="9" fill="#C0B6A2"/>
+  <rect x="560" y="52" width="480" height="28" rx="14" fill="#FFFFFF"/><text x="800" y="73" font-size="17" fill="#6B7A72" text-anchor="middle">procomachinery.com</text>
+  <rect x="60" y="92" width="1480" height="80" fill="#FFFFFF"/>
+  <text x="110" y="143" font-size="28" font-weight="800" fill="#152A24">PROCO</text>
+  <g font-size="20" fill="#152A24"><text x="700" y="140">Solutions</text><text x="830" y="140">Industries</text><text x="965" y="140">Parts</text><text x="1050" y="140">Resources</text></g>
+  <rect x="1240" y="112" width="250" height="50" rx="8" fill="#F5B923"/><text x="1365" y="144" font-size="20" font-weight="800" fill="#152A24" text-anchor="middle">Request a quote</text>
+  <rect x="60" y="172" width="1480" height="460" fill="#152A24"/>
+  <text x="110" y="290" font-size="22" font-weight="700" fill="#F5B923" letter-spacing="3">PLASTICS · PACKAGING · AUTOMATION</text>
+  <text x="110" y="370" font-size="58" font-weight="800" fill="#FEF4DE">Robotic automation</text>
+  <text x="110" y="440" font-size="58" font-weight="800" fill="#FEF4DE">for plastics and packaging</text>
+  <text x="110" y="500" font-size="24" fill="#C9D2CC">Faster cycles, safer lines and parts shipped when you need them.</text>
+  <rect x="110" y="540" width="250" height="60" rx="8" fill="#F5B923"/><text x="235" y="578" font-size="22" font-weight="800" fill="#152A24" text-anchor="middle">Request a quote</text>
+  <rect x="380" y="540" width="200" height="60" rx="8" fill="none" stroke="#FEF4DE" stroke-width="3"/><text x="480" y="578" font-size="22" font-weight="700" fill="#FEF4DE" text-anchor="middle">Order parts</text>
+  <path d="M1120 590 L1120 400 L1290 300 L1430 340" stroke="#F5B923" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="1120" cy="400" r="34" fill="#F5B923"/><circle cx="1290" cy="300" r="34" fill="#F5B923"/>
+  <rect x="1040" y="580" width="170" height="52" rx="8" fill="#F5B923"/>
+  <g>
+    <rect x="110" y="680" width="440" height="200" rx="12" fill="#F7F3EA"/><text x="140" y="740" font-size="26" font-weight="800" fill="#152A24">Sprue pickers</text><rect x="140" y="770" width="360" height="12" rx="6" fill="#E3DACA"/><rect x="140" y="796" width="280" height="12" rx="6" fill="#E3DACA"/>
+    <rect x="580" y="680" width="440" height="200" rx="12" fill="#F7F3EA"/><text x="610" y="740" font-size="26" font-weight="800" fill="#152A24">Servo robots</text><rect x="610" y="770" width="360" height="12" rx="6" fill="#E3DACA"/><rect x="610" y="796" width="280" height="12" rx="6" fill="#E3DACA"/>
+    <rect x="1050" y="680" width="440" height="200" rx="12" fill="#F7F3EA"/><text x="1080" y="740" font-size="26" font-weight="800" fill="#152A24">Spare parts</text><rect x="1080" y="770" width="360" height="12" rx="6" fill="#E3DACA"/><rect x="1080" y="796" width="280" height="12" rx="6" fill="#E3DACA"/>
+  </g>
+  <text x="60" y="975" font-size="18" fill="#8E8778">Illustration of the redesigned homepage</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#F4F1EA"/>
+  <rect width="1600" height="96" fill="#152A24"/>
+  <text x="60" y="60" font-size="28" font-weight="700" fill="#FEF4DE">Marketing performance</text>
+  <text x="430" y="60" font-size="20" fill="#9FB0A8">Leadership report · 2023</text>
+  <rect x="1300" y="30" width="240" height="38" rx="19" fill="#F5B923"/><text x="1420" y="56" font-size="18" font-weight="800" fill="#152A24" text-anchor="middle">vs. 2022 baseline</text>
+  <g>
+    <rect x="60" y="130" width="350" height="190" rx="14" fill="#FFFFFF"/><text x="90" y="178" font-size="18" font-weight="700" fill="#6B7A72" letter-spacing="1.5">ORGANIC TRAFFIC</text><text x="90" y="260" font-size="60" font-weight="800" fill="#152A24">+200%</text><text x="90" y="296" font-size="18" fill="#2F6B37">▲ SEO + new website</text>
+    <rect x="430" y="130" width="350" height="190" rx="14" fill="#FFFFFF"/><text x="460" y="178" font-size="18" font-weight="700" fill="#6B7A72" letter-spacing="1.5">QUALIFIED LEADS</text><text x="460" y="260" font-size="60" font-weight="800" fill="#152A24">+10%</text><text x="460" y="296" font-size="18" fill="#2F6B37">▲ paid media</text>
+    <rect x="800" y="130" width="350" height="190" rx="14" fill="#FFFFFF"/><text x="830" y="178" font-size="18" font-weight="700" fill="#6B7A72" letter-spacing="1.5">PART SALES</text><text x="830" y="260" font-size="60" font-weight="800" fill="#152A24">+30%</text><text x="830" y="296" font-size="18" fill="#2F6B37">▲ lead forms</text>
+    <rect x="1170" y="130" width="370" height="190" rx="14" fill="#FFFFFF"/><text x="1200" y="178" font-size="18" font-weight="700" fill="#6B7A72" letter-spacing="1.5">CUSTOMER RETENTION</text><text x="1200" y="260" font-size="60" font-weight="800" fill="#152A24">+5%</text><text x="1200" y="296" font-size="18" fill="#2F6B37">▲ email + CRM</text>
+  </g>
+  <rect x="60" y="350" width="900" height="560" rx="14" fill="#FFFFFF"/>
+  <text x="90" y="400" font-size="22" font-weight="700" fill="#152A24">Leads by channel · quarterly</text>
+  <g font-size="16" fill="#6B7A72"><rect x="620" y="384" width="16" height="16" rx="3" fill="#152A24"/><text x="644" y="398">Organic</text><rect x="730" y="384" width="16" height="16" rx="3" fill="#F5B923"/><text x="754" y="398">Paid</text><rect x="820" y="384" width="16" height="16" rx="3" fill="#C9C0AC"/><text x="844" y="398">Email</text></g>
+  <line x1="110" y1="860" x2="920" y2="860" stroke="#C9C0AC" stroke-width="2"/>
+  <g>
+    <rect x="160" y="700" width="60" height="160" fill="#152A24"/><rect x="160" y="640" width="60" height="60" fill="#F5B923"/><rect x="160" y="610" width="60" height="30" fill="#C9C0AC"/>
+    <rect x="360" y="650" width="60" height="210" fill="#152A24"/><rect x="360" y="585" width="60" height="65" fill="#F5B923"/><rect x="360" y="550" width="60" height="35" fill="#C9C0AC"/>
+    <rect x="560" y="590" width="60" height="270" fill="#152A24"/><rect x="560" y="520" width="60" height="70" fill="#F5B923"/><rect x="560" y="482" width="60" height="38" fill="#C9C0AC"/>
+    <rect x="760" y="520" width="60" height="340" fill="#152A24"/><rect x="760" y="446" width="60" height="74" fill="#F5B923"/><rect x="760" y="404" width="60" height="42" fill="#C9C0AC"/>
+  </g>
+  <g font-size="18" fill="#6B7A72" text-anchor="middle"><text x="190" y="892">Q1</text><text x="390" y="892">Q2</text><text x="590" y="892">Q3</text><text x="790" y="892">Q4</text></g>
+  <rect x="990" y="350" width="550" height="560" rx="14" fill="#FFFFFF"/>
+  <text x="1020" y="400" font-size="22" font-weight="700" fill="#152A24">Where budget moved next</text>
+  <g font-size="20" fill="#152A24">
+    <text x="1020" y="470">SEO content</text><rect x="1020" y="484" width="480" height="18" rx="9" fill="#EDE6D6"/><rect x="1020" y="484" width="400" height="18" rx="9" fill="#152A24"/>
+    <text x="1020" y="560">LinkedIn Ads</text><rect x="1020" y="574" width="480" height="18" rx="9" fill="#EDE6D6"/><rect x="1020" y="574" width="320" height="18" rx="9" fill="#F5B923"/>
+    <text x="1020" y="650">Google Ads</text><rect x="1020" y="664" width="480" height="18" rx="9" fill="#EDE6D6"/><rect x="1020" y="664" width="250" height="18" rx="9" fill="#F5B923"/>
+    <text x="1020" y="740">Trade shows</text><rect x="1020" y="754" width="480" height="18" rx="9" fill="#EDE6D6"/><rect x="1020" y="754" width="170" height="18" rx="9" fill="#C9C0AC"/>
+  </g>
+  <text x="60" y="965" font-size="18" fill="#A3AAA5">Illustration · headline results are real, channel splits are indicative</text>
+</svg>

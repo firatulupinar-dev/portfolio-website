@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect x="140" y="70" width="900" height="64" rx="32" fill="#FFFFFF" stroke="#DADCE0" stroke-width="2"/>
+  <text x="180" y="112" font-size="24" fill="#202124">power quality meter for data center</text>
+  <circle cx="990" cy="102" r="14" fill="none" stroke="#6B7A72" stroke-width="3"/><line x1="1000" y1="112" x2="1010" y2="122" stroke="#6B7A72" stroke-width="3"/>
+  <line x1="0" y1="180" x2="1600" y2="180" stroke="#EBEBEB" stroke-width="2"/>
+  <g font-size="20" fill="#5F6368"><text x="140" y="164">All</text><text x="200" y="164">Shopping</text><text x="310" y="164">Images</text><text x="400" y="164">News</text></g>
+  <rect x="140" y="146" width="36" height="4" fill="#1A73E8"/>
+  <rect x="140" y="220" width="960" height="270" rx="14" fill="#F8FAFD" stroke="#F5B923" stroke-width="3"/>
+  <text x="170" y="262" font-size="18" font-weight="700" fill="#202124">Sponsored</text>
+  <circle cx="186" cy="296" r="16" fill="#152A24"/><text x="186" y="302" font-size="16" font-weight="800" fill="#F5B923" text-anchor="middle">A</text>
+  <text x="214" y="292" font-size="19" fill="#202124">Accuenergy</text><text x="214" y="314" font-size="17" fill="#5F6368">accuenergy.com › power-quality</text>
+  <text x="170" y="366" font-size="30" fill="#1A0DAB">Power Quality Meter | Catch Issues Before Downtime</text>
+  <text x="170" y="408" font-size="20" fill="#4D5156">Spot sags, swells and harmonics in real time. Revenue-grade accuracy,</text>
+  <text x="170" y="436" font-size="20" fill="#4D5156">built for data centers and critical facilities. Get a quote today.</text>
+  <g font-size="19" fill="#1A0DAB"><text x="170" y="472">Request a Quote</text><text x="350" y="472">Download Datasheet</text><text x="570" y="472">Talk to an Engineer</text></g>
+  <g>
+    <rect x="140" y="530" width="960" height="34" rx="6" fill="#F1F3F4"/><rect x="140" y="580" width="700" height="18" rx="9" fill="#E8EAED"/><rect x="140" y="610" width="860" height="14" rx="7" fill="#F1F3F4"/><rect x="140" y="636" width="780" height="14" rx="7" fill="#F1F3F4"/>
+    <rect x="140" y="690" width="640" height="18" rx="9" fill="#E8EAED"/><rect x="140" y="720" width="860" height="14" rx="7" fill="#F1F3F4"/><rect x="140" y="746" width="720" height="14" rx="7" fill="#F1F3F4"/>
+  </g>
+  <rect x="1160" y="220" width="380" height="380" rx="16" fill="#152A24"/>
+  <text x="1190" y="270" font-size="18" font-weight="700" fill="#F5B923" letter-spacing="2">HOW I BUILT IT</text>
+  <g font-size="19" fill="#FEF4DE">
+    <text x="1190" y="320">1  Match high-intent searches</text>
+    <text x="1190" y="370">2  Lead with the buyer's problem</text>
+    <text x="1190" y="420">3  Prove it: accuracy, use case</text>
+    <text x="1190" y="470">4  Sitelinks to quote, datasheet</text>
+    <text x="1190" y="520">5  Land on the launch page</text>
+  </g>
+  <text x="140" y="960" font-size="18" fill="#A3AAA5">Illustration of a search campaign ad</text>
+</svg>

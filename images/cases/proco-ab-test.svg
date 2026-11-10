@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#F7F3EA"/>
+  <text x="60" y="70" font-size="28" font-weight="700" fill="#152A24">Landing page A/B test</text>
+  <text x="400" y="70" font-size="22" fill="#6B7A72">Same traffic, two messages · Google Ads and LinkedIn</text>
+  <g>
+    <rect x="60" y="110" width="700" height="800" rx="18" fill="#FFFFFF" stroke="#E2D8C2" stroke-width="2"/>
+    <rect x="60" y="110" width="700" height="56" rx="18" fill="#EFE8D8"/><rect x="60" y="140" width="700" height="26" fill="#EFE8D8"/>
+    <text x="96" y="146" font-size="20" font-weight="700" fill="#6B7A72" letter-spacing="2">VARIANT A · CONTROL</text>
+    <text x="100" y="250" font-size="40" font-weight="800" fill="#152A24">Industrial automation</text>
+    <text x="100" y="298" font-size="40" font-weight="800" fill="#152A24">solutions</text>
+    <rect x="100" y="340" width="560" height="14" rx="7" fill="#EDE6D6"/><rect x="100" y="370" width="460" height="14" rx="7" fill="#EDE6D6"/>
+    <rect x="100" y="420" width="560" height="220" rx="12" fill="#E7E1D3"/>
+    <rect x="100" y="680" width="220" height="62" rx="10" fill="#8A948F"/><text x="210" y="719" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">Learn more</text>
+    <text x="100" y="840" font-size="22" fill="#6B7A72">Generic headline, soft call to action</text>
+  </g>
+  <g>
+    <rect x="840" y="110" width="700" height="800" rx="18" fill="#FFFFFF" stroke="#F5B923" stroke-width="5"/>
+    <rect x="840" y="110" width="700" height="56" rx="18" fill="#152A24"/><rect x="840" y="140" width="700" height="26" fill="#152A24"/>
+    <text x="876" y="146" font-size="20" font-weight="700" fill="#F5B923" letter-spacing="2">VARIANT B</text>
+    <rect x="1340" y="124" width="180" height="32" rx="16" fill="#F5B923"/><text x="1430" y="147" font-size="18" font-weight="800" fill="#152A24" text-anchor="middle">WINNER</text>
+    <text x="880" y="250" font-size="40" font-weight="800" fill="#152A24">Robots built for</text>
+    <text x="880" y="298" font-size="40" font-weight="800" fill="#152A24">injection molding</text>
+    <text x="880" y="352" font-size="24" fill="#6B7A72">Cut cycle time on your existing lines.</text>
+    <rect x="880" y="400" width="560" height="220" rx="12" fill="#152A24"/>
+    <path d="M1020 580 L1020 500 L1100 450 L1190 470" stroke="#F5B923" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <rect x="880" y="660" width="260" height="62" rx="10" fill="#F5B923"/><text x="1010" y="699" font-size="22" font-weight="800" fill="#152A24" text-anchor="middle">Request a quote</text>
+    <text x="880" y="840" font-size="22" fill="#6B7A72">Industry-specific headline, clear next step</text>
+  </g>
+  <text x="60" y="960" font-size="18" fill="#A3AAA5">Illustration of the test setup</text>
+</svg>

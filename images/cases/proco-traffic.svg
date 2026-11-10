@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1600" height="88" fill="#F7F3EA"/>
+  <text x="60" y="56" font-size="28" font-weight="700" fill="#152A24">Search performance</text>
+  <text x="430" y="56" font-size="22" fill="#6B7A72">Organic sessions · indexed to Nov 2022 = 100</text>
+  <rect x="1290" y="26" width="250" height="40" rx="20" fill="#E3F1E4"/>
+  <text x="1415" y="53" font-size="20" font-weight="700" fill="#2F6B37" text-anchor="middle">+200% in 13 months</text>
+  <g stroke="#EDE6D6" stroke-width="2">
+    <line x1="120" y1="220" x2="1520" y2="220"/><line x1="120" y1="380" x2="1520" y2="380"/>
+    <line x1="120" y1="540" x2="1520" y2="540"/><line x1="120" y1="700" x2="1520" y2="700"/>
+    <line x1="120" y1="860" x2="1520" y2="860" stroke="#C9C0AC"/>
+  </g>
+  <g font-size="18" fill="#8A948F" text-anchor="end">
+    <text x="104" y="226">320</text><text x="104" y="386">240</text><text x="104" y="546">160</text><text x="104" y="706">80</text><text x="104" y="866">0</text>
+  </g>
+  <path d="M120 660 L227.7 652 L335.4 636 L443.1 618 L550.8 600 L658.5 568 L766.2 544 L873.9 518 L981.6 482 L1089.3 450 L1197 408 L1304.7 364 L1412.4 318 L1520 260 L1520 860 L120 860 Z" fill="#F5B923" fill-opacity=".16"/>
+  <path d="M120 660 L227.7 652 L335.4 636 L443.1 618 L550.8 600 L658.5 568 L766.2 544 L873.9 518 L981.6 482 L1089.3 450 L1197 408 L1304.7 364 L1412.4 318 L1520 260" fill="none" stroke="#152A24" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <line x1="550.8" y1="240" x2="550.8" y2="860" stroke="#F5B923" stroke-width="3" stroke-dasharray="10 8"/>
+  <rect x="566" y="236" width="246" height="38" rx="8" fill="#152A24"/>
+  <text x="689" y="262" font-size="18" font-weight="700" fill="#F5B923" text-anchor="middle">New website launched</text>
+  <circle cx="120" cy="660" r="9" fill="#152A24"/><circle cx="1520" cy="260" r="11" fill="#F5B923" stroke="#152A24" stroke-width="4"/>
+  <text x="1500" y="236" font-size="22" font-weight="800" fill="#152A24" text-anchor="end">300</text>
+  <g font-size="18" fill="#8A948F" text-anchor="middle">
+    <text x="120" y="900">Nov '22</text><text x="443.1" y="900">Feb '23</text><text x="766.2" y="900">May '23</text><text x="1089.3" y="900">Aug '23</text><text x="1412.4" y="900">Nov '23</text>
+  </g>
+  <text x="60" y="960" font-size="18" fill="#A3AAA5">Illustration based on the campaign results</text>
+</svg>

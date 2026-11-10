@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1600" height="88" fill="#F7F3EA"/>
+  <text x="60" y="56" font-size="28" font-weight="700" fill="#152A24">Leads by month</text>
+  <text x="290" y="56" font-size="22" fill="#6B7A72">HubSpot · all sources</text>
+  <rect x="1290" y="26" width="250" height="40" rx="20" fill="#E3F1E4"/>
+  <text x="1415" y="53" font-size="20" font-weight="700" fill="#2F6B37" text-anchor="middle">Avg 340 a month</text>
+  <g stroke="#EDE6D6" stroke-width="2">
+    <line x1="120" y1="220" x2="1520" y2="220"/><line x1="120" y1="380" x2="1520" y2="380"/>
+    <line x1="120" y1="540" x2="1520" y2="540"/><line x1="120" y1="700" x2="1520" y2="700"/>
+    <line x1="120" y1="860" x2="1520" y2="860" stroke="#C9C0AC"/>
+  </g>
+  <g font-size="18" fill="#8A948F" text-anchor="end">
+    <text x="104" y="226">400</text><text x="104" y="386">300</text><text x="104" y="546">200</text><text x="104" y="706">100</text><text x="104" y="866">0</text>
+  </g>
+  <g fill="#152A24">
+    <rect x="150" y="380" width="80" height="480" rx="6"/><rect x="265" y="348" width="80" height="512" rx="6"/><rect x="380" y="412" width="80" height="448" rx="6"/>
+    <rect x="495" y="316" width="80" height="544" rx="6" fill="#F5B923"/><rect x="610" y="364" width="80" height="496" rx="6"/><rect x="725" y="332" width="80" height="528" rx="6"/>
+    <rect x="840" y="396" width="80" height="464" rx="6"/><rect x="955" y="300" width="80" height="560" rx="6" fill="#F5B923"/><rect x="1070" y="348" width="80" height="512" rx="6"/>
+    <rect x="1185" y="380" width="80" height="480" rx="6"/><rect x="1300" y="324" width="80" height="536" rx="6" fill="#F5B923"/><rect x="1415" y="340" width="80" height="520" rx="6"/>
+  </g>
+  <line x1="120" y1="316" x2="1520" y2="316" stroke="#F5B923" stroke-width="3" stroke-dasharray="10 8"/>
+  <rect x="1330" y="246" width="190" height="38" rx="8" fill="#152A24"/><text x="1425" y="272" font-size="18" font-weight="700" fill="#F5B923" text-anchor="middle">Average 340</text>
+  <g font-size="17" fill="#8A948F" text-anchor="middle">
+    <text x="190" y="896">M1</text><text x="305" y="896">M2</text><text x="420" y="896">M3</text><text x="535" y="896">M4</text><text x="650" y="896">M5</text><text x="765" y="896">M6</text><text x="880" y="896">M7</text><text x="995" y="896">M8</text><text x="1110" y="896">M9</text><text x="1225" y="896">M10</text><text x="1340" y="896">M11</text><text x="1455" y="896">M12</text>
+  </g>
+  <rect x="1060" y="924" width="18" height="18" rx="4" fill="#F5B923"/><text x="1088" y="940" font-size="17" fill="#6B7A72">Months with a product launch</text>
+  <text x="60" y="960" font-size="18" fill="#A3AAA5">Illustration based on the reported average</text>
+</svg>

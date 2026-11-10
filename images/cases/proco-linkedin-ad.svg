@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#F3F2EF"/>
+  <rect x="400" y="40" width="800" height="920" rx="16" fill="#FFFFFF" stroke="#E0DFDC" stroke-width="2"/>
+  <rect x="440" y="80" width="72" height="72" rx="10" fill="#152A24"/>
+  <path d="M462 134V100h26M462 117h20" stroke="#FEF4DE" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <text x="532" y="108" font-size="26" font-weight="700" fill="#191919">Proco Machinery</text>
+  <text x="532" y="140" font-size="20" fill="#666666">Promoted</text>
+  <text x="440" y="208" font-size="25" fill="#191919">Running injection molding lines? Cut cycle time and</text>
+  <text x="440" y="242" font-size="25" fill="#191919">labour costs with robots built for plastics.</text>
+  <rect x="400" y="276" width="800" height="440" fill="#152A24"/>
+  <g stroke="#F5B923" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M640 640 L640 520 L760 440 L900 470"/>
+  </g>
+  <circle cx="640" cy="520" r="22" fill="#F5B923"/><circle cx="760" cy="440" r="22" fill="#F5B923"/>
+  <rect x="580" y="630" width="120" height="40" rx="8" fill="#F5B923"/>
+  <rect x="900" y="452" width="60" height="36" rx="6" fill="#FEF4DE"/>
+  <rect x="980" y="560" width="160" height="90" rx="10" fill="#FEF4DE" fill-opacity=".14" stroke="#FEF4DE" stroke-opacity=".4" stroke-width="3"/>
+  <text x="440" y="340" font-size="40" font-weight="800" fill="#FEF4DE">Faster cycles.</text>
+  <text x="440" y="390" font-size="40" font-weight="800" fill="#F5B923">Fewer bottlenecks.</text>
+  <rect x="400" y="716" width="800" height="120" fill="#EEF3F8"/>
+  <text x="440" y="764" font-size="24" font-weight="700" fill="#191919">Robotic automation for plastics</text>
+  <text x="440" y="800" font-size="20" fill="#666666">procomachinery.com</text>
+  <rect x="940" y="746" width="220" height="56" rx="28" fill="none" stroke="#0A66C2" stroke-width="3"/>
+  <text x="1050" y="782" font-size="22" font-weight="700" fill="#0A66C2" text-anchor="middle">Request a quote</text>
+  <g font-size="20" fill="#666666"><text x="440" y="900">Like</text><text x="560" y="900">Comment</text><text x="720" y="900">Repost</text><text x="860" y="900">Send</text></g>
+  <text x="60" y="960" font-size="18" fill="#9A9A96">Illustration of a LinkedIn ad</text>
+</svg>

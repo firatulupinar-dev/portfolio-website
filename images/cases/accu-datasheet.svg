@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#E9E4D8"/>
+  <rect x="180" y="40" width="760" height="900" rx="6" fill="#FFFFFF"/>
+  <rect x="180" y="40" width="760" height="150" rx="6" fill="#152A24"/><rect x="180" y="150" width="760" height="40" fill="#152A24"/>
+  <text x="220" y="100" font-size="18" font-weight="700" fill="#F5B923" letter-spacing="3">DATASHEET</text>
+  <text x="220" y="150" font-size="38" font-weight="800" fill="#FEF4DE">Smart Power Meter</text>
+  <text x="220" y="250" font-size="22" font-weight="800" fill="#152A24">Key benefits</text>
+  <g font-size="19" fill="#3E4C46">
+    <circle cx="228" cy="289" r="6" fill="#F5B923"/><text x="246" y="295">Revenue-grade accuracy for tenant billing</text>
+    <circle cx="228" cy="327" r="6" fill="#F5B923"/><text x="246" y="333">Real-time data over Ethernet and Modbus</text>
+    <circle cx="228" cy="365" r="6" fill="#F5B923"/><text x="246" y="371">Fits existing panels, no rewiring</text>
+  </g>
+  <text x="220" y="440" font-size="22" font-weight="800" fill="#152A24">Specifications</text>
+  <g font-size="18">
+    <rect x="220" y="460" width="680" height="44" fill="#F7F3EA"/><text x="236" y="489" fill="#6B7A72">Accuracy class</text><text x="600" y="489" fill="#152A24" font-weight="700">Revenue grade</text>
+    <text x="236" y="533" fill="#6B7A72">Communication</text><text x="600" y="533" fill="#152A24" font-weight="700">Ethernet · Modbus</text>
+    <rect x="220" y="548" width="680" height="44" fill="#F7F3EA"/><text x="236" y="577" fill="#6B7A72">Mounting</text><text x="600" y="577" fill="#152A24" font-weight="700">DIN rail / panel</text>
+    <text x="236" y="621" fill="#6B7A72">Display</text><text x="600" y="621" fill="#152A24" font-weight="700">Backlit LCD</text>
+  </g>
+  <rect x="220" y="680" width="680" height="12" rx="6" fill="#EDE6D6"/><rect x="220" y="708" width="600" height="12" rx="6" fill="#EDE6D6"/><rect x="220" y="736" width="640" height="12" rx="6" fill="#EDE6D6"/>
+  <rect x="220" y="830" width="260" height="56" rx="8" fill="#F5B923"/><text x="350" y="866" font-size="20" font-weight="800" fill="#152A24" text-anchor="middle">Request a quote</text>
+  <g font-size="19">
+    <rect x="1000" y="160" width="460" height="150" rx="14" fill="#FFFFFF"/><circle cx="1040" cy="200" r="18" fill="#F5B923"/><text x="1040" y="207" font-size="18" font-weight="800" fill="#152A24" text-anchor="middle">E</text>
+    <text x="1072" y="207" font-weight="800" fill="#152A24">Engineering</text><text x="1030" y="250" fill="#3E4C46">Confirmed protocol list</text><text x="1030" y="280" fill="#2F6B37" font-weight="700">✓ Approved</text>
+    <rect x="1000" y="340" width="460" height="150" rx="14" fill="#FFFFFF"/><circle cx="1040" cy="380" r="18" fill="#152A24"/><text x="1040" y="387" font-size="18" font-weight="800" fill="#F5B923" text-anchor="middle">P</text>
+    <text x="1072" y="387" font-weight="800" fill="#152A24">Product</text><text x="1030" y="430" fill="#3E4C46">Benefit order matches roadmap</text><text x="1030" y="460" fill="#2F6B37" font-weight="700">✓ Approved</text>
+    <rect x="1000" y="520" width="460" height="150" rx="14" fill="#FFFFFF"/><circle cx="1040" cy="560" r="18" fill="#6B7A72"/><text x="1040" y="567" font-size="18" font-weight="800" fill="#FFFFFF" text-anchor="middle">S</text>
+    <text x="1072" y="567" font-weight="800" fill="#152A24">Sales</text><text x="1030" y="610" fill="#3E4C46">Lead with tenant billing</text><text x="1030" y="640" fill="#2F6B37" font-weight="700">✓ Approved</text>
+  </g>
+  <text x="1000" y="730" font-size="20" font-weight="700" fill="#152A24">Reviewed with product, engineering and sales</text>
+  <text x="180" y="975" font-size="18" fill="#8E8778">Illustration · product and specs are generic</text>
+</svg>

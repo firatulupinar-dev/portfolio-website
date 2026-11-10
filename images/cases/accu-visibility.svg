@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1600" height="88" fill="#F7F3EA"/>
+  <text x="60" y="56" font-size="28" font-weight="700" fill="#152A24">Search visibility</text>
+  <text x="330" y="56" font-size="22" fill="#6B7A72">Tracked keywords · indexed to start = 100</text>
+  <rect x="1300" y="26" width="240" height="40" rx="20" fill="#E3F1E4"/>
+  <text x="1420" y="53" font-size="20" font-weight="700" fill="#2F6B37" text-anchor="middle">+15% visibility</text>
+  <g stroke="#EDE6D6" stroke-width="2">
+    <line x1="120" y1="220" x2="1520" y2="220"/><line x1="120" y1="380" x2="1520" y2="380"/>
+    <line x1="120" y1="540" x2="1520" y2="540"/><line x1="120" y1="700" x2="1520" y2="700"/>
+    <line x1="120" y1="860" x2="1520" y2="860" stroke="#C9C0AC"/>
+  </g>
+  <g font-size="18" fill="#8A948F" text-anchor="end">
+    <text x="104" y="226">120</text><text x="104" y="386">110</text><text x="104" y="546">100</text><text x="104" y="706">90</text><text x="104" y="866">80</text>
+  </g>
+  <path d="M120 540 L247 548 L374 536 L501 530 L628 514 L755 490 L882 462 L1009 440 L1136 420 L1263 404 L1390 392 L1520 300 L1520 860 L120 860 Z" fill="#F5B923" fill-opacity=".14"/>
+  <path d="M120 540 L247 548 L374 536 L501 530 L628 514 L755 490 L882 462 L1009 440 L1136 420 L1263 404 L1390 392 L1520 300" fill="none" stroke="#152A24" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  <line x1="501" y1="240" x2="501" y2="860" stroke="#F5B923" stroke-width="3" stroke-dasharray="10 8"/>
+  <rect x="516" y="236" width="268" height="38" rx="8" fill="#152A24"/>
+  <text x="650" y="262" font-size="18" font-weight="700" fill="#F5B923" text-anchor="middle">Content clusters go live</text>
+  <circle cx="120" cy="540" r="9" fill="#152A24"/><circle cx="1520" cy="300" r="11" fill="#F5B923" stroke="#152A24" stroke-width="4"/>
+  <text x="1500" y="276" font-size="22" font-weight="800" fill="#152A24" text-anchor="end">115</text>
+  <g font-size="18" fill="#8A948F" text-anchor="middle">
+    <text x="120" y="900">Month 1</text><text x="501" y="900">Month 4</text><text x="882" y="900">Month 7</text><text x="1263" y="900">Month 10</text><text x="1520" y="900">Month 12</text>
+  </g>
+  <text x="60" y="960" font-size="18" fill="#A3AAA5">Illustration based on the reported results</text>
+</svg>

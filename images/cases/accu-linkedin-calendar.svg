@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#F7F3EA"/>
+  <text x="60" y="80" font-size="32" font-weight="800" fill="#152A24">LinkedIn content calendar</text>
+  <text x="60" y="118" font-size="22" fill="#6B7A72">Annual plan, built around product launches and industry moments</text>
+  <rect x="1270" y="56" width="270" height="44" rx="22" fill="#152A24"/>
+  <text x="1405" y="85" font-size="20" font-weight="700" fill="#F5B923" text-anchor="middle">+40% followers YoY</text>
+  <g font-size="18" font-weight="700" fill="#6B7A72">
+    <text x="300" y="180">Week 1</text><text x="610" y="180">Week 2</text><text x="920" y="180">Week 3</text><text x="1230" y="180">Week 4</text>
+  </g>
+  <g font-size="22" font-weight="800" fill="#152A24">
+    <text x="60" y="262">March</text><text x="60" y="442">April</text><text x="60" y="622">May</text><text x="60" y="802">June</text>
+  </g>
+  <g stroke="#E3DACA" stroke-width="2"><line x1="60" y1="200" x2="1540" y2="200"/><line x1="60" y1="380" x2="1540" y2="380"/><line x1="60" y1="560" x2="1540" y2="560"/><line x1="60" y1="740" x2="1540" y2="740"/><line x1="60" y1="920" x2="1540" y2="920"/></g>
+  <g font-size="19">
+    <rect x="290" y="222" width="290" height="130" rx="12" fill="#152A24"/><text x="312" y="262" font-weight="800" fill="#F5B923">LAUNCH</text><text x="312" y="296" fill="#FEF4DE">New smart meter</text><text x="312" y="324" fill="#C9D2CC">Carousel + video</text>
+    <rect x="600" y="222" width="290" height="130" rx="12" fill="#FFFFFF"/><text x="622" y="262" font-weight="800" fill="#6B7A72">EDUCATION</text><text x="622" y="296" fill="#152A24">Power quality 101</text><text x="622" y="324" fill="#6B7A72">Blog post</text>
+    <rect x="1220" y="222" width="290" height="130" rx="12" fill="#FFFFFF"/><text x="1242" y="262" font-weight="800" fill="#6B7A72">CUSTOMER</text><text x="1242" y="296" fill="#152A24">Data center story</text><text x="1242" y="324" fill="#6B7A72">Case study</text>
+    <rect x="600" y="402" width="290" height="130" rx="12" fill="#FFFFFF"/><text x="622" y="442" font-weight="800" fill="#6B7A72">EVENT</text><text x="622" y="476" fill="#152A24">Trade show recap</text><text x="622" y="504" fill="#6B7A72">Photo post</text>
+    <rect x="910" y="402" width="290" height="130" rx="12" fill="#152A24"/><text x="932" y="442" font-weight="800" fill="#F5B923">LAUNCH</text><text x="932" y="476" fill="#FEF4DE">Energy software update</text><text x="932" y="504" fill="#C9D2CC">Video demo</text>
+    <rect x="290" y="582" width="290" height="130" rx="12" fill="#FFFFFF"/><text x="312" y="622" font-weight="800" fill="#6B7A72">EDUCATION</text><text x="312" y="656" fill="#152A24">Submetering guide</text><text x="312" y="684" fill="#6B7A72">Article</text>
+    <rect x="1220" y="582" width="290" height="130" rx="12" fill="#FFFFFF"/><text x="1242" y="622" font-weight="800" fill="#6B7A72">PRESS</text><text x="1242" y="656" fill="#152A24">Partnership news</text><text x="1242" y="684" fill="#6B7A72">Press release</text>
+    <rect x="600" y="762" width="290" height="130" rx="12" fill="#152A24"/><text x="622" y="802" font-weight="800" fill="#F5B923">LAUNCH</text><text x="622" y="836" fill="#FEF4DE">Wireless sensor</text><text x="622" y="864" fill="#C9D2CC">Carousel + webinar</text>
+    <rect x="1220" y="762" width="290" height="130" rx="12" fill="#FFFFFF"/><text x="1242" y="802" font-weight="800" fill="#6B7A72">EDUCATION</text><text x="1242" y="836" fill="#152A24">Utility trends</text><text x="1242" y="864" fill="#6B7A72">Poll</text>
+  </g>
+  <text x="60" y="970" font-size="18" fill="#8E8778">Illustration · product names are generic</text>
+</svg>

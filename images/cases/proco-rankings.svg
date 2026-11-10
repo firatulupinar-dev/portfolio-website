@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect width="1600" height="88" fill="#F7F3EA"/>
+  <text x="60" y="56" font-size="28" font-weight="700" fill="#152A24">Keyword rankings</text>
+  <text x="330" y="56" font-size="22" fill="#6B7A72">Google position · before and after the SEO work</text>
+  <g font-size="18" font-weight="700" fill="#8A948F" letter-spacing="1.5">
+    <text x="80" y="160">KEYWORD</text><text x="980" y="160" text-anchor="middle">BEFORE</text><text x="1180" y="160" text-anchor="middle">AFTER</text><text x="1440" y="160" text-anchor="middle">CHANGE</text>
+  </g>
+  <line x1="60" y1="184" x2="1540" y2="184" stroke="#152A24" stroke-width="2"/>
+  <g font-size="26" fill="#152A24">
+    <text x="80" y="252">robotic automation for injection molding</text>
+    <text x="80" y="372">sprue picker robot</text>
+    <text x="80" y="492">plastics automation equipment</text>
+    <text x="80" y="612">end of arm tooling manufacturer</text>
+    <text x="80" y="732">packaging automation solutions</text>
+    <text x="80" y="852">robotic part removal system</text>
+  </g>
+  <g stroke="#EDE6D6" stroke-width="2">
+    <line x1="60" y1="304" x2="1540" y2="304"/><line x1="60" y1="424" x2="1540" y2="424"/><line x1="60" y1="544" x2="1540" y2="544"/>
+    <line x1="60" y1="664" x2="1540" y2="664"/><line x1="60" y1="784" x2="1540" y2="784"/>
+  </g>
+  <g font-size="26" fill="#8A948F" text-anchor="middle">
+    <text x="980" y="252">38</text><text x="980" y="372">24</text><text x="980" y="492">51</text><text x="980" y="612">19</text><text x="980" y="732">44</text><text x="980" y="852">31</text>
+  </g>
+  <g font-size="28" font-weight="800" fill="#152A24" text-anchor="middle">
+    <text x="1180" y="252">4</text><text x="1180" y="372">2</text><text x="1180" y="492">7</text><text x="1180" y="612">3</text><text x="1180" y="732">9</text><text x="1180" y="852">5</text>
+  </g>
+  <g>
+    <rect x="1370" y="222" width="140" height="42" rx="21" fill="#F5B923"/><text x="1440" y="251" font-size="22" font-weight="700" fill="#152A24" text-anchor="middle">▲ 34</text>
+    <rect x="1370" y="342" width="140" height="42" rx="21" fill="#F5B923"/><text x="1440" y="371" font-size="22" font-weight="700" fill="#152A24" text-anchor="middle">▲ 22</text>
+    <rect x="1370" y="462" width="140" height="42" rx="21" fill="#F5B923"/><text x="1440" y="491" font-size="22" font-weight="700" fill="#152A24" text-anchor="middle">▲ 44</text>
+    <rect x="1370" y="582" width="140" height="42" rx="21" fill="#F5B923"/><text x="1440" y="611" font-size="22" font-weight="700" fill="#152A24" text-anchor="middle">▲ 16</text>
+    <rect x="1370" y="702" width="140" height="42" rx="21" fill="#F5B923"/><text x="1440" y="731" font-size="22" font-weight="700" fill="#152A24" text-anchor="middle">▲ 35</text>
+    <rect x="1370" y="822" width="140" height="42" rx="21" fill="#F5B923"/><text x="1440" y="851" font-size="22" font-weight="700" fill="#152A24" text-anchor="middle">▲ 26</text>
+  </g>
+  <text x="60" y="960" font-size="18" fill="#A3AAA5">Illustration · example keywords and positions</text>
+</svg>
