@@ -932,3 +932,7 @@ button.rm-sample-frame:focus-visible{outline:2px solid var(--accent);outline-off
 .rm-tl-two-lines{display:grid;grid-template-columns:repeat(4,max-content);gap:7px;}
 .rm-tl-two-lines li{white-space:nowrap;}
 @media (max-width:640px){.rm-tl-two-lines{grid-template-columns:repeat(2,max-content);}}
+/* wide screenshots (spreadsheets) anchor left in the thumbnail so the first columns stay visible */
+button.rm-sample-frame img.rm-img-left{object-position:left top;}
+/* roadmap without the side navigation: stages use the full content width */
+.rm-grid-full{grid-template-columns:minmax(0,1fr);}

@@ -29,7 +29,7 @@
     var b = buttons[current], thumb = b.querySelector('img'), fig = b.closest('figure');
     img.src = b.dataset.full || thumb.currentSrc || thumb.src;
     img.alt = thumb.alt || '';
-    cap.textContent = (fig.classList.contains('is-illustration') ? 'Illustration · ' : '') + (fig.querySelector('figcaption') ? fig.querySelector('figcaption').textContent : '');
+    cap.textContent = fig.dataset.lbCaption || ((fig.classList.contains('is-illustration') ? 'Illustration · ' : '') + (fig.querySelector('figcaption') ? fig.querySelector('figcaption').textContent : ''));
     count.textContent = (current + 1) + ' / ' + buttons.length;
     dlg.querySelectorAll('[data-go]').forEach(function(x){ x.hidden = buttons.length < 2; });
   }

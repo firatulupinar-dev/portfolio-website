@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Arial, 'Segoe UI', sans-serif">
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <!-- search bar -->
+  <rect x="150" y="34" width="760" height="50" rx="25" fill="#FFFFFF" stroke="#DFE1E5" stroke-width="2"/>
+  <text x="182" y="66" font-size="18" fill="#202124">power quality meter for data center</text>
+  <line x1="842" y1="46" x2="842" y2="72" stroke="#DFE1E5" stroke-width="2"/>
+  <circle cx="872" cy="57" r="9" fill="none" stroke="#4285F4" stroke-width="2.6"/><line x1="878.5" y1="63.5" x2="886" y2="71" stroke="#4285F4" stroke-width="2.6" stroke-linecap="round"/>
+  <g font-size="14" fill="#5F6368"><text x="182" y="124" fill="#1A73E8" font-weight="700">All</text><text x="232" y="124">Shopping</text><text x="314" y="124">Images</text><text x="384" y="124">Videos</text><text x="452" y="124">News</text><text x="512" y="124">More</text></g>
+  <rect x="178" y="134" width="30" height="3" rx="1.5" fill="#1A73E8"/>
+  <line x1="0" y1="138" x2="1600" y2="138" stroke="#EBEBEB" stroke-width="1.5"/>
+
+  <!-- sponsored ad -->
+  <text x="182" y="182" font-size="14" font-weight="700" fill="#202124">Sponsored</text>
+  <circle cx="196" cy="216" r="14" fill="#F1F3F4"/><text x="196" y="221" font-size="13" font-weight="700" fill="#0E8A9A" text-anchor="middle">A</text>
+  <text x="220" y="212" font-size="14" fill="#202124">Accuenergy</text>
+  <text x="220" y="230" font-size="12" fill="#4D5156">https://www.accuenergy.com › power-quality</text>
+  <text x="182" y="268" font-size="21" fill="#1A0DAB">Power Quality Meter for Data Centers | Catch Issues Before Downtime</text>
+  <text x="182" y="298" font-size="14.5" fill="#4D5156">Monitor sags, swells and harmonics in real time with revenue-grade accuracy. Built for</text>
+  <text x="182" y="320" font-size="14.5" fill="#4D5156">critical facilities. Free web interface software. Request a quote today.</text>
+  <g font-size="14.5" fill="#1A0DAB"><text x="182" y="352">Request a Quote</text><text x="182" y="378">Download Datasheet</text><text x="430" y="352">Data Center Solutions</text><text x="430" y="378">Talk to an Engineer</text></g>
+  <line x1="182" y1="400" x2="900" y2="400" stroke="#EBEBEB" stroke-width="1.5"/>
+
+  <!-- organic: our article -->
+  <circle cx="196" cy="436" r="14" fill="#F1F3F4"/><text x="196" y="441" font-size="13" font-weight="700" fill="#0E8A9A" text-anchor="middle">A</text>
+  <text x="220" y="432" font-size="14" fill="#202124">Accuenergy</text>
+  <text x="220" y="450" font-size="12" fill="#4D5156">https://www.accuenergy.com › blog › harmonics-data-centers</text>
+  <text x="182" y="488" font-size="21" fill="#1A0DAB">What Causes Harmonics in Data Centers? (And How to Monitor Them)</text>
+  <text x="182" y="518" font-size="14.5" fill="#4D5156">Harmonics from UPS systems and server power supplies can overheat equipment and trip</text>
+  <text x="182" y="540" font-size="14.5" fill="#4D5156">breakers. Learn the warning signs and how continuous power quality monitoring helps.</text>
+
+  <!-- people also ask -->
+  <text x="182" y="596" font-size="20" fill="#202124">People also ask</text>
+  <g font-size="15.5" fill="#202124">
+    <line x1="182" y1="614" x2="900" y2="614" stroke="#EBEBEB" stroke-width="1.5"/><text x="182" y="646">What does a power quality meter measure?</text><path d="M880 638 l6 6 6 -6" fill="none" stroke="#5F6368" stroke-width="2"/>
+    <line x1="182" y1="664" x2="900" y2="664" stroke="#EBEBEB" stroke-width="1.5"/><text x="182" y="696">Do data centers need Class A power quality monitoring?</text><path d="M880 688 l6 6 6 -6" fill="none" stroke="#5F6368" stroke-width="2"/>
+    <line x1="182" y1="714" x2="900" y2="714" stroke="#EBEBEB" stroke-width="1.5"/><text x="182" y="746">How do you find the source of harmonics?</text><path d="M880 738 l6 6 6 -6" fill="none" stroke="#5F6368" stroke-width="2"/>
+    <line x1="182" y1="764" x2="900" y2="764" stroke="#EBEBEB" stroke-width="1.5"/>
+  </g>
+
+  <!-- other organic results, greyed out -->
+  <g fill="#F1F3F4">
+    <circle cx="196" cy="806" r="14"/><rect x="220" y="796" width="120" height="12" rx="6"/><rect x="220" y="814" width="210" height="9" rx="4.5"/>
+    <rect x="182" y="840" width="520" height="16" rx="8" fill="#E8EAF6"/><rect x="182" y="868" width="680" height="11" rx="5.5"/><rect x="182" y="888" width="600" height="11" rx="5.5"/>
+    <circle cx="196" cy="934" r="14"/><rect x="220" y="924" width="140" height="12" rx="6"/><rect x="220" y="942" width="190" height="9" rx="4.5"/>
+    <rect x="182" y="966" width="480" height="16" rx="8" fill="#E8EAF6"/>
+  </g>
+
+  <!-- annotations -->
+  <g font-family="Inter, 'Segoe UI', Arial, sans-serif">
+    <line x1="908" y1="268" x2="1010" y2="268" stroke="#F5B923" stroke-width="2" stroke-dasharray="5 5"/>
+    <line x1="908" y1="365" x2="1010" y2="365" stroke="#F5B923" stroke-width="2" stroke-dasharray="5 5"/>
+    <line x1="908" y1="488" x2="1010" y2="488" stroke="#F5B923" stroke-width="2" stroke-dasharray="5 5"/>
+    <line x1="908" y1="680" x2="1010" y2="680" stroke="#F5B923" stroke-width="2" stroke-dasharray="5 5"/>
+    <g>
+      <rect x="1010" y="232" width="530" height="74" rx="12" fill="#152A24"/><circle cx="1042" cy="269" r="14" fill="#F5B923"/><text x="1042" y="275" font-size="15" font-weight="800" fill="#152A24" text-anchor="middle">1</text>
+      <text x="1068" y="262" font-size="17" font-weight="700" fill="#FEF4DE">Headline mirrors the search</text><text x="1068" y="288" font-size="15" fill="#C9D2CC">Keyword + buyer problem, so the click feels relevant</text>
+      <rect x="1010" y="328" width="530" height="74" rx="12" fill="#152A24"/><circle cx="1042" cy="365" r="14" fill="#F5B923"/><text x="1042" y="371" font-size="15" font-weight="800" fill="#152A24" text-anchor="middle">2</text>
+      <text x="1068" y="358" font-size="17" font-weight="700" fill="#FEF4DE">Sitelinks to each next step</text><text x="1068" y="384" font-size="15" fill="#C9D2CC">Quote, datasheet, solution page and sales</text>
+      <rect x="1010" y="451" width="530" height="74" rx="12" fill="#152A24"/><circle cx="1042" cy="488" r="14" fill="#F5B923"/><text x="1042" y="494" font-size="15" font-weight="800" fill="#152A24" text-anchor="middle">3</text>
+      <text x="1068" y="481" font-size="17" font-weight="700" fill="#FEF4DE">Paid and organic on one page</text><text x="1068" y="507" font-size="15" fill="#C9D2CC">The ad captures intent; the article earns trust</text>
+      <rect x="1010" y="643" width="530" height="74" rx="12" fill="#152A24"/><circle cx="1042" cy="680" r="14" fill="#F5B923"/><text x="1042" y="686" font-size="15" font-weight="800" fill="#152A24" text-anchor="middle">4</text>
+      <text x="1068" y="673" font-size="17" font-weight="700" fill="#FEF4DE">Questions became content</text><text x="1068" y="699" font-size="15" fill="#C9D2CC">Each "People also ask" answer maps to a page</text>
+    </g>
+  </g>
+</svg>
