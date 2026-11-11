@@ -13,7 +13,7 @@
   dlg.className = 'rm-lightbox';
   dlg.setAttribute('aria-label', 'Work sample');
   dlg.innerHTML =
-    '<figure class="rm-lb-figure"><img class="rm-lb-img" alt=""><figcaption class="rm-lb-bar">' +
+    '<figure class="rm-lb-figure"><div class="rm-lb-scroll"><img class="rm-lb-img" alt=""></div><figcaption class="rm-lb-bar">' +
     '<span class="rm-lb-caption"></span><span class="rm-lb-count"></span>' +
     '<span class="rm-lb-actions"><button type="button" class="rm-lb-btn" data-go="-1" aria-label="Previous sample">&larr;</button>' +
     '<button type="button" class="rm-lb-btn" data-go="1" aria-label="Next sample">&rarr;</button>' +
@@ -21,7 +21,7 @@
     '</figcaption></figure>';
   document.body.appendChild(dlg);
 
-  var img = dlg.querySelector('.rm-lb-img'), cap = dlg.querySelector('.rm-lb-caption'), count = dlg.querySelector('.rm-lb-count');
+  var img = dlg.querySelector('.rm-lb-img'), cap = dlg.querySelector('.rm-lb-caption'), count = dlg.querySelector('.rm-lb-count'), pane = dlg.querySelector('.rm-lb-scroll');
   var current = 0, opener = null;
 
   function show(i){
@@ -30,6 +30,11 @@
     img.src = b.dataset.full || thumb.currentSrc || thumb.src;
     img.alt = thumb.alt || '';
     cap.textContent = fig.dataset.lbCaption || ((fig.classList.contains('is-illustration') ? 'Illustration · ' : '') + (fig.querySelector('figcaption') ? fig.querySelector('figcaption').textContent : ''));
+    /* a sample with a full-page screenshot (data-full) opens at reading width and scrolls top to bottom */
+    var full = !!b.dataset.full;
+    dlg.classList.toggle('is-scroll', full);
+    if(full) cap.textContent += ' · Scroll to view the full page';
+    pane.scrollTop = 0;
     count.textContent = (current + 1) + ' / ' + buttons.length;
     dlg.querySelectorAll('[data-go]').forEach(function(x){ x.hidden = buttons.length < 2; });
   }

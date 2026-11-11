@@ -936,3 +936,9 @@ button.rm-sample-frame:focus-visible{outline:2px solid var(--accent);outline-off
 button.rm-sample-frame img.rm-img-left{object-position:left top;}
 /* roadmap without the side navigation: stages use the full content width */
 .rm-grid-full{grid-template-columns:minmax(0,1fr);}
+/* work-sample viewer: full-page screenshots scroll inside the viewer at a readable width */
+.rm-lb-scroll{max-height:calc(92vh - 64px);overflow:auto;overscroll-behavior:contain;}
+.rm-lightbox.is-scroll{width:min(1100px,94vw);}
+.rm-lightbox.is-scroll .rm-lb-img{width:auto;max-width:100%;max-height:none;height:auto;margin:0 auto;}
+/* sample badge: plain words, dark pill, readable at a glance */
+.rm-sample.is-illustration .rm-sample-frame::before{content:"*Sample illustration";padding:5px 11px;background:var(--dark);font-family:var(--font-sans);font-size:.75rem;font-weight:600;letter-spacing:0;text-transform:none;color:var(--paper);box-shadow:0 4px 12px -6px rgba(21,42,36,.55);}
