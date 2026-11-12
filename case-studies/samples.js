@@ -33,6 +33,8 @@
     /* a sample with a full-page screenshot (data-full) opens at reading width and scrolls top to bottom */
     var full = !!b.dataset.full;
     dlg.classList.toggle('is-scroll', full);
+    /* data-full-width caps how wide a full-page image shows (e.g. emails at reading width, sharp on high-DPI screens) */
+    img.style.maxWidth = b.dataset.fullWidth ? b.dataset.fullWidth + 'px' : '';
     if(full) cap.textContent += ' · Scroll to view the full page';
     pane.scrollTop = 0;
     count.textContent = (current + 1) + ' / ' + buttons.length;
