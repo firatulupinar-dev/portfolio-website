@@ -80,15 +80,23 @@ h1{max-width:790px;font-size:clamp(2.6rem,7vw,5.6rem);line-height:1.02;letter-sp
 .contact-option p{color:var(--ink-soft);line-height:1.65;}
 .contact-option a{display:inline-block;margin-top:18px;font-weight:700;text-decoration-color:var(--accent);text-underline-offset:4px;}
 .placeholder-note{margin-top:46px;padding:16px 18px;border-left:3px solid var(--accent);background:rgba(245,185,35,.08);color:var(--ink-soft);font-size:.875rem;line-height:1.6;}
-footer{border-top:1px solid var(--line);}
-.footer-inner{max-width:1120px;margin:auto;padding:28px 32px;display:flex;justify-content:space-between;gap:20px;color:var(--ink-soft);font-size:.8125rem;}
-.footer-signature{display:inline-flex;align-items:center;gap:9px;}
-.footer-logo{width:28px;height:28px;flex:none;}
+footer{border-top:1px solid var(--line);padding:48px 32px 32px;}
+.footer-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;}
+.footer-brand{font-family:var(--font-sans);font-weight:700;font-size:15px;color:var(--ink);}
+.footer-brand-lockup{display:inline-flex;align-items:center;gap:10px;margin-bottom:10px;text-decoration:none;}
+.footer-logo{width:30px;height:30px;flex:none;}
 .footer-logo-cursor{fill:var(--accent);}
+.footer-tagline{font-family:var(--font-sans);font-size:.75rem;color:var(--ink-soft);max-width:260px;line-height:1.6;}
+.footer-col-label{font-family:var(--font-sans);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);margin-bottom:14px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-family:var(--font-sans);font-size:13px;color:var(--ink-soft);text-decoration:none;transition:color .2s;}
+.footer-links a:hover,.footer-links a:focus-visible{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px;}
+.footer-links a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.footer-bottom{max-width:1120px;margin:32px auto 0;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-family:var(--font-sans);font-size:.75rem;color:var(--ink-soft);}
+@media(max-width:640px){.footer-inner{grid-template-columns:1fr;gap:28px;}footer{padding:40px 20px 28px;}}
 @media(max-width:720px){
   .page{padding:64px 20px 72px;}
   .placeholder-grid,.contact-options{grid-template-columns:1fr;}
-  .footer-inner{padding:24px 20px;flex-direction:column;}
 }
 
 /* ===================== CASE STUDY CARDS (portfolio index) ===================== */
@@ -773,7 +781,7 @@ header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);
 .rm-body-result-aligned{grid-template-areas:"meta meta" "actions result";row-gap:0;}
 .rm-body-result-aligned .rm-stage-meta{grid-area:meta;}
 .rm-body-result-aligned .rm-stage-actions{grid-area:actions;}
-.rm-body-result-aligned .rm-result{grid-area:result;}
+.rm-body-result-aligned .rm-result{grid-area:result;margin-top:26px;}
 .rm-body-data{grid-template-columns:1fr;}
 .rm-data-stage .rm-proof-list{grid-template-columns:1fr;}
 .rm-sub{margin-bottom:10px;font-family:var(--font-mono);font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
@@ -941,4 +949,4 @@ button.rm-sample-frame img.rm-img-left{object-position:left top;}
 .rm-lightbox.is-scroll{width:min(1100px,94vw);}
 .rm-lightbox.is-scroll .rm-lb-img{width:auto;max-width:100%;max-height:none;height:auto;margin:0 auto;}
 /* sample badge: plain words, dark pill, readable at a glance */
-.rm-sample.is-illustration .rm-sample-frame::before{content:"*Sample illustration";padding:5px 11px;background:var(--dark);font-family:var(--font-sans);font-size:.75rem;font-weight:600;letter-spacing:0;text-transform:none;color:var(--paper);box-shadow:0 4px 12px -6px rgba(21,42,36,.55);}
+.rm-sample.is-illustration .rm-sample-frame::before{content:"*\2009Sample illustration";left:12px;top:12px;padding:5px 10px 5px 9px;border:1px solid rgba(21,42,36,.12);background:rgba(255,251,239,.94);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.01em;text-transform:none;color:var(--ink-soft);box-shadow:0 2px 6px -3px rgba(21,42,36,.25);}
