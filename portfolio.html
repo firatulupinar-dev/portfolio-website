@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Work: Case Studies, Skills and Tools | Firat Ulupinar</title>
-<meta name="description" content="Case studies from Firat Ulupinar: tripled organic traffic at Proco Machinery, 30% more online sales for Newell Outdoors and SISU Wellness, 15+ launches at Accuenergy and more.">
+<meta name="description" content="Case studies from Firat Ulupinar: tripled organic traffic at Proco Machinery, 30% more online sales for Newell Outdoors, 15+ launches at Accuenergy and more.">
 <!-- Change to index, follow once the case studies have real results. -->
 <meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#152A24">
@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="pages.css?v=5">
+<link rel="stylesheet" href="pages.css?v=23">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -33,35 +33,32 @@
   </div>
 </header>
 <main id="main" tabindex="-1" class="wk">
-  <div class="page work-cases">
-    <span class="page-label"><span>//</span> CASE STUDIES</span>
+  <div class="page work-cases" id="case-studies">
     <h1>Work that moved the needle.</h1>
-    <p class="lede">Each project starts with the result, then shows what I did to get there.</p>
-
-    <!-- RESULTS ACROSS THE FUNNEL: best result at each stage, left (reach) to right (revenue).
-         Static: a quiet line links the stages; revenue gets the yellow marker. -->
-    <section class="wk-funnel" id="wkFunnel" aria-label="Results across the funnel">
-      <div class="wk-track" aria-hidden="true"><span class="wk-track-fill"></span></div>
-      <ol>
-        <li style="--d:0s"><span class="wk-dot" aria-hidden="true"></span><span class="wk-stage">01 &middot; Reach</span><b class="wk-count" data-target="200" data-prefix="+" data-suffix="%">+200%</b><span class="wk-label">organic traffic</span></li>
-        <li style="--d:.45s"><span class="wk-dot" aria-hidden="true"></span><span class="wk-stage">02 &middot; Engage</span><b class="wk-count" data-target="30" data-prefix="+" data-suffix="%">+30%</b><span class="wk-label">email open rate</span></li>
-        <li style="--d:.9s"><span class="wk-dot" aria-hidden="true"></span><span class="wk-stage">03 &middot; Convert</span><b class="wk-count" data-target="340">340</b><span class="wk-label">leads a month</span></li>
-        <li style="--d:1.35s"><span class="wk-dot" aria-hidden="true"></span><span class="wk-stage">04 &middot; Revenue</span><b class="wk-count" data-target="1" data-prefix="$" data-suffix="M+">$1M+</b><span class="wk-label">in sales driven</span></li>
-      </ol>
-    </section>
-
+    <p class="lede">Results for B2B and D2C brands in energy, robotics, ecommerce and hospitality, and exactly how I got them.</p>
+    <!-- ON THIS PAGE: jump links so visitors see everything the page covers before they scroll -->
+    <nav class="wk-index" aria-label="On this page">
+      <ul>
+        <li><a href="#case-studies-list">Case studies</a></li>
+        <li><a href="#tools">Tech stack</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#how-i-work">How I work</a></li>
+        <li><a href="#lets-chat">Let&rsquo;s chat</a></li>
+      </ul>
+    </nav>
 
     <!-- PROJECT CARDS: every card reads in the same order, so they scan fast:
          photo → result → client · industry → headline → channels. To add a project, copy one <li>. -->
-    <div class="wk-list">
+    <div class="wk-list" id="case-studies-list">
+      <span class="page-label"><span>//</span> CASE STUDIES</span>
       <ol class="wk-cards">
-        <li class="wk-row" data-skills="seo paid email content">
-          <a class="wk-card" href="case-studies/proco-machinery.html">
-            <span class="wk-photo"><img src="images/work/proco.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async"><span class="wk-tag"><span>Proco Machinery</span><span>Robotics</span></span></span>
+        <li class="wk-row" data-skills="content paid social seo ai email">
+          <a class="wk-card" href="case-studies/accuenergy.html">
+            <span class="wk-photo"><img src="images/work/accuenergy.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async"><span class="wk-tag"><span>Accuenergy</span><span>Energy</span></span></span>
             <span class="wk-body">
-              <span class="wk-result"><b>$1M+</b><small>automation sales</small></span>
-              <span class="wk-title">Tripled organic traffic for a robotics manufacturer</span>
-              <span class="wk-ch"><i data-skill="seo">SEO</i><i data-skill="paid">Paid media</i><i data-skill="email">Email &amp; CRM</i><i data-skill="content">Content</i></span>
+              <span class="wk-result"><b>340</b><small>leads per month</small></span>
+              <span class="wk-title">Marketed 15+ product launches and grew website traffic 25%</span>
+              <span class="wk-ch"><i data-skill="content">Content</i><i data-skill="paid">Paid media</i><i data-skill="social">Social</i><i data-skill="seo">SEO</i><i data-skill="ai">AI search</i><i data-skill="email">Email &amp; CRM</i></span>
             </span>
           </a>
         </li>
@@ -75,13 +72,13 @@
             </span>
           </a>
         </li>
-        <li class="wk-row" data-skills="content paid social seo ai email">
-          <a class="wk-card" href="case-studies/accuenergy.html">
-            <span class="wk-photo"><img src="images/work/accuenergy.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async"><span class="wk-tag"><span>Accuenergy</span><span>Energy</span></span></span>
+        <li class="wk-row" data-skills="seo paid email content">
+          <a class="wk-card" href="case-studies/proco-machinery.html">
+            <span class="wk-photo"><img src="images/work/proco.jpg" alt="" width="1600" height="1067" loading="lazy" decoding="async"><span class="wk-tag"><span>Proco Machinery</span><span>Robotics</span></span></span>
             <span class="wk-body">
-              <span class="wk-result"><b>340</b><small>leads per month</small></span>
-              <span class="wk-title">Marketed 15+ product launches and grew website traffic 25%</span>
-              <span class="wk-ch"><i data-skill="content">Content</i><i data-skill="paid">Paid media</i><i data-skill="social">Social</i><i data-skill="seo">SEO</i><i data-skill="ai">AI search</i><i data-skill="email">Email &amp; CRM</i></span>
+              <span class="wk-result"><b>$1M+</b><small>automation sales</small></span>
+              <span class="wk-title">Tripled organic traffic for a robotics manufacturer</span>
+              <span class="wk-ch"><i data-skill="seo">SEO</i><i data-skill="paid">Paid media</i><i data-skill="email">Email &amp; CRM</i><i data-skill="content">Content</i></span>
             </span>
           </a>
         </li>
@@ -106,7 +103,6 @@
         <span class="page-label"><span>//</span> TECH STACK</span>
         <h2 id="stack-title">The tools I work with.</h2>
       </div>
-      <p>The platforms I use day to day, from research and building to launching and reporting.</p>
     </div>
     <!-- One card per area. To add a tool, copy an <li> (the two letters in .wk-tm are its monogram). -->
     <div class="wk-stack-grid">
@@ -114,29 +110,42 @@
         <h3><span class="wk-live" aria-hidden="true"></span>SEO &amp; AI search</h3>
         <ul>
           <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/semrush.svg);--brand:#FF642D" aria-hidden="true"></span>Semrush</li>
-          <li><span class="wk-tm" style="--brand:#6AB32E" aria-hidden="true">SF</span>Screaming Frog</li>
-          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/googlesearchconsole.svg);--brand:#458CF5" aria-hidden="true"></span>Google Search Console</li>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/ahrefs.svg);--brand:#FF8D00" aria-hidden="true"></span>Ahrefs</li>
+          <li><span class="wk-tm wk-img" style="--img:url(images/tools/screamingfrog.png);--brand:#6AB32E" aria-hidden="true"></span>Screaming Frog</li>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/pagespeedinsights.svg);--brand:#4285F4" aria-hidden="true"></span>Google PageSpeed Insights</li>
         </ul>
       </article>
       <article class="wk-tools reveal-card">
-        <h3><span class="wk-live" aria-hidden="true"></span>Paid media</h3>
+        <h3><span class="wk-live" aria-hidden="true"></span>Paid &amp; social</h3>
         <ul>
           <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/googleads.svg);--brand:#4285F4" aria-hidden="true"></span>Google Ads</li>
-          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/meta.svg);--brand:#0467DF" aria-hidden="true"></span>Meta Ads Manager</li>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/meta.svg);--brand:#0081FB" aria-hidden="true"></span>Meta Ads Manager</li>
           <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/linkedin.svg);--brand:#0A66C2" aria-hidden="true"></span>LinkedIn Ads</li>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/hootsuite.svg);--brand:#143059" aria-hidden="true"></span>Hootsuite</li>
         </ul>
       </article>
       <article class="wk-tools reveal-card">
-        <h3><span class="wk-live" aria-hidden="true"></span>Email &amp; CRM</h3>
+        <h3><span class="wk-live" aria-hidden="true"></span>Email marketing</h3>
+        <ul>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/mailchimp.svg);--brand:#241C15" aria-hidden="true"></span>Mailchimp</li>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/klaviyo.png);--brand:#232426" aria-hidden="true"></span>Klaviyo</li>
+          <li><span class="wk-tm" style="--brand:#1856ED" aria-hidden="true">CC</span>Constant Contact</li>
+          <li><span class="wk-tm wk-img" style="--img:url(images/tools/litmus.png);--brand:#E2683E" aria-hidden="true"></span>Litmus</li>
+          <li><span class="wk-tm wk-img" style="--img:url(images/tools/zerobounce.png);--brand:#1D2B3A" aria-hidden="true"></span>ZeroBounce</li>
+        </ul>
+      </article>
+      <article class="wk-tools reveal-card">
+        <h3><span class="wk-live" aria-hidden="true"></span>CRM &amp; automation</h3>
         <ul>
           <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/hubspot.svg);--brand:#FF7A59" aria-hidden="true"></span>HubSpot</li>
-          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/mailchimp.svg);--brand:#241C15" aria-hidden="true"></span>Mailchimp</li>
         </ul>
       </article>
       <article class="wk-tools reveal-card">
         <h3><span class="wk-live" aria-hidden="true"></span>Analytics &amp; reporting</h3>
         <ul>
           <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/googleanalytics.svg);--brand:#E37400" aria-hidden="true"></span>Google Analytics</li>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/googlesearchconsole.svg);--brand:#458CF5" aria-hidden="true"></span>Google Search Console</li>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/hotjar.svg);--brand:#FF3C00" aria-hidden="true"></span>Hotjar</li>
           <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/looker.svg);--brand:#4285F4" aria-hidden="true"></span>Looker</li>
         </ul>
       </article>
@@ -149,12 +158,20 @@
         </ul>
       </article>
       <article class="wk-tools reveal-card">
+        <h3><span class="wk-live" aria-hidden="true"></span>Design</h3>
+        <ul>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/figma.svg);--brand:#F24E1E" aria-hidden="true"></span>Figma</li>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/adobecreativecloud.svg);--brand:#DA1F26" aria-hidden="true"></span>Adobe Creative Suite</li>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/canva.svg);--brand:#00C4CC" aria-hidden="true"></span>Canva</li>
+        </ul>
+      </article>
+      <article class="wk-tools reveal-card">
         <h3><span class="wk-live" aria-hidden="true"></span>Programming</h3>
         <ul>
           <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/html5.svg);--brand:#E34F26" aria-hidden="true"></span>HTML</li>
-          <li><span class="wk-tm" style="--brand:#1572B6" aria-hidden="true">CSS</span>CSS</li>
-          <li><span class="wk-tm" style="--brand:#C9A400" aria-hidden="true">JS</span>JavaScript</li>
-          <li><span class="wk-tm" style="--brand:#336791" aria-hidden="true">SQL</span>SQL</li>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/css3.svg);--brand:#1572B6" aria-hidden="true"></span>CSS</li>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/javascript.svg);--brand:#E8C300" aria-hidden="true"></span>JavaScript</li>
+          <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/database.svg);--brand:#336791" aria-hidden="true"></span>SQL</li>
         </ul>
       </article>
     </div>
@@ -165,19 +182,36 @@
     <div class="ab-section-head">
       <div>
         <span class="page-label"><span>//</span> CERTIFICATIONS</span>
-        <h2 id="certs-title">Certified in the platforms I use.</h2>
+        <h2 id="certs-title">Keeping pace as search, data and AI evolve.</h2>
       </div>
-      <p>Formal training from the companies behind the tools, backing up the hands-on work above.</p>
     </div>
-    <ul class="wk-cert-grid">
-      <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/google.svg);--brand:#4285F4" aria-hidden="true"></span><strong>Google Ads &amp; Analytics</strong><small>Google</small></li>
-      <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/hubspot.svg);--brand:#FF7A59" aria-hidden="true"></span><strong>Digital Marketing</strong><small>HubSpot Academy</small></li>
-      <li><span class="wk-tm wk-logo" style="--logo:url(images/tools/semrush.svg);--brand:#FF642D" aria-hidden="true"></span><strong>Search Engine Optimization</strong><small>Semrush Academy</small></li>
-    </ul>
+    <!-- One dark card per provider; HubSpot Academy (the longest list) spans two rows on wide screens. -->
+    <div class="wk-prov-grid">
+      <article class="wk-prov wk-prov-hubspot" style="--brand:#FF7A59">
+        <div class="wk-prov-head"><span class="wk-tm wk-logo" style="--logo:url(images/tools/hubspot.svg)" aria-hidden="true"></span><div><h3>HubSpot Academy</h3></div></div>
+        <ul><li>Inbound Marketing</li><li>Digital Marketing</li><li>Content Marketing</li><li>SEO</li><li>Email Marketing</li><li>Social Media</li></ul>
+      </article>
+      <article class="wk-prov" style="--brand:#4285F4">
+        <div class="wk-prov-head"><span class="wk-tm wk-logo" style="--logo:url(images/tools/google.svg)" aria-hidden="true"></span><div><h3>Google</h3></div></div>
+        <ul><li>Digital Marketing Specialization <em>Coursera</em></li><li>Google Analytics</li><li>Google Ads</li></ul>
+      </article>
+      <article class="wk-prov" style="--brand:#FF642D">
+        <div class="wk-prov-head"><span class="wk-tm wk-logo" style="--logo:url(images/tools/semrush.svg)" aria-hidden="true"></span><div><h3>Semrush Academy</h3></div></div>
+        <ul><li>SEO</li><li>AI Search</li><li>Digital Marketing</li></ul>
+      </article>
+      <article class="wk-prov" style="--brand:#A435F0">
+        <div class="wk-prov-head"><span class="wk-tm wk-logo" style="--logo:url(images/tools/udemy.svg)" aria-hidden="true"></span><div><h3>Udemy</h3></div></div>
+        <ul><li>Conversion Rate Optimization</li><li>Advanced Digital Marketing</li><li>PostgreSQL</li></ul>
+      </article>
+      <article class="wk-prov" style="--brand:#0A0A23">
+        <div class="wk-prov-head"><span class="wk-tm wk-logo" style="--logo:url(images/tools/freecodecamp.svg)" aria-hidden="true"></span><div><h3>freeCodeCamp</h3></div></div>
+        <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+      </article>
+    </div>
   </section>
 
   <!-- HOW I WORK: what working together looks like, in four steps. -->
-  <section class="ab-section wk-process" aria-labelledby="process-title">
+  <section class="ab-section wk-process" id="how-i-work" aria-labelledby="process-title">
     <div class="ab-section-head">
       <div>
         <span class="page-label"><span>//</span> HOW I WORK</span>
@@ -193,7 +227,7 @@
     </ol>
   </section>
 
-  <section class="wk-cta-wrap" aria-labelledby="wk-cta-title">
+  <section class="wk-cta-wrap" id="lets-chat" aria-labelledby="wk-cta-title">
     <div class="wk-cta">
       <div>
         <span class="page-label"><span>//</span> LET&rsquo;S HAVE A CHAT</span>

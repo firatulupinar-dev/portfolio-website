@@ -13,7 +13,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../pages.css?v=5">
+<link rel="stylesheet" href="../pages.css?v=23">
+<link rel="stylesheet" href="case-study.css?v=2">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -35,82 +36,175 @@
 
 <main id="main" tabindex="-1">
   <article>
-    <div class="cs">
-      <div class="cs-head">
-        <span class="page-label"><span>//</span> CASE STUDY &middot; HOSPITALITY</span>
-        <h1>Put 105 keywords on Google's first page for a Toronto yacht charter</h1>
-        <p class="lede">Yankee Lady Yacht Charters has offered premium boat cruises for social and corporate events in Toronto for over 40 years. I ran their search, paid and email marketing.</p>
+    <!-- INTRO: headline and story on the left, photo on the right; key results sit in one light strip below -->
+    <div class="csx">
+      <div class="csx-hero">
+        <div class="csx-copy">
+          <span class="page-label"><span>//</span> CASE STUDY &middot; HOSPITALITY</span>
+          <h1>Put 105 keywords on Google&rsquo;s first page for a Toronto yacht charter</h1>
+          <p class="lede">Yankee Lady Yacht Charters has offered premium boat cruises for social and corporate events in Toronto for over 40 years.</p>
+          <dl class="csx-facts">
+            <div><dt>Company</dt><dd>Yankee Lady Yacht Charters</dd></div>
+            <div><dt>My role</dt><dd>Marketing Specialist</dd></div>
+            <div><dt>Timeline</dt><dd>Mar 2020 &ndash; Oct 2022</dd></div>
+            <div><dt>Market</dt><dd>B2C &amp; B2B &middot; Hospitality</dd></div>
+          </dl>
+        </div>
+        <figure class="csx-photo"><img src="../images/work/yankee-lady.jpg" alt="Toronto skyline and harbour with sailboats on Lake Ontario" width="1600" height="1067" decoding="async"></figure>
       </div>
 
-      <dl class="cs-facts">
-        <div><dt>Company</dt><dd>Yankee Lady Yacht Charters</dd></div>
-        <div><dt>My role</dt><dd>Marketing Specialist</dd></div>
-        <div><dt>Timeline</dt><dd>Mar 2020 &ndash; Oct 2022</dd></div>
-        <div><dt>Services</dt><dd>SEO, PPC, Email, Landing pages</dd></div>
-      </dl>
-      <div class="cs-tools">
-        <span class="cs-label">Tools</span>
-        <ul aria-label="Tools used"><li>Google Ads</li><li>Semrush</li><li>Screaming Frog</li><li>Google Search Console</li><li>Google Analytics</li></ul>
-      </div>
-
-      <div class="cs-hero">[Add a hero image: a cruise, the website or a top landing page]</div>
+      <section class="csx-results" aria-labelledby="results-heading">
+        <h2 class="csx-results-label" id="results-heading">Key results</h2>
+        <dl>
+          <div><dd class="is-key">105</dd><dt>keywords in Google&rsquo;s top 10, from a new SEO strategy</dt></div>
+          <div><dd class="is-key">+20%</dd><dt>outbound leads from a $20K/month Google Ads program</dt></div>
+          <div><dd class="is-key">+5%</dd><dt>repeat bookings for upcoming seasons, from segmented email</dt></div>
+        </dl>
+      </section>
     </div>
 
-    <section class="cs-results" aria-labelledby="results-heading">
-      <div class="cs-results-inner">
-        <h2 class="page-label" id="results-heading"><span>//</span> RESULTS</h2>
-        <dl class="cs-metrics">
-          <div><dt><strong>Keywords in Google's top 10</strong>from a new SEO strategy</dt><dd>105</dd></div>
-          <div><dt><strong>Outbound leads</strong>from a $20K/month Google Ads program</dt><dd>+20%</dd></div>
-          <div><dt><strong>Repeat bookings</strong>for upcoming seasons, from segmented email</dt><dd>+5%</dd></div>
-        </dl>
+    <!-- GROWTH ROADMAP: four connected stages, each with what I did, results, work samples and tools.
+         The stage rail beside the scrollbar (case-study.js) follows the reader. -->
+    <section class="rm" aria-labelledby="rm-title">
+      <div class="rm-head">
+        <span class="page-label"><span>//</span> THE GROWTH ROADMAP</span>
+        <h2 id="rm-title">One system, four connected stages</h2>
+        <p><strong>The challenge:</strong> Yankee Lady serves two different audiences: people planning social events and companies booking corporate cruises. Marketing had to reach both, and bring past guests back season after season.</p>
+        <p><strong>The solution:</strong> I organized the work into four connected stages, built each channel around how people actually plan and book a cruise, and tracked every one against bookings.</p>
+      </div>
+      <!-- SYSTEM MAP: the four stages at a glance, with the feedback loop from reporting back to the start -->
+      <nav class="lp-map" aria-label="The four stages">
+        <ol>
+          <li><a href="#attract"><span class="lp-n">01</span><span class="lp-name">Attract</span></a></li>
+          <li><a href="#convert"><span class="lp-n">02</span><span class="lp-name">Convert</span></a></li>
+          <li><a href="#retain"><span class="lp-n">03</span><span class="lp-name">Retain</span></a></li>
+          <li><a href="#measure"><span class="lp-n">04</span><span class="lp-name">Measure</span></a></li>
+        </ol>
+        <div class="lp-loop" aria-hidden="true">
+          <svg viewBox="0 0 1000 40" preserveAspectRatio="none"><path d="M875 0 V22 Q875 30 867 30 H133 Q125 30 125 22 V6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" vector-effect="non-scaling-stroke"/><path d="M119 12 L125 2 L131 12" fill="none" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke"/></svg>
+          <span>Data-driven decisions across the customer journey</span>
+        </div>
+      </nav>
+
+      <div class="rm-grid rm-grid-full">
+        <div class="rm-stages">
+          <section class="rm-stage" id="attract" aria-labelledby="attract-title">
+            <h3 id="attract-title">Build an SEO strategy from the ground up</h3>
+            <div class="rm-body rm-body-result-aligned">
+              <div class="rm-stage-meta">
+              </div>
+              <div class="rm-stage-actions">
+                <p class="rm-sub">What I did</p>
+                <ul class="rm-do">
+                  <li><strong>Technical SEO:</strong> Resolved indexing issues and improved site performance.</li>
+                  <li><strong>Keyword &amp; Competitive Research:</strong> Ran competitive and keyword analysis across private and corporate cruise searches.</li>
+                  <li><strong>On-page &amp; Authority:</strong> Optimized on-page elements and strengthened the backlink profile.</li>
+                </ul>
+              </div>
+              <aside class="rm-result rm-result-combined" aria-labelledby="attract-results-title">
+                <span class="rm-sub" id="attract-results-title">Results</span>
+                <dl>
+                  <div><dd>105</dd><dt>keywords in Google&rsquo;s top 10</dt></div>
+                </dl>
+              </aside>
+            </div>
+            <div class="st-tools">
+              <p class="rm-sub">Tools</p>
+              <ul><li><span class="rm-logo" style="--logo:url(../images/tools/semrush.svg);--brand:#FF642D" aria-hidden="true"></span>Semrush</li><li>Screaming Frog</li><li><span class="rm-logo" style="--logo:url(../images/tools/googlesearchconsole.svg);--brand:#458CF5" aria-hidden="true"></span>Google Search Console</li></ul>
+            </div>
+          </section>
+
+          <section class="rm-stage" id="convert" aria-labelledby="convert-title">
+            <h3 id="convert-title">Turn searches into charter enquiries</h3>
+            <div class="rm-body rm-body-result-aligned">
+              <div class="rm-stage-meta">
+              </div>
+              <div class="rm-stage-actions">
+                <p class="rm-sub">What I did</p>
+                <ul class="rm-do">
+                  <li><strong>Google Ads Program:</strong> Managed a $20K/month Google Ads program, segmenting keyword themes and refining negative keywords.</li>
+                  <li><strong>Landing Pages:</strong> Designed the top 5 converting landing pages.</li>
+                  <li><strong>Ad Testing:</strong> A/B-tested ad copy and kept the best-performing messages running.</li>
+                </ul>
+              </div>
+              <aside class="rm-result rm-result-combined" aria-labelledby="convert-results-title">
+                <span class="rm-sub" id="convert-results-title">Results</span>
+                <dl>
+                  <div><dd>+20%</dd><dt>outbound leads</dt></div>
+                </dl>
+              </aside>
+            </div>
+            <div class="st-tools">
+              <p class="rm-sub">Tools</p>
+              <ul><li><span class="rm-logo" style="--logo:url(../images/tools/googleads.svg);--brand:#4285F4" aria-hidden="true"></span>Google Ads</li></ul>
+            </div>
+          </section>
+
+          <section class="rm-stage" id="retain" aria-labelledby="retain-title">
+            <h3 id="retain-title">Bring past guests back season after season</h3>
+            <div class="rm-body rm-body-result-aligned">
+              <div class="rm-stage-meta">
+              </div>
+              <div class="rm-stage-actions">
+                <p class="rm-sub">What I did</p>
+                <ul class="rm-do">
+                  <li><strong>Segmentation:</strong> Split 10,000+ email subscribers into B2C and B2B groups.</li>
+                  <li><strong>Automation:</strong> Built automated email workflows.</li>
+                  <li><strong>Newsletters &amp; Promotions:</strong> Wrote personalized monthly newsletters and promotions.</li>
+                </ul>
+              </div>
+              <aside class="rm-result rm-result-combined" aria-labelledby="retain-results-title">
+                <span class="rm-sub" id="retain-results-title">Results</span>
+                <dl>
+                  <div><dd>+5%</dd><dt>repeat bookings</dt></div>
+                </dl>
+              </aside>
+            </div>
+          </section>
+
+          <section class="rm-stage rm-data-stage" id="measure" aria-labelledby="measure-title">
+            <h3 id="measure-title">Keep marketing, sales and management on the same numbers</h3>
+            <div class="rm-body rm-body-data">
+              <div>
+                <p class="rm-sub">What I did</p>
+                <ul class="rm-do">
+                  <li><strong>Budget Allocation:</strong> Tracked campaign KPIs closely to reallocate budget to what was working.</li>
+                  <li><strong>Dashboards:</strong> Turned the data into easy-to-read dashboards, keeping marketing, sales and management working from the same numbers.</li>
+                </ul>
+              </div>
+            </div>
+            <section class="csx-results csx-results-end" aria-labelledby="results-heading-end">
+              <h4 class="csx-results-label" id="results-heading-end">Key results</h4>
+              <dl>
+            <div><dd class="is-key">105</dd><dt>keywords in Google&rsquo;s top 10, from a new SEO strategy</dt></div>
+            <div><dd class="is-key">+20%</dd><dt>outbound leads from a $20K/month Google Ads program</dt></div>
+            <div><dd class="is-key">+5%</dd><dt>repeat bookings for upcoming seasons, from segmented email</dt></div>
+              </dl>
+            </section>
+            <div class="st-tools">
+              <p class="rm-sub">Tools</p>
+              <ul><li><span class="rm-logo" style="--logo:url(../images/tools/googleanalytics.svg);--brand:#E37400" aria-hidden="true"></span>Google Analytics</li></ul>
+            </div>
+          </section>
+        </div>
       </div>
     </section>
-
-    <div class="cs-body">
-      <section class="cs-step" aria-labelledby="challenge-heading">
-        <span class="cs-label">01 &middot; The challenge</span>
-        <h2 id="challenge-heading">Filling cruises for both private and corporate events</h2>
-        <p>Yankee Lady serves two different audiences: people planning social events and companies booking corporate cruises. Marketing had to reach both, and bring past guests back season after season. [Add the starting point: rankings, leads or bookings before you joined.]</p>
-      </section>
-
-      <section class="cs-step" aria-labelledby="approach-heading">
-        <span class="cs-label">02 &middot; What I did</span>
-        <h2 id="approach-heading">Search, paid and email, tuned for bookings</h2>
-        <p>I built each channel around how people actually plan and book a cruise, then tracked every one against bookings.</p>
-        <ol class="cs-actions">
-          <li><div>
-            <h3>Built an SEO strategy from the ground up</h3>
-            <p>Resolved indexing issues, improved site performance, ran competitive and keyword analysis, optimized on-page elements and strengthened the backlink profile. 105 keywords reached Google's top 10.</p>
-            <ul class="case-tags" aria-label="Skills used"><li>SEO</li><li>Technical SEO</li></ul>
-          </div></li>
-          <li><div>
-            <h3>Managed a $20K/month Google Ads program</h3>
-            <p>Designed the top 5 converting landing pages, segmented keyword themes, refined negative keywords and A/B tested ad copy. Outbound lead generation rose 20%.</p>
-            <ul class="case-tags" aria-label="Skills used"><li>PPC</li><li>Landing pages</li></ul>
-          </div></li>
-          <li><div>
-            <h3>Segmented 10,000+ email subscribers</h3>
-            <p>Split the list into B2C and B2B groups, built automated workflows, and wrote personalized monthly newsletters and promotions. Repeat bookings for upcoming seasons rose 5%.</p>
-            <ul class="case-tags" aria-label="Skills used"><li>Email</li></ul>
-          </div></li>
-        </ol>
-      </section>
-
-      <section class="cs-step" aria-labelledby="outcome-heading">
-        <span class="cs-label">03 &middot; The outcome</span>
-        <h2 id="outcome-heading">More leads, more repeat guests, clearer decisions</h2>
-        <p>Search visibility, paid leads and repeat bookings all grew together. I tracked campaign KPIs closely to reallocate budget, turned the data into easy-to-read dashboards, and kept marketing, sales and management working from the same numbers.</p>
-      </section>
-    </div>
+    <!-- CALL TO ACTION: same dark card as the homepage, plus a link to the About page -->
+    <section class="cs-cta" aria-labelledby="cta-title">
+      <div class="cs-cta-card">
+        <div>
+          <p class="cs-cta-label"><span aria-hidden="true">//</span> LET&rsquo;S HAVE A CHAT</p>
+          <h2 id="cta-title">Your customers move between channels. <span>Your marketing should too.</span></h2>
+          <p class="cs-cta-sub">Book a free intro call. We&rsquo;ll look at how customers find you, where they drop off, and what to fix first.</p>
+        </div>
+        <div class="cs-cta-row">
+          <a class="cs-cta-btn" href="../contact.html#book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>Book an intro call <span aria-hidden="true">&rarr;</span></a>
+          <p class="cs-cta-alt">Prefer email?<br>Write to me at <a href="mailto:fredulupinar@gmail.com">fredulupinar@gmail.com</a></p>
+          <a class="cs-cta-about" href="../about.html">Learn more about me <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
   </article>
-
-  <nav class="cs-next" aria-label="Next case study">
-    <div class="cs-next-inner">
-      <a class="cs-next-link" href="proco-machinery.html"><span class="cs-label">Next case study</span><strong>Proco Machinery &rarr;</strong></a>
-      <a class="btn" href="../contact.html#book">Want results like this? Book a call</a>
-    </div>
-  </nav>
 </main>
 <footer>
   <div class="footer-inner">
@@ -142,22 +236,8 @@
   </div>
 </footer>
 
-<script>
-/* flip the open header to its dark style while it sits over a dark section */
-(function(){
-  var header = document.querySelector('header'), dark = [].slice.call(document.querySelectorAll('.cs-results'));
-  if(!header || !dark.length) return;
-  var ticking = false;
-  function check(){
-    ticking = false;
-    var mid = header.offsetHeight / 2;
-    header.classList.toggle('on-dark', dark.some(function(el){ var r = el.getBoundingClientRect(); return r.top < mid && r.bottom > mid; }));
-  }
-  window.addEventListener('scroll', function(){ if(!ticking){ ticking = true; requestAnimationFrame(check); } }, { passive: true });
-  window.addEventListener('resize', check);
-  check();
-})();
-</script>
+<script src="roadmap.js" defer></script>
+<script src="case-study.js?v=2" defer></script>
 <script src="../cat.js" defer></script>
 </body>
 </html>

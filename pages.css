@@ -629,39 +629,8 @@ header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);
 @media (max-width:720px){ .wk-cards{grid-template-columns:1fr;} .wk-body{padding:20px 20px 20px;} }
 @media (prefers-reduced-motion:reduce){ .wk-card,.wk-photo img{transition:none;} .wk-card:hover{transform:none;} .wk-card:hover .wk-photo img{transform:none;} }
 
-/* ---- WORK PAGE FUNNEL: best result at each stage, Reach → Revenue. A gold line draws through the
-   stages once when the panel scrolls into view, dots light up in turn and the numbers count up. ---- */
-.wk-funnel{position:relative;margin:40px 0 8px;padding:30px 32px 22px;border:1px solid var(--line);border-radius:18px;background:var(--paper-alt);}
-.wk-funnel ol{position:relative;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;}
-.wk-funnel li{display:flex;flex-direction:column;}
-.wk-track{position:absolute;left:32px;right:32px;top:35px;height:2px;border-radius:2px;background:rgba(21,42,36,.12);}
-.wk-track::after{content:"";position:absolute;right:-1px;top:50%;width:7px;height:7px;border-top:2px solid rgba(21,42,36,.3);border-right:2px solid rgba(21,42,36,.3);transform:translateY(-50%) rotate(45deg);}
-.wk-track-fill{position:absolute;left:0;top:0;bottom:0;width:0;border-radius:2px;background:var(--accent);}
-.wk-dot{position:relative;z-index:1;width:12px;height:12px;margin-bottom:20px;border:2px solid rgba(21,42,36,.28);border-radius:50%;background:var(--paper-alt);}
-.wk-stage{font-family:var(--font-mono);font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
-.wk-count{margin-top:10px;font-size:clamp(2.5rem,1.9rem + 1.8vw,3.25rem);font-weight:800;line-height:1;letter-spacing:-.05em;color:var(--ink);font-variant-numeric:tabular-nums;}
-.wk-funnel li:last-child .wk-count{align-self:flex-start;background:linear-gradient(transparent 62%,rgba(245,185,35,.55) 62%,rgba(245,185,35,.55) 92%,transparent 92%);}
-.wk-label{margin-top:8px;font-size:.9375rem;line-height:1.45;color:var(--ink-soft);}
-.wk-wink{margin-top:24px;padding-top:16px;border-top:1px solid var(--line);font-size:.9375rem;color:var(--ink-soft);}
-.wk-wink b{font-weight:800;color:var(--ink);}
-/* resting (or no-JS / reduced motion) state is the finished state; the animation only plays once */
-.wk-funnel.is-ready .wk-track-fill{width:0;}
-.wk-funnel.is-ready .wk-dot{background:var(--paper-alt);border-color:rgba(21,42,36,.28);box-shadow:none;}
-.wk-funnel:not(.is-ready) .wk-track-fill,.wk-funnel.is-run .wk-track-fill{width:100%;}
-.wk-funnel:not(.is-ready) .wk-dot,.wk-funnel.is-run .wk-dot{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 5px rgba(245,185,35,.22);}
-@media (prefers-reduced-motion:no-preference){
-  .wk-funnel.is-run .wk-track-fill{transition:width 1.8s cubic-bezier(.45,0,.2,1);}
-  .wk-funnel.is-run .wk-dot{transition:background .35s ease,border-color .35s ease,box-shadow .35s ease;transition-delay:var(--d);}
-}
-@media (max-width:760px){
-  .wk-funnel{padding:24px 20px 18px;}
-  .wk-funnel ol{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 18px;}
-  .wk-track{display:none;}
-  .wk-dot{margin-bottom:14px;}
-}
 
-/* work page rhythm: more breathing room between the intro, the funnel and the project cards */
-.wk-funnel{margin:clamp(40px,5vw,56px) 0 0;}
+/* work page rhythm: more breathing room between the intro and the project cards */
 .wk-list{margin-top:clamp(48px,6vw,72px);}
 
 /* ---- WORK PAGE TECH STACK: six cards in a 3 x 2 grid; each tool gets a small monogram tile.
@@ -710,8 +679,6 @@ header.on-dark .nav-cta:hover{background:var(--paper);border-color:var(--paper);
 .wk-tag span:first-child{font-weight:700;color:var(--paper);}
 .wk-tag span + span::before{content:"\00B7";margin-right:8px;color:var(--accent);font-weight:700;}
 .wk-title{margin-top:2px;}
-.wk-funnel{padding-bottom:30px;}
-@media (max-width:760px){ .wk-funnel{padding-bottom:24px;} }
 
 /* ---- WORK PAGE CERTIFICATIONS: own section, three dark cards side by side ---- */
 .wk-cert-grid{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
@@ -950,3 +917,66 @@ button.rm-sample-frame img.rm-img-left{object-position:left top;}
 .rm-lightbox.is-scroll .rm-lb-img{width:auto;max-width:100%;max-height:none;height:auto;margin:0 auto;}
 /* sample badge: plain words, dark pill, readable at a glance */
 .rm-sample.is-illustration .rm-sample-frame::before{content:"*\2009Sample illustration";left:12px;top:12px;padding:5px 10px 5px 9px;border:1px solid rgba(21,42,36,.12);background:rgba(255,251,239,.94);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--font-sans);font-size:.6875rem;font-weight:600;letter-spacing:.01em;text-transform:none;color:var(--ink-soft);box-shadow:0 2px 6px -3px rgba(21,42,36,.25);}
+.rm-head p+p{margin-top:12px;}
+.csx-results-end{margin-top:32px;}
+.csx-results-end + .st-tools{margin-top:24px;}
+/* Call to action at the end of a case study (matches the homepage card) */
+.cs-cta{max-width:1120px;margin:0 auto;padding:clamp(8px,2vw,24px) 32px clamp(64px,8vw,96px);}
+.cs-cta-card{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px 56px;align-items:center;padding:52px 56px;border:1px solid rgba(254,244,222,.08);border-radius:18px;background:var(--dark);color:var(--paper);box-shadow:0 30px 60px -36px rgba(21,42,36,.7);}
+.cs-cta-label{margin-bottom:16px;font-family:var(--font-mono);font-size:.75rem;font-style:italic;font-weight:600;letter-spacing:-.035em;color:var(--accent);}
+.cs-cta h2{max-width:600px;font-size:clamp(2rem,1.62rem + 1.65vw,3rem);font-weight:700;line-height:1.1;letter-spacing:-.03em;color:var(--paper);text-wrap:balance;}
+.cs-cta h2 span{color:var(--accent);}
+.cs-cta-sub{margin-top:16px;max-width:520px;font-size:1.0625rem;line-height:1.6;color:rgba(254,244,222,.68);}
+.cs-cta-row{display:flex;flex-direction:column;align-items:flex-start;gap:14px;}
+.cs-cta-btn{display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border-radius:10px;background:var(--accent);color:var(--dark);font-size:.9375rem;font-weight:700;text-decoration:none;transition:background .2s;}
+.cs-cta-btn svg{width:16px;height:16px;flex-shrink:0;}
+.cs-cta-btn:hover,.cs-cta-btn:focus-visible{background:var(--paper);}
+.cs-cta-btn:focus-visible,.cs-cta-about:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
+.cs-cta-alt{font-size:.875rem;line-height:1.55;color:rgba(254,244,222,.6);}
+.cs-cta-alt a{color:var(--paper);font-weight:600;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:3px;}
+.cs-cta-about{font-size:.875rem;font-weight:700;color:var(--paper);text-decoration:underline;text-decoration-color:rgba(254,244,222,.35);text-underline-offset:4px;}
+.cs-cta-about:hover{text-decoration-color:var(--accent);}
+@media(max-width:900px){.cs-cta-card{grid-template-columns:1fr;gap:28px;padding:40px 28px;}}
+@media(max-width:640px){.cs-cta{padding-left:20px;padding-right:20px;}}
+/* Work page: on-this-page index under the intro */
+.wk-index{margin-top:24px;}
+.wk-index ul{list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:10px 0;}
+.wk-index li{display:inline-flex;align-items:center;}
+.wk-index li + li::before{content:"";display:inline-block;width:5px;height:5px;margin:0 14px;border-radius:50%;background:var(--accent);}
+.wk-index a{font-family:var(--font-mono);font-size:.75rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);text-decoration:none;transition:color .2s;}
+.wk-index a:hover,.wk-index a:focus-visible{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:4px;}
+.wk-index a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
+#case-studies-list,#tools,#certifications,#how-i-work,#lets-chat{scroll-margin-top:90px;}
+/* tech stack: real logos in their own brand colours at rest; monogram tiles (tools without a logo) use the brand colour too */
+.wk-stack .wk-logo::before{width:17px;height:17px;background:var(--brand,var(--ink));}
+.wk-stack .wk-tm:not(.wk-logo){color:var(--brand,var(--ink));}
+.wk-stack .wk-tools li:hover .wk-tm{background:var(--paper);border-color:var(--brand,var(--ink));color:var(--brand,var(--ink));}
+.wk-stack .wk-tools li:hover .wk-logo::before{background:var(--brand,var(--ink));}
+/* tech stack: seven areas sit in a 4 + 3 grid on wide screens */
+@media (min-width:1000px){ .wk-stack .wk-stack-grid{grid-template-columns:repeat(4,minmax(0,1fr));} }
+/* full-colour logo image (for brands whose icon only exists as a picture) */
+.wk-stack .wk-img::before{content:"";width:20px;height:20px;background:var(--img) center/contain no-repeat;}
+/* ---- WORK PAGE CERTIFICATIONS, grouped by provider: dark cards, gold logo tile, a count, then each
+   certification on its own line with a small gold tick. HubSpot (longest list) spans two rows. ---- */
+.wk-prov-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-areas:"hub a b" "hub c d";gap:16px;}
+.wk-prov-hubspot{grid-area:hub;}
+.wk-prov{display:flex;flex-direction:column;padding:24px;border-radius:18px;background:var(--dark);color:var(--paper);transition:transform .35s cubic-bezier(.22,.9,.32,1),box-shadow .35s ease;}
+.wk-prov:hover{transform:translateY(-3px);box-shadow:0 22px 40px -26px rgba(21,42,36,.6);}
+.wk-prov-head{display:flex;align-items:center;gap:14px;padding-bottom:16px;margin-bottom:6px;border-bottom:1px solid rgba(254,244,222,.12);}
+.wk-prov .wk-tm{width:44px;height:44px;border:0;border-radius:12px;background:var(--accent);transition:background .25s ease,transform .3s cubic-bezier(.22,.9,.32,1);}
+.wk-prov .wk-logo::before{width:20px;height:20px;background:var(--dark);}
+.wk-prov:hover .wk-tm{background:var(--paper);transform:rotate(-4deg);}
+.wk-prov:hover .wk-logo::before{background:var(--brand,var(--dark));}
+.wk-prov h3{font-size:1.0625rem;font-weight:700;line-height:1.25;letter-spacing:-.015em;color:var(--paper);}
+.wk-prov-head small{display:block;margin-top:3px;font-family:var(--font-mono);font-size:.6875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);}
+.wk-prov ul{list-style:none;}
+.wk-prov li{position:relative;padding:10px 0 10px 24px;border-top:1px solid rgba(254,244,222,.08);font-size:.9375rem;font-weight:500;line-height:1.4;color:rgba(254,244,222,.9);}
+.wk-prov li:first-child{border-top:0;}
+.wk-prov li::before{content:"";position:absolute;left:2px;top:15px;width:9px;height:5px;border:solid var(--accent);border-width:0 0 2px 2px;transform:rotate(-45deg);}
+.wk-prov li em{margin-left:6px;padding:2px 7px;border-radius:999px;background:rgba(254,244,222,.1);font-family:var(--font-mono);font-size:.625rem;font-style:normal;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(254,244,222,.7);vertical-align:1px;}
+@media (max-width:900px){ .wk-prov-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"hub a" "hub b" "c d";} }
+@media (max-width:600px){ .wk-prov-grid{grid-template-columns:1fr;grid-template-areas:none;} .wk-prov-hubspot{grid-area:auto;} }
+@media (prefers-reduced-motion:reduce){ .wk-prov,.wk-prov .wk-tm{transition:none;} .wk-prov:hover,.wk-prov:hover .wk-tm{transform:none;} }
+/* certifications head has no side text, so the heading gets the full width */
+.wk-certs-sec .ab-section-head,.wk-stack .ab-section-head{grid-template-columns:1fr;}
+.wk-certs-sec .ab-section-head h2{max-width:720px;}
