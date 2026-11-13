@@ -129,6 +129,8 @@ html{scrollbar-width:thin;scrollbar-color:rgba(30,58,50,.45) transparent;}
 .st-tools li:first-child{padding-left:0;border-left:0;}
 .st-tools .rm-logo{width:17px;height:17px;background:var(--brand,var(--ink));transition:transform .2s ease;}
 .st-tools li:hover .rm-logo{transform:scale(1.12);}
+/* full-colour logos (e.g. Litmus) use the image itself instead of a single-colour mask */
+.rm-logo.rm-img,.st-tools .rm-logo.rm-img{-webkit-mask:none;mask:none;background:var(--img) center/contain no-repeat;}
 @media (max-width:760px){
 
   .st-tools ul{gap:10px 0;}

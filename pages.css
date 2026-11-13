@@ -980,3 +980,6 @@ button.rm-sample-frame img.rm-img-left{object-position:left top;}
 /* certifications head has no side text, so the heading gets the full width */
 .wk-certs-sec .ab-section-head,.wk-stack .ab-section-head{grid-template-columns:1fr;}
 .wk-certs-sec .ab-section-head h2{max-width:720px;}
+
+/* Sample viewer: caption, counter and arrows sit above the image so they are easy to find */
+.rm-lb-bar{order:-1;border-top:0;border-bottom:1px solid var(--line);}
