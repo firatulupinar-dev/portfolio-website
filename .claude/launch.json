@@ -6,6 +6,12 @@
       "runtimeExecutable": "powershell",
       "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", ".claude/serve.ps1", "-Port", "8080"],
       "port": 8080
+    },
+    {
+      "name": "board-copy",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", ".claude/serve.ps1", "-Port", "8090", "-Root", "_drafts/blog-revisions/board-size"],
+      "port": 8090
     }
   ]
 }

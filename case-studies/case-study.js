@@ -77,3 +77,93 @@
     go(0);
   });
 })();
+
+/* shared viewer for [data-ib] samples: one dialog, a dimmed backdrop, close on click outside, the X or Esc.
+   Tall samples (emails, pages) open at reading width and scroll; wide ones (ads) fit the screen. */
+var openViewer = (function(){
+  var dlg, box, big, cap, opener;
+  function build(){
+    dlg = document.createElement('dialog'); dlg.className = 'ib-lb';
+    dlg.innerHTML = '<div class="ib-lb-box"><p class="ib-lb-cap"></p><img alt=""></div><button type="button" class="ib-lb-x" aria-label="Close">&times;</button>';
+    document.body.appendChild(dlg);
+    box = dlg.querySelector('.ib-lb-box'); big = dlg.querySelector('img'); cap = dlg.querySelector('.ib-lb-cap');
+    dlg.querySelector('.ib-lb-x').addEventListener('click', function(){ dlg.close(); });
+    dlg.addEventListener('click', function(e){ if(e.target !== big) dlg.close(); });
+    dlg.addEventListener('close', function(){ document.documentElement.classList.remove('ib-lb-open'); if(opener) opener.focus({preventScroll: true}); });
+  }
+  return function(img, label, from){
+    if(!dlg) build();
+    opener = from;
+    var tall = img.naturalHeight / Math.max(1, img.naturalWidth) > 1.3;
+    dlg.classList.toggle('is-tall', tall);
+    big.src = img.currentSrc || img.src; big.alt = img.alt; cap.textContent = label;
+    dlg.setAttribute('aria-label', label);
+    document.documentElement.classList.add('ib-lb-open');
+    dlg.showModal(); dlg.scrollTop = 0;
+  };
+})();
+/* 3) Inbox-style email browser ([data-ib]): picking an email in the list swaps it into the scrolling pane. */
+(function(){
+  [].forEach.call(document.querySelectorAll('[data-ib]'), function(ib){
+    var items = [].slice.call(ib.querySelectorAll('.ib-item'));
+    var pane = ib.querySelector('.ib-pane'), img = pane.querySelector('img');
+    var badge = ib.querySelector('.ib-badge'), title = ib.querySelector('.ib-title');
+    function pick(i, focus){
+      var it = items[i];
+      items.forEach(function(x){ x.setAttribute('aria-selected', x === it ? 'true' : 'false'); x.tabIndex = x === it ? 0 : -1; });
+      img.src = it.getAttribute('data-src'); img.alt = it.getAttribute('data-alt');
+      badge.textContent = badge.dataset.b = it.getAttribute('data-badge');
+      title.textContent = it.getAttribute('data-title') || it.querySelector('b').textContent;
+      pane.scrollTop = 0;
+      renderJumps(it.getAttribute('data-jumps'));
+      if(focus) it.focus();
+      if(window.matchMedia('(max-width:820px)').matches) it.scrollIntoView({block:'nearest', inline:'nearest'});
+    }
+
+    /* long samples: a reading-progress bar, a back-to-top button, and optional section chips
+       (data-jumps="Label:0.25|Label:0.5", positions as a fraction of the image height) */
+    var view = ib.querySelector('.ib-view');
+    var prog = document.createElement('div'); prog.className = 'ib-prog'; prog.innerHTML = '<span></span>';
+    pane.parentNode.insertBefore(prog, pane);
+    var jumps = document.createElement('div'); jumps.className = 'ib-jumps'; jumps.setAttribute('aria-label', 'Jump to a section');
+    prog.parentNode.insertBefore(jumps, prog);
+    var up = document.createElement('button'); up.type = 'button'; up.className = 'ib-top'; up.setAttribute('aria-label', 'Back to the top of the sample'); up.innerHTML = '&uarr;';
+    view.appendChild(up);
+    up.addEventListener('click', function(){ pane.scrollTo({top: 0, behavior: 'smooth'}); });
+    function onScroll(){
+      var max = pane.scrollHeight - pane.clientHeight, f = max > 0 ? pane.scrollTop / max : 0;
+      prog.firstChild.style.width = (f * 100) + '%';
+      up.classList.toggle('is-on', pane.scrollTop > pane.clientHeight);
+      var on = null;
+      [].forEach.call(jumps.children, function(b){ if(img.offsetHeight * parseFloat(b.dataset.at) <= pane.scrollTop + 40) on = b; });
+      [].forEach.call(jumps.children, function(b){ if(b === on && !b.classList.contains('is-on')) jumps.scrollTo({left: Math.max(0, b.offsetLeft - jumps.offsetLeft - 60), behavior: 'smooth'}); b.classList.toggle('is-on', b === on); });
+    }
+    pane.addEventListener('scroll', onScroll, {passive: true});
+    function renderJumps(spec){
+      jumps.innerHTML = ''; jumps.hidden = !spec;
+      if(spec) spec.split('|').forEach(function(s){
+        var p = s.split(':'), b = document.createElement('button');
+        b.type = 'button'; b.textContent = p[0]; b.dataset.at = p[1];
+        b.addEventListener('click', function(){ pane.scrollTo({top: Math.max(0, img.offsetHeight * parseFloat(p[1]) - 12), behavior: 'smooth'}); });
+        jumps.appendChild(b);
+      });
+      onScroll();
+    }
+    renderJumps((items.filter(function(x){ return x.getAttribute('aria-selected') === 'true'; })[0] || items[0]).getAttribute('data-jumps'));
+
+    /* click-to-enlarge: clicking the sample opens it bigger over a softly dimmed page */
+    var hint = ib.querySelector('.ib-hint');
+    if(!hint){ hint = document.createElement('span'); hint.className = 'ib-hint'; ib.querySelector('.ib-bar').appendChild(hint); }
+    hint.textContent = (hint.textContent ? hint.textContent + ' \u00b7 ' : '') + 'Click to enlarge';
+    img.addEventListener('click', function(){ openViewer(img, title.textContent, pane); });
+    pane.addEventListener('keydown', function(e){ if((e.key === 'Enter' || e.key === ' ') && e.target === pane){ e.preventDefault(); openViewer(img, title.textContent, pane); } });
+    items.forEach(function(it, i){
+      it.tabIndex = i ? -1 : 0;
+      it.addEventListener('click', function(){ pick(i); });
+      it.addEventListener('keydown', function(e){
+        var k = e.key, d = (k === 'ArrowDown' || k === 'ArrowRight') ? 1 : (k === 'ArrowUp' || k === 'ArrowLeft') ? -1 : 0;
+        if(d){ e.preventDefault(); pick((i + d + items.length) % items.length, true); }
+      });
+    });
+  });
+})();

@@ -1,6 +1,6 @@
 # Minimal static file server for previewing the site locally (no Python/Node needed).
-param([int]$Port = 8080)
-$root = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+param([int]$Port = 8080, [string]$Root = '')
+$root = if ($Root) { (Resolve-Path $Root).Path } else { (Resolve-Path (Join-Path $PSScriptRoot '..')).Path }
 $types = @{ '.html'='text/html; charset=utf-8'; '.css'='text/css'; '.js'='text/javascript'; '.svg'='image/svg+xml';
   '.jpg'='image/jpeg'; '.jpeg'='image/jpeg'; '.png'='image/png'; '.webp'='image/webp'; '.xml'='application/xml'; '.txt'='text/plain' }
 $listener = New-Object System.Net.HttpListener
